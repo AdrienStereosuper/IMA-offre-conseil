@@ -3428,13 +3428,15 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     font-size: 1.3em;
   }
   #content #bloc-slides .slide#slide1 {
-    top: 0;
+    top: 13%;
   }
   #content #bloc-slides .slide#slide2 {
-    top: 0;
+    top: 13%;
+    left: 400px;
   }
   #content #bloc-slides .slide#slide3 {
-    top: 0;
+    top: 13%;
+    left: 400px;
   }
   #content #bloc-slides .slide#slide3 a.btn-base {
     margin-top: 10px;
