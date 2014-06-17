@@ -169,7 +169,7 @@ $(document).ready(function(){
 	});
 	
 	$(window).bind("popstate", function(e) {
-		window.location = location.pathname;
+		//window.location = location.pathname;
 	});
 	
 });
