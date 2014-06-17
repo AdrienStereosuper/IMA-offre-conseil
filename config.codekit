@@ -112,15 +112,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/cas-clients.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/cas-clients.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/css\/icons.data.png.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -1021,6 +1012,15 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/references.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/references.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/vision.html": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1033,7 +1033,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Adrien",
+"lastSavedByUser": "Boris Forconi",
 "manualImportLinks": {
 	},
 "projectAttributes": {

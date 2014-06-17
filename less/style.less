@@ -397,6 +397,7 @@ a.btn-base{
 	height: 100%;
 	margin: 0 auto;
 	padding: 0;
+	z-index: 2;
 }
 
 * {
@@ -446,10 +447,18 @@ body {
 	}
 }
 
-.content-load{
-	display: block;
+#content-load, #superfluous {
 	width: 100%;
 	height: 100%;
+	display: block;
+	z-index: 2;
+	position: relative;
+}
+#superfluous{
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 ul{
@@ -457,15 +466,11 @@ ul{
 	padding: 0;
 }
 
-
-
-
-
 #bouton-imatech{
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 3;
 	&.bouton-bleu{
 		.cn-button{
 			border-color: @bleuima;
@@ -480,7 +485,6 @@ ul{
 		}
 	}
 }
-
 
 
 .csstransforms .cn-wrapper {

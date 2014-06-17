@@ -1,3 +1,8 @@
+/* pile niceScoll */
+var niceScrolls = [];
+
+
+
 ///////////////////////////////////////////////////////////////////////////////////
 ///////////////// Fontion pour l'initialisation du bloc contact ///////////////////
 ///////////////////////////////////////////////////////////////////////////////////
@@ -11,7 +16,6 @@ function blocContact(){
 function boutonIMA(){
 	button = $('#cn-button');
 	wrapper = $('#cn-wrapper');
-	
 	if($(window).width()>767){
 		button.hover(
 		  function() {
@@ -20,7 +24,6 @@ function boutonIMA(){
 		    $('#cn-wrapper').removeClass("opened-nav");
 		  }
 		);
-		
 		wrapper.hover(
 		  function() {
 		    $('#cn-wrapper').addClass("opened-nav");
@@ -29,11 +32,13 @@ function boutonIMA(){
 		  }
 		);
 		if($("html").hasClass("csstransforms")){
+			$(".cn-wrapper ul li a").unbind('mouseenter mouseleave');
+			$(".cn-wrapper ul li .zone-texte h2").css({'color':"#4e4e4e","top":0});
+			TweenMax.to($('.cn-wrapper ul li .zone-texte h2'), 0, {color: "#4e4e4e", top:"0"});
 			$(".cn-wrapper ul li:not(.active) a").hover(
 			  function() {
 			  	var parent = $(this).parent();
-			    borderColor = $(this).css("border-top-color");
-			    
+			    borderColor = $(this).css("border-top-color"); 
 			    tl = new TimelineMax();
 			    tl2 = new TimelineMax();
 			    tl.to($('.zone-texte h2',parent), 0, {color: borderColor});
@@ -41,7 +46,6 @@ function boutonIMA(){
 			    tl2.to($('.zone-texte h2',parent), 0.3, {top:"10px"});
 			  }, function() {
 			  	var parent = $(this).parent();
-			  	
 			    tl.to($('.zone-texte h2',parent), 0.1, {color: "#4e4e4e", top:"0"});
 			  }
 			);

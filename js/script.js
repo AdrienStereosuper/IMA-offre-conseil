@@ -2,6 +2,7 @@
 //////// variables ////////
 ///////////////////////////
 
+
 /* bouton ima */
 var borderColor;
 var button;
@@ -141,69 +142,150 @@ $(document).ready(function(){
 		readyCasClient();
 	}
 	
-	//// LOAD
-	$("#cn-wrapper a").each(function() {
-		$(this).click(function() {
-			if ($(this).attr("href").indexOf("index")>=0) {
-				index = $(this).attr("href");
-				var toLoad = $(this).attr("href")+" .content-load";
-				loadInit();
-				$(".content-load").load(toLoad, loadFinished);
-				return false;
-			}
-			if ($(this).attr("href").indexOf("vision")>=0) {
-				index = $(this).attr("href");
-				var toLoad = $(this).attr("href")+" .content-load";
-				loadInit();
-				$(".content-load").load(toLoad, loadFinished);
-				return false;
-			}
-			if ($(this).attr("href").indexOf("cas-clients")>=0) {
-				index = $(this).attr("href");
-				var toLoad = $(this).attr("href")+" .content-load";
-				loadInit();
-				$(".content-load").load(toLoad, loadFinished);
-				return false;
-			}
-		});
-	});
-	
-	$(window).bind("popstate", function(e) {
-		window.location = location.pathname;
-	});
-	
+	/////////////////// GÉRER LES LOADS ///////////////////
+	initLoad();
+		
 });
-
-function loadInit() {
-	$(".content-load").hide(400);
-}
-
-function loadFinished() {
-	$(".content-load").show(400);
-	var obj = { index: index };
-	if (index.indexOf("vision")>=0) {
-		window.history.pushState(obj,'Vision','vision.html');
-		readyMetiers();
-		$("#menu-bottom").removeClass("menu-violet").removeClass("menu-bleu");
-		$("#bouton-imatech").removeClass("bouton-bleu");
-	} else if (index.indexOf("index")>=0) {
-		window.history.pushState(obj,'Accueil','index.html');
-		readyIntro();
-		$("#menu-bottom").removeClass("menu-violet").removeClass("menu-bleu").addClass("menu-violet");
-		$("#bouton-imatech").removeClass("bouton-bleu");
-	}else if (index.indexOf("cas-clients")>=0) {
-		window.history.pushState(obj,'Cas clients','cas-clients.html');
-		readyCasClient();
-		$("#menu-bottom").removeClass("menu-violet").removeClass("menu-bleu").addClass("menu-bleu");
-		$("#bouton-imatech").removeClass("bouton-bleu").addClass("bouton-bleu");
-	}
-}
 
 $(window).resize(function() {
 	if($("body").hasClass("intro") || $("body").hasClass("home")){
 		backgroundPictoGrid();
 	}
 });
+
+//////////////////////////////////////////////////////////////////////
+/////////////////////// Fonction pour le load ////////////////////////
+//////////////////////////////////////////////////////////////////////
+function initLoad() {
+	/////////////////// MAPPER LES LIENS DU MENU ///////////////////
+	$("#cn-wrapper a").each(function() {
+		$(this).click(function() {
+			loadStart($(this).attr("href"));
+			return false;
+		});
+	});
+	
+	/////////////////// GESTION D'URL ///////////////////
+	if (Modernizr.history) {
+		$(window).bind("popstate", function(e) {
+			//window.location = location.pathname;
+		});
+	}
+}
+function loadStart(toLoad) {
+	for (var key in niceScrolls){
+	   niceScrolls[key].resize().hide();
+	   niceScrolls[key].remove();
+	}
+	niceScrolls = [];
+	index = toLoad;
+	$("#content-load").fadeOut(400);
+	$("#content-load").load(toLoad+" #content-load", loadFinished);
+}
+
+function loadFinished() {
+	$("#content-load").fadeIn(400);
+	$("#menu-bottom").removeClass("menu-violet").removeClass("menu-bleu");
+	$("#bouton-imatech").removeClass("bouton-bleu");
+	$("body")[0].className = '';
+	if (index.indexOf("vision")>=0) {
+		updateAll('vision');
+		$("body").addClass('metiers');
+		readyMetiers();
+	} else if (index.indexOf("metiers")>=0) {
+		updateAll('metiers');
+		$("body").addClass('metiers');
+		readyMetiers();
+	} else if (index.indexOf("references")>=0) {
+		updateAll('references');
+		$("body").addClass('cas-clients');
+		$("#menu-bottom").addClass("menu-bleu");
+		$("#bouton-imatech").addClass("bouton-bleu");
+		readyCasClient();
+	} else {
+		updateAll('accueil');
+		$("body").addClass('intro');
+		$("#menu-bottom").addClass("menu-violet");
+		readyIntro();
+	}
+}
+
+function updateAll(espace) {
+	// lien
+	updateURL(espace);
+	// menu
+	updateMenuState(espace);
+	// déco
+	updateSuperfluous(espace);
+}
+
+function updateURL(espace) {
+	var obj = { page: index };
+	if (Modernizr.history) {
+		switch(espace) {
+			case "vision":
+				window.history.pushState(obj,'Page Vision', '/vision');
+				break;
+			case "metiers":
+				window.history.pushState(obj,'Page Métiers', '/metiers');
+				break;
+			case "references":
+				window.history.pushState(obj,'Page Cas Client', '/references');
+				break;
+			default :
+				window.history.pushState(obj,'PageAccueil', '/');
+				break;
+		}
+	}
+}
+
+function updateMenuState(espace) {
+	$('#cn-wrapper').removeClass("opened-nav");
+	$(".cn-wrapper-menu-ferme").removeClass('accueil').removeClass('vision').removeClass('expertise').removeClass('references');
+	$(".cn-wrapper-menu-ferme li").removeClass('active');
+	$("#cn-wrapper li").removeClass('active');
+	switch(espace) {
+		case "vision":
+			$(".cn-wrapper-menu-ferme").addClass('vision');
+			$(".cn-wrapper-menu-ferme li.conseil").addClass('active');
+			$("#cn-wrapper li.conseil").addClass('active');
+			break;
+		case "metiers":
+			$(".cn-wrapper-menu-ferme").addClass('expertise');
+			$(".cn-wrapper-menu-ferme li.expertise").addClass('active');
+			$("#cn-wrapper li.expertise").addClass('active');
+			break;
+		case "references":
+			$(".cn-wrapper-menu-ferme").addClass('references');
+			$(".cn-wrapper-menu-ferme li.references").addClass('active');
+			$("#cn-wrapper li.references").addClass('active');
+			break;
+		default :
+			$(".cn-wrapper-menu-ferme").addClass('accueil');
+			$(".cn-wrapper-menu-ferme li.accueil").addClass('active');
+			$("#cn-wrapper li.accueil").addClass('active');
+			break;
+	}
+	boutonIMA();
+}
+
+function updateSuperfluous(espace) {
+	$("#superfluous").html();
+	switch(espace) {
+		case "vision":
+		case "metiers":
+			$("#superfluous").html('<div id="bg-office"></div>');
+			break;
+		case "references":
+			$("#superfluous").html('<div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
+			break;
+		default :
+			$("#superfluous").html('<ul id="pictos-fond"></ul>');
+			break;
+	}
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////// Fonction ready mentions legales ////////////////////////
@@ -1029,7 +1111,7 @@ function majPucesCasClient(indexPucesCasClient){
 function customCasClientScroll(){
 	//$("#masque-slides-cas-clients").niceScroll().remove();
 	if($(window).width()>767){
-		$("#masque-slides-cas-clients").niceScroll({
+		niceScrolls.push($("#masque-slides-cas-clients").niceScroll({
 			cursorcolor: "#fff",
 			cursorwidth: "3px",
 			cursorborderradius: "3px",
@@ -1037,7 +1119,7 @@ function customCasClientScroll(){
 			background: "rgba(255, 255, 255, 0.2)",
 			cursorborder: "none",
 			autohidemode: "none"
-		});
+		}));
 	}
 }
 

@@ -371,8 +371,8 @@ function getTranslationYSlideIntro(){
 ////////////////////////////////////////////////////////////////////////////////
 function customActuScroll(){
 	if($(window).width()>767){
-		$("#masque-actus").niceScroll().remove();
-		$("#masque-actus").niceScroll({
+		//$("#masque-actus").niceScroll().remove();
+		niceScrolls.push($("#masque-actus").niceScroll({
 			cursorcolor: "#fff",
 			cursorwidth: "3px",
 			cursorborderradius: "3px",
@@ -380,7 +380,7 @@ function customActuScroll(){
 			background: "rgba(255, 255, 255, 0.2)",
 			cursorborder: "none",
 			autohidemode: "none"
-		});
+		}));
 	}
 }
 
@@ -392,8 +392,8 @@ function removeCustomActuScroll(){
 
 function customActuOuverteScroll(){
 	if($(window).width()>767){
-		$("#bloc-videos-actus").niceScroll().remove();
-		$("#bloc-videos-actus").niceScroll({
+		//$("#bloc-videos-actus").niceScroll().remove();
+		niceScrolls.push($("#bloc-videos-actus").niceScroll({
 			cursorcolor: "#fff",
 			cursorwidth: "3px",
 			cursorborderradius: "3px",
@@ -401,7 +401,7 @@ function customActuOuverteScroll(){
 			background: "rgba(255, 255, 255, 0.2)",
 			cursorborder: "none",
 			autohidemode: "none"
-		});
+		}));
 	}
 }
 
