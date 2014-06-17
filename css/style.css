@@ -3145,6 +3145,23 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   #container {
     width: 100%;
   }
+  #bloc-contact {
+    width: 400px;
+  }
+  #bloc-contact h4 {
+    margin: 0 0 25px 0;
+  }
+  #bloc-contact #part-gauche-bloc-contact,
+  #bloc-contact #part-droite-bloc-contact {
+    display: block;
+    width: 100%;
+  }
+  #bloc-contact #part-gauche-bloc-contact {
+    margin: 0 0 30px 0;
+  }
+  #bloc-contact #part-droite-bloc-contact {
+    margin: 0;
+  }
   #menu-bottom #content-menu-bottom {
     width: 90%;
   }
@@ -3656,6 +3673,17 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   /* @end */
 }
 @media (max-width: 500px) {
+  #bloc-contact {
+    right: inherit;
+    left: -115px;
+    bottom: 110px;
+    padding: 25px;
+    width: 300px;
+  }
+  #bloc-contact .fleche-bloc-contact {
+    right: inherit;
+    left: 165px;
+  }
   #menu-bottom #content-menu-bottom {
     width: 95%;
   }
