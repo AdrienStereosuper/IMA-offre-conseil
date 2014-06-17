@@ -2358,6 +2358,7 @@ ul#pictos-fond li.picto-fond.videochat {
   padding: 0;
 }
 #vision ul#slides-vision li.slide-vision ul#elements-audit-preliminaire li.element-audit-preliminaire {
+  margin-bottom: 10px;
   display: inline-block;
   color: #d13c92;
   font-family: 'ConduitITCStd-Bold', sans-serif;
@@ -3533,7 +3534,6 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     margin: 10px 0;
   }
   #vision ul#slides-vision li.slide-vision ul#elements-audit-preliminaire li.element-audit-preliminaire {
-    margin-bottom: 10px;
     font-size: 1.1em;
   }
   #vision ul#slides-vision li.slide-vision .fleche-vision {
