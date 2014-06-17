@@ -446,6 +446,12 @@ body {
 	}
 }
 
+.content-load{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
 ul{
 	margin: 0;
 	padding: 0;
@@ -2632,7 +2638,7 @@ ul#puces-slides-cas-clients{
 						li.logo-cas-client{
 							display: inline-block;
 							.inline-ie7();
-							vertical-align: middle;
+							vertical-align: top;
 							width: 128px;
 							height: 128px;
 							margin: 0 7px;
@@ -2653,15 +2659,11 @@ ul#puces-slides-cas-clients{
 								line-height: 128px;
 								text-align: center;
 								.transition(all 300ms);
-								font-size:0;
 								&:hover{
 									.box-shadow(~"inset 0 0 16px rgba(0,0,0,.32)");
 								}
 								img{
 									vertical-align: middle;
-								}
-								span {
-								    display: inline-block;
 								}
 							}
 						}
