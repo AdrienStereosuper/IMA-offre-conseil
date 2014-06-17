@@ -2368,6 +2368,7 @@ ul#pictos-fond li.picto-fond.videochat {
   padding: 0;
 }
 #vision ul#slides-vision li.slide-vision ul#elements-audit-preliminaire li.element-audit-preliminaire {
+  margin-bottom: 10px;
   display: inline-block;
   color: #d13c92;
   font-family: 'ConduitITCStd-Bold', sans-serif;
@@ -3155,6 +3156,23 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   #container {
     width: 100%;
   }
+  #bloc-contact {
+    width: 400px;
+  }
+  #bloc-contact h4 {
+    margin: 0 0 25px 0;
+  }
+  #bloc-contact #part-gauche-bloc-contact,
+  #bloc-contact #part-droite-bloc-contact {
+    display: block;
+    width: 100%;
+  }
+  #bloc-contact #part-gauche-bloc-contact {
+    margin: 0 0 30px 0;
+  }
+  #bloc-contact #part-droite-bloc-contact {
+    margin: 0;
+  }
   #menu-bottom #content-menu-bottom {
     width: 90%;
   }
@@ -3418,14 +3436,14 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     height: 1000px;
   }
   #content #bloc-slides a#btn-next-slide {
-    top: -78px;
+    top: 70px;
     margin-left: -76px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   #content #bloc-slides a#btn-prev-slide {
-    top: -78px;
+    top: 70px;
     margin-left: 10px;
     width: 66px;
     height: 66px;
@@ -3442,9 +3460,11 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   }
   #content #bloc-slides .slide#slide2 {
     top: 0;
+    left: 400px;
   }
   #content #bloc-slides .slide#slide3 {
     top: 0;
+    left: 400px;
   }
   #content #bloc-slides .slide#slide3 a.btn-base {
     margin-top: 10px;
@@ -3524,7 +3544,6 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     margin: 10px 0;
   }
   #vision ul#slides-vision li.slide-vision ul#elements-audit-preliminaire li.element-audit-preliminaire {
-    margin-bottom: 10px;
     font-size: 1.1em;
   }
   #vision ul#slides-vision li.slide-vision .fleche-vision {
@@ -3664,6 +3683,17 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   /* @end */
 }
 @media (max-width: 500px) {
+  #bloc-contact {
+    right: inherit;
+    left: -115px;
+    bottom: 110px;
+    padding: 25px;
+    width: 300px;
+  }
+  #bloc-contact .fleche-bloc-contact {
+    right: inherit;
+    left: 165px;
+  }
   #menu-bottom #content-menu-bottom {
     width: 95%;
   }

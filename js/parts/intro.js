@@ -262,7 +262,7 @@ function initTexteIntro(){
 		TweenMax.fromTo($('a#btn-next-slide'), textAnimationTime, {y: "80px", opacity: "0"}, {y: "50px", opacity: "1", delay: 2.5});
 		TweenMax.to($('a#btn-prev-slide'), textAnimationTime, {scale: "1"});
 	}else{
-		TweenMax.to($('#slide1'), textAnimationTime, {top: "13%",  scale: "1", opacity: "1", delay: 2});
+		TweenMax.to($('#slide1'), textAnimationTime, {scale: "1", opacity: "1", delay: 2});
 		//TweenMax.fromTo($('a#btn-next-slide'), textAnimationTime, {y: "80px", opacity: "0"}, {y: "50px", opacity: "1", delay: 2.5});
 		TweenMax.to($('a#btn-prev-slide'), textAnimationTime, {scale: "1"});
 	}
@@ -283,11 +283,11 @@ function getEtape2Slide() {
 				.to($('a#btn-prev-slide'), textAnimationTime, {display: "block", scale: "1", ease:textAnimationEase},0);
 	}else{
 		tlSlide1 = new TimelineMax();
-		tlSlide1.to($('#slide1'), textAnimationTime, {top: "38%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlSlide1.to($('#slide1'), textAnimationTime, {left: "-400px", scale: "1", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
 					etape=2;
 				}})
-				.to($('#slide2'), textAnimationTime, {top: "13%", scale: "1", opacity: "1", ease:textAnimationEase},0)
-				.to($('#slide3'), textAnimationTime, {top: "0", scale: "1", opacity: "0", ease:textAnimationEase},0)
+				.to($('#slide2'), textAnimationTime, {left: "0", scale: "1", opacity: "1", ease:textAnimationEase},0)
+				.to($('#slide3'), textAnimationTime, {scale: "1", opacity: "0", ease:textAnimationEase},0)
 				.to($('a#btn-prev-slide'), textAnimationTime, {display: "block", scale: "1", ease:textAnimationEase},0);
 	}
 }
@@ -303,11 +303,11 @@ function getReverseEtape2Slide() {
 					   .to($('a#btn-prev-slide'), textAnimationTime, {display: "none", scale: "1", ease:textAnimationEase},0);
 	}else{
 		tlReverseSlide1 = new TimelineMax();
-		tlReverseSlide1.to($('#slide1'), textAnimationTime, {top: "13%", scale: "1", opacity: "1", ease:textAnimationEase, onComplete: function() {
+		tlReverseSlide1.to($('#slide1'), textAnimationTime, {left: "0", scale: "1", opacity: "1", ease:textAnimationEase, onComplete: function() {
 							etape=1;
 						}})
-					   .to($('#slide2'), textAnimationTime, {top: "0", scale: "1", opacity: "0", ease:textAnimationEase},0)
-					   .to($('#slide3'), textAnimationTime, {top: "0", scale: "1", opacity: "0", ease:textAnimationEase},0)
+					   .to($('#slide2'), textAnimationTime, {left: "400px", scale: "1", opacity: "0", ease:textAnimationEase},0)
+					   .to($('#slide3'), textAnimationTime, {left: "400px", scale: "1", opacity: "0", ease:textAnimationEase},0)
 					   .to($('a#btn-prev-slide'), textAnimationTime, {display: "none", scale: "1", ease:textAnimationEase},0);
 	}
 }
@@ -324,11 +324,11 @@ function getEtape3Slide() {
 				.to($('a#btn-next-slide'), textAnimationTime, {display: "none", ease:textAnimationEase},0);
 	}else{
 		tlSlide3 = new TimelineMax();
-		tlSlide3.to($('#slide1'), textAnimationTime, {top: "70%", scale: "0.6", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
+		tlSlide3.to($('#slide1'), textAnimationTime, {left: "-400px", scale: "1", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
 					etape=3;
 				}})
-				.to($('#slide2'), textAnimationTime, {top: "47%", scale: "0.8", opacity: "0.7", ease:textAnimationEase},0)
-				.to($('#slide3'), textAnimationTime, {top: "15%", scale: "1", opacity: "1", ease:textAnimationEase},0)
+				.to($('#slide2'), textAnimationTime, {left: "-400px", scale: "1", opacity: "0.7", ease:textAnimationEase},0)
+				.to($('#slide3'), textAnimationTime, {left: "0", scale: "1", opacity: "1", ease:textAnimationEase},0)
 				.to($('#slide3 a.btn-base'), textAnimationTime, {display: "inline-block", ease:textAnimationEase},0)
 				.to($('a#btn-next-slide'), textAnimationTime, {display: "none", ease:textAnimationEase},0);
 	}
@@ -346,12 +346,12 @@ function getReverseEtape3Slide() {
 					   .to($('a#btn-next-slide'), textAnimationTime, {display: "block", ease:textAnimationEase},0);
 	}else{
 		tlReverseSlide3 = new TimelineMax();
-		tlReverseSlide3.to($('#slide1'), textAnimationTime, {top: "38%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlReverseSlide3.to($('#slide1'), textAnimationTime, {left: "-400px", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
 							etape=2;
 							$('#slide3 a.btn-base').css("display","none");
 						}})
-					   .to($('#slide2'), textAnimationTime, {top: "13%", scale: "1", opacity: "1", ease:textAnimationEase},0)
-					   .to($('#slide3'), textAnimationTime, {top: "0", scale: "1", opacity: "0", ease:textAnimationEase},0)
+					   .to($('#slide2'), textAnimationTime, {left: "0", scale: "1", opacity: "1", ease:textAnimationEase},0)
+					   .to($('#slide3'), textAnimationTime, {left: "400px", scale: "1", opacity: "0", ease:textAnimationEase},0)
 					   .to($('a#btn-next-slide'), textAnimationTime, {display: "block", ease:textAnimationEase},0);
 	}
 }
