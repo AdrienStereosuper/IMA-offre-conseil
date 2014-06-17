@@ -3408,14 +3408,14 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     height: 1000px;
   }
   #content #bloc-slides a#btn-next-slide {
-    top: -78px;
+    top: 70px;
     margin-left: -76px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
   #content #bloc-slides a#btn-prev-slide {
-    top: -78px;
+    top: 70px;
     margin-left: 10px;
     width: 66px;
     height: 66px;
@@ -3428,14 +3428,14 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     font-size: 1.3em;
   }
   #content #bloc-slides .slide#slide1 {
-    top: 13%;
+    top: 0;
   }
   #content #bloc-slides .slide#slide2 {
-    top: 13%;
+    top: 0;
     left: 400px;
   }
   #content #bloc-slides .slide#slide3 {
-    top: 13%;
+    top: 0;
     left: 400px;
   }
   #content #bloc-slides .slide#slide3 a.btn-base {
