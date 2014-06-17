@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+	  	<meta charset="utf-8">
+	  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	  	<title></title>
+	  	<meta name="description" content="">
+	  	<meta name="viewport" content="width=device-width,initial-scale=1">
+	  	<link rel="stylesheet" href="css/libs/normalize.css">
+	  	<link rel="stylesheet" href="css/style.css">
+		<!--[if lt IE 7]>
+		<link rel="stylesheet" href="css/libs/ie6.css" />
+		<![endif]-->
+		<script src="js/libs/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/modernizr-2.6.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/jquery.nicescroll.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/polyfills.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/underscore.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/tweens/TweenMax.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/tweens/plugins/ScrollToPlugin.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/libs/tweens/plugins/BezierPlugin.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/parts/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body class="metiers">
+		<div id="bg-office"></div>
+	  	<div id="container">
+	  		<ul id="puces-metiers">
+	  			
+	  			<li class="puce-metier" id="management">
+	  				<div class="bloc-bulle gauche" id="bloc-bulle-management">
+	  					<h2>Management</h2>
+	  				</div>
+	  				<div class="bloc-question gauche" id="bloc-question-management">
+	  					<h2>Management :</h2>
+	  					<blockquote>Le management pratiqué crée-t-il un climat favorable à une Relation Client chaleureuse et efficace ?</blockquote>
+	  					<a href="cas-clients.html#management" class="btn-base"><span class="icon-arrow"></span>Nos réponses</a>
+	  				</div>
+	  				<div class="contour-puce"><span class="rond-cible"></span></div>
+	  			</li>
+	  			<li class="puce-metier" id="dimensionnement">
+	  				<div class="bloc-bulle gauche" id="bloc-bulle-dimensionnement">
+	  					<h2>Dimensionnement</h2>
+	  				</div>
+	  				<div class="bloc-question gauche bas" id="bloc-question-dimensionnement">
+	  					<h2>Dimensionnement :</h2>
+	  					<blockquote>Disposez-vous des méthodes pour dimensionner vos équipes en fonction des flux à venir ?</blockquote>
+	  					<a href="cas-clients.html#dimensionnement" class="btn-base"><span class="icon-arrow"></span>Nos réponses</a>
+	  				</div>
+	  				<div class="contour-puce"><span class="rond-cible"></span></div>
+	  			</li>
+	  			<li class="puce-metier" id="organisation">
+	  				<div class="bloc-bulle gauche" id="bloc-bulle-organisation">
+	  					<h2>Organisation</h2>
+	  				</div>
+	  				<div class="bloc-question gauche bas" id="bloc-question-organisation">
+	  					<h2>Organisation :</h2>
+	  					<blockquote>L’organisation déployée est-elle suffisamment agile face aux variations d’activité ?</blockquote>
+	  					<a href="cas-clients.html#organisation" class="btn-base"><span class="icon-arrow"></span>Nos réponses</a>
+	  				</div>
+	  					<div class="contour-puce"><span class="rond-cible"></span></div>
+	  			</li>
+	  			<li class="puce-metier" id="formation">
+	  				<div class="bloc-bulle gauche" id="bloc-bulle-formation">
+	  					<h2>Formation</h2>
+	  				</div>
+	  				<div class="bloc-question gauche" id="bloc-question-formation">
+	  					<h2>Formation :</h2>
+	  					<blockquote>Êtes-vous préparés à intégrer et accompagner les collaborateurs ?</blockquote>
+	  					<a href="cas-clients.html#formation" class="btn-base"><span class="icon-arrow"></span>Nos réponses</a>
+	  				</div>
+	  				<div class="contour-puce"><span class="rond-cible"></span></div>
+	  			</li>
+	  			<li class="puce-metier" id="audit-technique">
+	  				<div class="bloc-bulle droite" id="bloc-bulle-audit-technique">
+	  					<h2>Audit technique</h2>
+	  				</div>
+	  				<div class="bloc-question droite" id="bloc-question-audit-technique">
+	  					<h2>Audit technique :</h2>
+	  					<blockquote>Les outils déployés sur votre centre de contacts sont-ils efficaces et adaptés aux besoins ?</blockquote>
+	  					<a href="cas-clients.html#audit-technique" class="btn-base"><span class="icon-arrow"></span>Nos réponses</a>
+	  				</div>
+	  				<div class="contour-puce"><span class="rond-cible"></span></div>
+	  			</li>
+	  			<li class="puce-metier" id="parcours-client">
+	  				<div class="bloc-bulle droite" id="bloc-bulle-parcours-client">
+	  					<h2>Parcours client</h2>
+	  				</div>
+	  				<div class="bloc-question droite" id="bloc-question-parcours-client">
+	  					<h2>Parcours client :</h2>
+	  					<blockquote>Traitez-vous vos clients comme vous aimeriez l’être ?</blockquote>
+	  					<a href="cas-clients.html#parcours-client" class="btn-base"><span class="icon-arrow"></span>Nos réponses</a>
+	  				</div>
+	  				<div class="contour-puce"><span class="rond-cible"></span></div>
+	  			</li>
+	  		</ul>
+	  		<div id="content">
+	  			<div id="bouton-imatech">
+	  				<!-- Start Nav Structure -->
+	  				<button class="cn-button ima-icon-menu" id="cn-button"><span class="rond-centre"></span></button>
+	  				<div class="cn-wrapper-menu-ferme expertise">
+	  					<ul>
+	  						<li class="accueil"><div class="fond-indic"></div><div class="zone-texte"><h2><div class="cercle-indic"></div><span>Accueil</span></h2></div></li><li class="conseil"><div class="fond-indic"></div><div class="zone-texte"><h2><div class="cercle-indic"></div><span>Vision</span></h2></div></li><li class="expertise active"><div class="fond-indic"></div><div class="zone-texte"><h2><div class="cercle-indic"></div><span>Expertise</span></h2></div></li><li class="references"><div class="fond-indic"></div><div class="zone-texte"><h2><div class="cercle-indic"></div><span>Références</span></h2></div></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li>
+	  					</ul>
+	  				</div>
+	  				<div class="cn-wrapper" id="cn-wrapper">
+	  				    <ul>
+	  				      <li class="accueil"><a href="index.html"></a><div class="zone-texte"><h2>Accueil</h2></div></li><li class="conseil"><a href="vision.html"></a><div class="zone-texte"><h2>Notre<br> vision<br> du conseil</h2></div></li><li class="expertise active"><a href="metiers.html"></a><div class="zone-texte"><h2>Nos<br> domaines<br> d'expertise</h2></div></li><li class="references"><a href="cas-clients.html#dimensionnement"></a><div class="zone-texte"><h2>Nos<br> références</h2></div></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li><li><a href="#"></a></li>
+	  				     </ul>
+	  				</div>
+	  				<div id="cn-overlay" class="cn-overlay"></div>
+	  				<!-- End Nav Structure -->
+	  			</div>
+	  			
+	  			
+	  			
+	  		</div>
+	  	</div>
+	  	<div id="menu-bottom">
+	  		<div id="content-menu-bottom">
+	  			<div class="border border-left"></div>
+	  			<div id="masque-offre-conseil">
+		  			<div id="offre-conseil">
+		  				<svg id="offre-conseil-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318.1 342">
+		  				  <path fill-rule="evenodd" clip-rule="evenodd" d="M66 303.8c0 0 137-23.1 191.5-20.8 0 0 19.6 12.4 4.2 12.5 -15.5 0.1-103.3 0.4-187.4 16.6C74.3 312.1 33.1 315.1 66 303.8L66 303.8z"/>
+		  				  <g>
+		  				    <path d="M67.7 61.6c0 8.2 11.5-2.7 12.9-4.5 4.4-5.6 8.1-16.8 1.4-22.3 -5.4-4.5-17.3 3.8-11.5 7.6C78.3 47.7 72.3 56.7 67.7 61.6 67.7 62.1 71.8 57.2 67.7 61.6z"/>
+		  				    <path d="M248.4 175.5c-8.6 8.3 4.4 17.3 12.5 11.7C270.2 180.8 256.8 167.4 248.4 175.5 246.7 177.1 250.1 173.9 248.4 175.5z"/>
+		  				    <path d="M199.9 137.6c6.2 3.9 13.6-0.7 17.3-5.9 6.6 14.6 23.4 12.5 32.2 1.5 1.4-1.7 9.4-14.3 3.1-13.6 -5 0.6-7.3 14.7-13.8 17.2 -6 2.3-10.4-2.9-11.9-8 4.9-3.9 9.3-8.6 12.5-13.9 5.1-8.3 11.2-34.1-7.3-29.6 -12.8 3.1-16.7 18.5-17.2 29.9 -0.3 5.9 1.6 11.7-3.5 16.1 -6.7 5.7-8.1-3.6-8-8.6 0.2-6 1.3-12.1 2.8-17.9 1.3-5.5 5.1-12.7-3.4-10.2 -4.8 1.4-12.6 3.9-13.1-2 -0.3-3.5-0.6-7-1-10.5 -3.3-1.6-6.4-0.4-8.4 2.5 -2.7 3.9-3.5 9.6-2.1 14.2 0.8 2.5 2.7 4.3 5.2 5.2 -0.3 4.2-0.9 8.4-1.8 12.5 -0.8 3.7-2.3 14.2-7 15 -9.7 1.7-7.2-14-6.6-18.6 2-14.8 4.5-29.5 7.2-44.2 0.7-3.9 5.7-16.4-1.5-16.7 -10.8-0.4-9.4 8.7-10.4 17.1 -0.9 7.1-1.3 40.4-6.3 42.2 -6.1 2.2-4.4 10.1-1.9 14.1 -2.5 5.1-7.7 10.6-12.4 4.1 1.6-16.5 3.7-33 6.4-49.4 0.9-5.5 10.5-40.6-6-28.9 -3.8 2.7-3.3 11.9-3.9 16.3 -0.9 6.5-1.8 13-2.6 19.5 -0.8 6.6-1.5 13.1-2.2 19.7 -0.5 5.1-3.4 6.4-8.8 7.6 2-10.1 2.3-28.4-12.3-28.4 -2.8 0-5.3 1.4-7.1 3.5 -2.9 3.4-2.6 2.1-6.3 4 -6.2 3.2-8.6 11.8-9.4 18.2 -1.2 10.3 0.1 27.6 14.2 27.6 6.5 0 12.1-6.2 15.4-11.2 1.8-2.7 3.1-5.7 4.2-8.8 3.3-0.4 7.1-1.4 9.4-4 -0.3 3.4-2.6 4.4-3.1 7.7 -0.3 1.6 0 3.1 0.9 4.4 1.6 3.5 1 6.2 0.7 10 -0.7 11.9-1.2 23.7-1.3 35.6 -0.1 12.6 14.1 3.6 14.9-5.2 0.9-9.7-1.3-19.8-2.6-29.4 5.8 1.4 10.9-1.9 14-6.5 -0.4 5.9-5.5 46.5 1.6 47.2 19.6 1.7 16.3-30 13.1-41 8.6 0.2 12.6-9.4 14.5-16.2 0.9-2.9 1.7-6.6 2.3-9.6 1.3-6.6-0.3-7.1 6.4-7.7C193.6 113.3 190.5 131.7 199.9 137.6 201.5 138.6 198.3 136.6 199.9 137.6zM225.7 119.8c0-4.5 0.4-28.7 8.1-28.7 8.6 0-5.8 29.5-8 32.1C225.7 122 225.7 120.9 225.7 119.8zM114.9 124.8c-1.2 3.9-5.8 13.1-10.3 6.5 -4.6-6.8-4.2-17.3-2.6-24.9 1.2 7.2 7.5 11.7 14.3 12.8C115.9 121.1 115.4 122.9 114.9 124.8 114.3 126.5 115.4 123 114.9 124.8zM117.2 113.7c-6.8-2.6-12.7-16.9-5.2-21.9C119 87.2 117.5 111.5 117.2 113.7 114.7 112.8 117.7 110.1 117.2 113.7zM139.4 171.8c-0.2 0.8-0.4 1.5-0.6 2.3 0.3-2.8 0.5-5.6 0.8-8.5C139.6 167.7 139.5 169.8 139.4 171.8 139.2 173.3 139.5 170.4 139.4 171.8zM168.3 165.3c-0.6 3.2-2.3 8.8-6.4 9.1 0.9-11.2 1.9-22.3 3-33.5C167.7 148.6 169.8 157.2 168.3 165.3 167.8 168.1 168.8 162.5 168.3 165.3z"/>
+		  				    <path d="M187.5 220.7c-1.7-3.9-3.8-7.8-5.1-11.9 -1.9-5.9 3.1-7 3.2-12.6 0.4-14.4-17.4-6.7-19.1 3.1 -1.7 9.8-0.1 19.6-2.5 29.7 -1.6 6.7-3.7 22.8-12.6 22.8 -7.7 0-4.1-23.4-3.6-27.4 1-8.4 8.1-25 0.2-29.9 -13.2-8.1-27.8 40.6-31.3 50 1-9.4 3.2-18.7 5.2-27.9 1-4.6 8.2-23-1.3-22.2 -20 1.6-2.3 30.3-18.8 34 2.2-10.8 0.4-44.8-20.2-33.8 -3.9 2.1-4.5 5.7-8.6 6.8 -3.7 1.1-6.5 3.5-8.7 6.6 -5.1 7.4-6.3 17-6.3 25.7 0 9.1 0.5 15.2-9.1 20 -7.2 3.6-13.8-1.2-16.1-8.2 -3-9-1.9-19.6 0.1-28.7 1-4.6 2.3-9.2 4.5-13.4 1-1.8 7.4-9.7 7.8-3.6 0.6 8.4-3.1 17.8-5.7 25.7 -2.7 8.1 7.7 3.7 10.6-0.1 9.2-12.4 5.8-45.1-15.3-29.8 -14.2 10.3-19.7 33.7-15.5 50.2 5.5 21.6 30.5 19.8 42.4 4.7 5.4 9.6 16.3 10.6 24.5 4.3 4.2-3.2 7.6-7.4 10.1-12 1.5-2.7 2.7-5.6 3.7-8.5 2.5-0.3 5.1-0.9 7.4-2 -0.6 7-1.4 14.1-1.4 21.2 0 8.2 10.7 5.4 12.7 0.3 5.3-13.6 10.9-27.1 17.3-40.3 -1.7 11-6 40.8 9.4 45.1 19.4 5.3 25.3-24.6 27.4-37.4 5.1 9 14.3 24.3 8.1 34.8 -2.4 4.1-8.3 4.7-11.9 2.1 -2.4-1.7-2.4-4.5-5.6-3.1 -2.2 1-3 3.2-3 5.4 0 12.2 21.3 3.1 25.2-0.5C197.4 249.2 193.2 233.5 187.5 220.7 186.1 217.5 189 223.9 187.5 220.7zM88.3 241.5c-1.5 4.7-7.1 16.2-12.7 8.1 -5.7-8.4-5.2-21.4-3.2-30.8 1.5 8.8 9.2 14.5 17.6 15.8C89.6 236.9 89 239.2 88.3 241.5 87.6 243.6 88.9 239.3 88.3 241.5zM91.1 227.8c-9-3.4-13.3-16.8-8.2-25 3.2-5.3 7.1-0.5 8.2 3.5C93 213.1 92.1 221 91.1 227.8 88.1 226.7 91.7 223.4 91.1 227.8z"/>
+		  				    <path d="M300.1 238.6c-5.5-1.9-14.2 23.7-20.3 8.7 -2.2-5.5-2.6-11.8-2.7-17.7 -0.2-8.4 4-12.5 7.8-19.8 6.3-12.1 10.7-25.6 10.9-39.3 0.1-6.1-0.5-12.6-3.3-18.2 -2.2-4.2-9.5-11.4-14.4-6.5 -6.4 27.1-13.5 55.3-13.8 83.3 -0.1 5 2.5 12.7-0.2 16.9 -1.9 3.1-7.4 8.1-10.9 4.2 -5.8-6.4-0.2-24.3 1.2-31.5 1-4.7 4.7-13 3.3-17.7 -1.5-4.7-10.9-0.8-13.4 0.3 -1.6 7-3 14.1-3.7 21.3 -0.7 6.5 1.3 14.9-1.6 20.6 -4.1 8.2-15.2 20.6-23.4 9 -5.4-7.7 3.4-10.8 8.2-16.7 5-6.1 9-13.4 10.7-21.2 2.5-11.6-1.8-25.9-16.3-21.5 -12.5 3.8-17.9 18-19.4 29.8 -1.7 12.8-1.6 29.7 10.9 37.4 12.1 7.5 25.3 0.2 32.7-10.3 4.6 12.9 18.2 10.3 25.6 1.1 3.1 6.3 9.7 9.4 16.5 7.8C288.4 257.9 306.7 240.9 300.1 238.6 298.9 238.2 301.2 239 300.1 238.6zM281 190.7c1.4-7 3.1-14 5.1-20.9 2.6 13.5-2.2 27.6-8 39.6C278.7 203.1 279.7 196.9 281 190.7 282.3 184 279.6 197.3 281 190.7zM211.6 239.5c-1.7-9.7-0.4-32.6 8.7-39.1 5.4-3.9 3.1 13.4 2.8 15C221.5 224.1 217.4 232.8 211.6 239.5 211.5 238.9 214.9 235.6 211.6 239.5z"/>
+		  				    <path d="M54.1 139.1c5.3 0 18.7-9.3 16.3-15.9 -1.9-5.1-6.6 4.1-7 4.9 -1.4 2.3-4.9 6.5-8 4.6 -3.4-2.1-3.9-8.5-4.2-12 -0.8-7.7 0-11.3 3.8-17.8 5.8-9.9 10.1-21.2 10.9-32.7 0.5-7.3-0.5-25.3-12-24.1 -5.4 0.6-8.7 30.8-9.7 36.3C41.9 94.6 31.7 139.1 54.1 139.1zM54 83.6c1.1-5.7 2.5-11.3 4.1-16.9 2.1 10.9-1.8 22.4-6.5 32.1C52.1 93.7 53 88.6 54 83.6 55.1 78.2 52.9 89 54 83.6z"/>
+		  				  </g>
+		  				</svg>
+		  			</div>
+		  		</div>
+	  			<div id="signature">par 
+	  				<div class="icon-logo-footer">
+	  					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 18.5 39.7 6.1">
+	  					<path id="imatech-logo" d="M39.2 24.6v-2.9h-2.5v2.9h-0.5v-6.1h0.5V19v2.2h2.5v-2.7h0.5v6.1H39.2z M32.7 24.2c0.7 0 1.1 0 1.1 0 s0.5-0.1 0.7-0.5l0.4 0.2c0 0-0.3 0.7-1.1 0.7c-0.7 0-1.3 0-1.3 0s-1.1 0-1.1-1.1c0-1.1 0-3.8 0-3.8s-0.1-1.3 1.3-1.3 c1.2 0 1.3 0 1.3 0s0.9 0 0.9 0.7l-0.4 0.2c0 0-0.2-0.5-0.7-0.5s-0.9 0-0.9 0s-0.9 0-0.9 0.9s0 3.8 0 3.8S32 24.2 32.7 24.2z M27.3 24.6v-6.1h3.2V19h-2.7v2.2h2.3v0.5h-2.3V24h2.7v0.5h-2.7H27.3z M25 24.6h-0.5V19H23v-0.5h3.4V19H25V24.6z M21.9 24.6 l-0.4-1.3h-1.6l-0.4 1.3h-1.4l1.8-6.1h1.6l1.8 6.1H21.9z M20.8 19.7h-0.2l-0.5 2.7h1.3L20.8 19.7z M16.5 19.9l-1.1 4.7h-1.3 l-1.1-4.5v4.5h-1.3v-6.1h1.3h0.7l0.9 4.1h0.2l0.9-4.1h2v6.1h-1.3V19.9z M9.5 18.5H11v6.1H9.5V18.5z M5.1 24.6l2.2-2.9l-0.2-0.1 c0.3-0.4 0.5-0.8 0.5-1.3l0.9 2.2v0.7l-1.1 1.4H5.1z M5.8 22c-1 0-1.8-0.8-1.8-1.8c0-1 0.8-1.8 1.8-1.8s1.8 0.8 1.8 1.8 C7.5 21.2 6.7 22 5.8 22z M5.1 22.1l-2 2.5H0l3.6-4.7l0.2 0c0 0.1 0 0.2 0 0.3C3.8 21.1 4.3 21.8 5.1 22.1z M5.8 22.2 c0.3 0 0.6-0.1 0.8-0.2l-2 2.5H3.5l2-2.4C5.6 22.2 5.7 22.2 5.8 22.2z"/>
+	  					</svg>
+	  					
+	  		  		</div>
+	  		  	</div>
+	  			<div class="border border-center"></div>
+	  			<div id="bloc-btn-bottom">
+	  				<div id="bloc-contact">
+	  					<span class="fleche-bloc-contact"></span>
+	  					<div id="part-gauche-bloc-contact">
+	  						<h4>Besoin de précisions ?</h4>
+	  						<div class="notre-expert">
+	  							<div class="photo-expert">
+	  								<img width="108" src="img/expert/loic-dupe.jpg" alt="Photo Loic Dupe" />
+	  							</div>
+	  							<div class="desc-expert">
+	  								<div class="titre-expert">Votre interlocuteur</div>
+	  								<div class="nom-expert">Loïc Dupé</div>
+	  								<ul class="social-pictos">
+	  									<li><a title="LinkedIn" href="http://www.linkedin.com/" class="ima-icon-linkedin" target="_blank"></a></li>
+	  									<li><a title="Viadeo" href="http://www.viadeo.com/" class="ima-icon-viadeo" target="_blank"></a></li>
+	  								</ul>
+	  							</div>
+	  						</div>
+	  					</div><div id="part-droite-bloc-contact">
+	  						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris diam lorem, fringilla id arcu vel, bibendum euismod arcu. Sed molestie congue sollicitudin. </p>
+	  						<ul id="menu-contact">
+	  							<li><a title="Téléphone fixe" href="tel:33251866221"><span class="ima-icon-tel"></span>02 51 86 62 21</a></li>
+	  							<li><a title="Portable" href="tel:33630623192"><span class="ima-icon-telmobile"></span>06 30 62 31 92</a></li>
+	  							<li><a title="E-mail" id="lien-mail" href="mailto:l.dupe@imatechnologies.fr"><span class="ima-icon-mail"></span>l.dupe@imatechnologies.fr</a></li>
+	  						</ul>
+	  					</div>
+	  				</div>
+	  				<a href="#" class="btn-base" id="btn-contact"><span class="icon-arrow-right small"></span>Contactez-nous</a>
+	  				<a href="mentions-legales.html" class="btn-base"><span class="icon-arrow-right small"></span>Mentions légales</a>
+	  			</div>
+	  			<div class="border border-right"></div>
+	  		</div>
+	  	</div>
+		<!--[if lt IE 7 ]>
+		   	<script src="js/libs/dd_belatedpng.js"></script>
+		   	<script>DD_belatedPNG.fix("img, .png_bg");</script>
+		 <![endif]-->
+	</body>
+</html>
