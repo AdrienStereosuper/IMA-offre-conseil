@@ -2407,6 +2407,7 @@ ul#pictos-fond li.picto-fond.videochat {
   border-color: #6a9a25;
   top: 30px;
   display: none;
+  z-index: 2;
 }
 #vision ul#slides-vision a#btn-prev-slide-metier span {
   color: #6a9a25;
@@ -3207,6 +3208,83 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     left: 20px;
   }
   /* @end */
+  /* @group metiers */
+  ul#puces-metiers {
+    position: absolute;
+    top: 180px;
+    left: 50%;
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 0 0 -45%;
+  }
+  ul#puces-metiers li.puce-metier {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 10px 0!important;
+    width: 100%;
+    height: auto;
+    -webkit-border-radius: 5px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -moz-background-clip: padding;
+    border-radius: 5px;
+    background-clip: padding-box;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
+  }
+  ul#puces-metiers li.puce-metier .bloc-bulle {
+    position: relative;
+    top: inherit!important;
+    bottom: inherit!important;
+    left: inherit!important;
+    right: inherit!important;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 0;
+    background-clip: padding-box;
+  }
+  ul#puces-metiers li.puce-metier .bloc-question {
+    position: relative;
+    top: inherit!important;
+    bottom: inherit!important;
+    left: inherit!important;
+    right: inherit!important;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 0;
+    -moz-background-clip: padding;
+    border-radius: 0;
+    background-clip: padding-box;
+    display: none;
+  }
+  ul#puces-metiers li.puce-metier .bloc-question h2 {
+    display: none;
+  }
+  ul#puces-metiers li.puce-metier .contour-puce {
+    display: none;
+  }
+  /* @end */
 }
 @media (max-width: 767px) {
   html,
@@ -3559,77 +3637,6 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   ul#puces-metiers {
     position: absolute;
     top: 100px;
-    left: 50%;
-    display: block;
-    width: 90%;
-    height: auto;
-    margin: 0 0 0 -45%;
-  }
-  ul#puces-metiers li.puce-metier {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: 10px 0!important;
-    width: 100%;
-    height: auto;
-    -webkit-border-radius: 5px;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 5px;
-    -moz-background-clip: padding;
-    border-radius: 5px;
-    background-clip: padding-box;
-    overflow: hidden;
-    -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
-  }
-  ul#puces-metiers li.puce-metier .bloc-bulle {
-    position: relative;
-    top: inherit!important;
-    bottom: inherit!important;
-    left: inherit!important;
-    right: inherit!important;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-border-radius: 0;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 0;
-    -moz-background-clip: padding;
-    border-radius: 0;
-    background-clip: padding-box;
-  }
-  ul#puces-metiers li.puce-metier .bloc-question {
-    position: relative;
-    top: inherit!important;
-    bottom: inherit!important;
-    left: inherit!important;
-    right: inherit!important;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-border-radius: 0;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius: 0;
-    -moz-background-clip: padding;
-    border-radius: 0;
-    background-clip: padding-box;
-    display: none;
-  }
-  ul#puces-metiers li.puce-metier .bloc-question h2 {
-    display: none;
-  }
-  ul#puces-metiers li.puce-metier .contour-puce {
-    display: none;
   }
   /* @end */
   /* @group cas clients */
