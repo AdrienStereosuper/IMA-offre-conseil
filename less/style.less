@@ -2571,10 +2571,10 @@ ul#puces-slides-cas-clients{
 							font-size: 1.5em;
 							padding: 8px 10px 3px 24px;
 							.icon-arrow-right{
-								display: block;
+								display: inline-block;
 								position: absolute;
-								top: 50%;
-								margin-top: -17px;
+								top: 15px;
+								vertical-align: middle;
 								left: 9px;
 								.transition(left 0.2s);
 								&:before{
@@ -2657,7 +2657,8 @@ ul#puces-slides-cas-clients{
 								}
 							}
 							a{
-								display: block;
+								display: table-cell;
+								vertical-align:middle;
 								width: 128px;
 								height: 128px;
 								background: @blanc;
@@ -2668,7 +2669,7 @@ ul#puces-slides-cas-clients{
 								&:hover{
 									.box-shadow(~"inset 0 0 16px rgba(0,0,0,.32)");
 								}
-								img{
+								img {
 									vertical-align: middle;
 								}
 							}

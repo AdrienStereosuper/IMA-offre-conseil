@@ -2824,10 +2824,10 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   padding: 8px 10px 3px 24px;
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-notre-reponse a.btn-notre-reponse.btn-base .icon-arrow-right {
-  display: block;
+  display: inline-block;
   position: absolute;
-  top: 50%;
-  margin-top: -17px;
+  top: 15px;
+  vertical-align: middle;
   left: 9px;
   -webkit-transition: left 0.2s;
   -moz-transition: left 0.2s;
@@ -2940,7 +2940,8 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   box-shadow: inset 0 0 16px rgba(0,0,0,.32);
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-cas-client ul.logos-cas-client li.logo-cas-client a {
-  display: block;
+  display: table-cell;
+  vertical-align: middle;
   width: 128px;
   height: 128px;
   background: #ffffff;
