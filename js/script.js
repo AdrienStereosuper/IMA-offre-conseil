@@ -398,6 +398,7 @@ function readyIntro(){
 		if($("html").hasClass("touch")){
 			animateApparitionBlocActus();
 		}
+		return false;
 	});
 	
 	if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
@@ -511,8 +512,6 @@ function readyIntro(){
 			getEtape3Slide();
 			etape=3;
 		}
-		
-		
 		return false;
 	});
 	
@@ -542,6 +541,7 @@ function readyIntro(){
 	// clic sur le bouton pour fermer les actus
 	$("a#btn-fermer-actus").click(function(){
 		animateDisparitionBlocActus();
+		return false;
 	});
 	
 	$("li.actu.has-actu").click(function() {
@@ -655,6 +655,7 @@ function readyMetiers(){
 				TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
 			}
 		}
+		return false;
 	});
 	
 	// survol d'une puce métier
@@ -680,8 +681,7 @@ function readyMetiers(){
 		//animAppartitionBlocQuesion(idPuceMetier);
 		$(".bloc-question").css("display", "none");
 		$("#bloc-question-"+idPuceMetier).slideToggle( 200, function() {
-		});
-		  	  
+		});  
 		return false;
 	});
 	
@@ -1184,7 +1184,11 @@ function majPucesCasClient(indexPucesCasClient){
 /////// Fonction pour afficher la barre de scroll custom des cas clients ///////
 ////////////////////////////////////////////////////////////////////////////////
 function customCasClientScroll(){
-	//$("#masque-slides-cas-clients").niceScroll().remove();
+	for (var key in niceScrolls){
+		   // virer les scrollbars qui trainent
+	   niceScrolls[key].resize().hide().remove();
+	}
+	niceScrolls = [];
 	if($(window).width()>767){
 		niceScrolls.push($("#masque-slides-cas-clients").niceScroll({
 			cursorcolor: "#fff",

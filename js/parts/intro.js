@@ -101,7 +101,7 @@ function animateApparitionVideo(videoID){
 			tlBlocVideo.to($('#bloc-videos-actus'), actusAnimationTime, {x: "0", opacity: "1", onComplete: function() {
 				$("#content").removeClass().addClass("bloc-videos-actus-ouvert");
 			}});
-			$("#"+videoID).addClass("ouvert");
+			$("li.actu#"+videoID).addClass("ouvert");
 			tlVideo.to($("#video-actu-"+videoID), actusAnimationTime, {opacity: "1"});
 			tlLiensActus.to($(".actu:not('#"+videoID+"')"), actusAnimationTime, {opacity: "0.6"});
 			
@@ -123,16 +123,11 @@ function animateApparitionVideo(videoID){
 			}});
 			
 		}else if($("#content").hasClass("bloc-videos-actus-ouvert")){
-			if(!($("#"+videoID).hasClass("ouvert"))){
+			if(!($("li.actu#"+videoID).hasClass("ouvert"))){
 				// stopper la video
 				stopVideos();
 				removeCustomActuOuverteScroll();
-				if($("li.actu.has-video").hasClass("ouvert")){
-					oldVideoActuID = $("li.actu.has-video.ouvert").attr("id");
-				}else {
-					oldVideoActuID = $("li.actu.has-actu.ouvert").attr("id");
-				}
-				
+				oldVideoActuID = $("li.actu.ouvert").attr("id");	
 				tlVideo.to($("#video-actu-"+oldVideoActuID), 0, {display: "none"});
 				tlVideo.to($("#video-actu-"+oldVideoActuID), actusAnimationTime, {opacity: "0"});
 				
@@ -145,8 +140,8 @@ function animateApparitionVideo(videoID){
 						customActuOuverteScroll();
 					//}
 				}});
-				$("#"+oldVideoActuID).removeClass("ouvert");
-				$("#"+videoID).addClass("ouvert");
+				$("li.actu#"+oldVideoActuID).removeClass("ouvert");
+				$("li.actu#"+videoID).addClass("ouvert");
 				
 	
 				scrollToVideo(videoID);
@@ -172,7 +167,7 @@ function animateApparitionVideo(videoID){
 			tlBlocVideo.to($('#bloc-videos-actus'), actusAnimationTime, {x: "0", opacity: "1", onComplete: function() {
 				$("#content").removeClass().addClass("bloc-videos-actus-ouvert");
 			}});
-			$("#"+videoID).addClass("ouvert");
+			$("li.actu#"+videoID).addClass("ouvert");
 			tlVideo.to($("#video-actu-"+videoID), actusAnimationTime, {opacity: "1"});
 			tlLiensActus.to($(".actu:not('#"+videoID+"')"), actusAnimationTime, {opacity: "0.6"});
 			
@@ -198,7 +193,7 @@ function animateApparitionVideo(videoID){
 				}});
 			}
 		}else if($("#content").hasClass("bloc-videos-actus-ouvert")){
-				if(!($("#"+videoID).hasClass("ouvert"))){
+				if(!($("li.actu#"+videoID).hasClass("ouvert"))){
 					// stopper la video
 					stopVideos();
 					removeCustomActuOuverteScroll();
@@ -220,8 +215,8 @@ function animateApparitionVideo(videoID){
 							customActuOuverteScroll();
 						//}
 					}});
-					$("#"+oldVideoActuID).removeClass("ouvert");
-					$("#"+videoID).addClass("ouvert");
+					$("li.actu#"+oldVideoActuID).removeClass("ouvert");
+					$("li.actu#"+videoID).addClass("ouvert");
 					
 		
 					scrollToVideo(videoID);
@@ -417,7 +412,6 @@ function getTranslationYSlideIntro(){
 ////////////////////////////////////////////////////////////////////////////////
 function customActuScroll(){
 	if($(window).width()>767){
-		//$("#masque-actus").niceScroll().remove();
 		niceScrolls.push($("#masque-actus").niceScroll({
 			cursorcolor: "#fff",
 			cursorwidth: "3px",
@@ -432,13 +426,16 @@ function customActuScroll(){
 
 function removeCustomActuScroll(){
 	if($(window).width()>767){
-		$("#masque-actus").niceScroll().hide();
+		for (var key in niceScrolls){
+			   // virer les scrollbars qui trainent
+		   niceScrolls[key].resize().hide().remove();
+		}
+		niceScrolls = [];
 	}
 }
 
 function customActuOuverteScroll(){
 	if($(window).width()>767){
-		//$("#bloc-videos-actus").niceScroll().remove();
 		niceScrolls.push($("#bloc-videos-actus").niceScroll({
 			cursorcolor: "#fff",
 			cursorwidth: "3px",
@@ -453,7 +450,7 @@ function customActuOuverteScroll(){
 
 function removeCustomActuOuverteScroll(){
 	if($(window).width()>767){
-		$("#bloc-videos-actus").niceScroll().hide();
+		$("#bloc-videos-actus").getNiceScroll().resize().hide().remove();
 	}
 }
 
@@ -501,7 +498,7 @@ function mouseHandle(event, nomTimeline) {
 /////////// Fonction pour aligner l'actu de la vidéo cliquée en haut ///////////
 ////////////////////////////////////////////////////////////////////////////////
 function scrollToVideo(videoID){
-	topLigneActuVideo = $("#"+videoID).offset().top;
+	topLigneActuVideo = $("li.actu#"+videoID).offset().top;
 	topBlocActus = $("#bloc-actus").offset().top;
 	scrollBlocVideo = $("#masque-actus").scrollTop();
 	hauteurScrollAlignementVideo = topLigneActuVideo-topBlocActus+scrollBlocVideo;
