@@ -158,34 +158,80 @@ function animateApparitionVideo(videoID){
 		}
 	}else{
 		// sur mobile
+		if($("#content").hasClass("bloc-actus-ouvert")){
+			// apparition du bloc video
+			tlBlocVideo = new TimelineMax();
+			tlVideo = new TimelineMax();
+			tlLiensActus= new TimelineMax();
+			tlBlocVideo.to($('#bloc-videos-actus'), 0, {display: "block"});
+			
+			scrollToVideo(videoID);
+			
+			// afficher la bonne video
+			tlBlocVideo.to($("#video-actu-"+videoID), 0, {display: "block"});
+			tlBlocVideo.to($('#bloc-videos-actus'), actusAnimationTime, {x: "0", opacity: "1", onComplete: function() {
+				$("#content").removeClass().addClass("bloc-videos-actus-ouvert");
+			}});
+			$("#"+videoID).addClass("ouvert");
+			tlVideo.to($("#video-actu-"+videoID), actusAnimationTime, {opacity: "1"});
+			tlLiensActus.to($(".actu:not('#"+videoID+"')"), actusAnimationTime, {opacity: "0.6"});
+			
+			// le bloc actus s'anime vers la droite
+			tlBlocActusPart2 = new TimelineMax();
+			if($(window).width()>"767"){
+				tlBlocActusPart2.to($('#bloc-actus'), actusAnimationTime, {x: "380px", onComplete: function(){
+					//customActuScroll();
+					//if($("#"+videoID).hasClass("has-actu")){
+						customActuOuverteScroll();
+					//}
+				}, onReverseComplete: function() {
+					customActuScroll();
+				}});
+			}else {
+				tlBlocActusPart2.to($('#bloc-actus'), actusAnimationTime, {x: "800px", onComplete: function(){
+					//customActuScroll();
+					//if($("#"+videoID).hasClass("has-actu")){
+						customActuOuverteScroll();
+					//}
+				}, onReverseComplete: function() {
+					customActuScroll();
+				}});
+			}
+		}else if($("#content").hasClass("bloc-videos-actus-ouvert")){
+				if(!($("#"+videoID).hasClass("ouvert"))){
+					// stopper la video
+					stopVideos();
+					removeCustomActuOuverteScroll();
+					if($("li.actu.has-video").hasClass("ouvert")){
+						oldVideoActuID = $("li.actu.has-video.ouvert").attr("id");
+					}else {
+						oldVideoActuID = $("li.actu.has-actu.ouvert").attr("id");
+					}
+					
+					tlVideo.to($("#video-actu-"+oldVideoActuID), 0, {display: "none"});
+					tlVideo.to($("#video-actu-"+oldVideoActuID), actusAnimationTime, {opacity: "0"});
+					
+					tlVideo = new TimelineMax();
+					tlVideo.to($("#video-actu-"+videoID), 0, {display: "block"});
+					tlVideo.to($("#video-actu-"+videoID), actusAnimationTime, {opacity: "1"});
+					tlLiensActus.to($(".actu:not('#"+videoID+"')"), actusAnimationTime, {opacity: "0.6"});
+					tlLiensActus.to($(".actu#"+videoID), actusAnimationTime, {opacity: "1", onComplete: function(){
+						//if($("#"+videoID).hasClass("has-actu")){
+							customActuOuverteScroll();
+						//}
+					}});
+					$("#"+oldVideoActuID).removeClass("ouvert");
+					$("#"+videoID).addClass("ouvert");
+					
 		
-		// apparition du bloc video
-		tlBlocVideo = new TimelineMax();
-		tlVideo = new TimelineMax();
-		tlLiensActus= new TimelineMax();
-		tlBlocVideo.to($('#bloc-videos-actus'), 0, {display: "block"});
+					scrollToVideo(videoID);
+				}else{
+					animateDisparitionBlocActus();
+					$("li.actu.has-video.ouvert").removeClass("ouvert");
+					removeCustomActuOuverteScroll();
+				}
+			}
 		
-		scrollToVideo(videoID);
-		
-		// afficher la bonne video
-		tlBlocVideo.to($("#video-actu-"+videoID), 0, {display: "block"});
-		tlBlocVideo.to($('#bloc-videos-actus'), actusAnimationTime, {x: "0", opacity: "1", onComplete: function() {
-			$("#content").removeClass().addClass("bloc-videos-actus-ouvert");
-		}});
-		$("#"+videoID).addClass("ouvert");
-		tlVideo.to($("#video-actu-"+videoID), actusAnimationTime, {opacity: "1"});
-		tlLiensActus.to($(".actu:not('#"+videoID+"')"), actusAnimationTime, {opacity: "0.6"});
-		
-		// le bloc actus s'anime vers la droite
-		tlBlocActusPart2 = new TimelineMax();
-		tlBlocActusPart2.to($('#bloc-actus'), actusAnimationTime, {x: "800px", onComplete: function(){
-			//customActuScroll();
-			//if($("#"+videoID).hasClass("has-actu")){
-				customActuOuverteScroll();
-			//}
-		}, onReverseComplete: function() {
-			customActuScroll();
-		}});
 		
 		/*if($("#content").hasClass("bloc-actus-ouvert")){
 			// apparition du bloc video

@@ -99,6 +99,7 @@ var tlbouton4;
 
 /* pushstate */
 var index = '';
+var everPushed  = false;
 
 $(document).ready(function(){
 	boutonIMA();
@@ -157,33 +158,46 @@ $(window).resize(function() {
 /////////////////////// Fonction pour le load ////////////////////////
 //////////////////////////////////////////////////////////////////////
 function initLoad() {
-	/////////////////// MAPPER LES LIENS DU MENU ///////////////////
+	/////////////////// MAPPER LES LIENS ///////////////////
+	// menu
 	$("#cn-wrapper a").each(function() {
 		$(this).click(function() {
 			loadStart($(this).attr("href"));
+			everPushed = true;
 			return false;
 		});
 	});
+	// footer 
+	$("#bloc-btn-bottom a[href^=mentions]").click(function() {
+		loadStart($(this).attr("href"));
+		everPushed = true;
+		return false;
+	});
+	// contenu
+	mapAllLinks();
 	
 	/////////////////// GESTION D'URL ///////////////////
 	if (Modernizr.history) {
-		$(window).bind("popstate", function(e) {
-			//window.location = location.pathname;
+		$(window).bind("popstate", function() {
+			 if (everPushed) {
+			   // link = location.pathname.replace(/^.*[\\/]/, ""); // get filename only
+			   // loadStart(link);
+			   if (!everPushed) {
+				   	window.location = location.pathname;
+			   }
+			 }
 		});
 	}
 }
 function loadStart(toLoad) {
 	for (var key in niceScrolls){
-	   niceScrolls[key].resize().hide();
-	   niceScrolls[key].remove();
+  	   // virer les scrollbars qui trainent
+	   niceScrolls[key].resize().hide().remove();
 	}
 	niceScrolls = [];
 	index = toLoad;
 	$("#content-load").fadeOut(400);
 	$("#content-load").load(toLoad+" #content-load", loadFinished);
-	$(window).bind("popstate", function(e) {
-		//window.location = location.pathname;
-	});
 }
 
 function loadInit() {
@@ -204,17 +218,28 @@ function loadFinished() {
 		$("body").addClass('metiers');
 		readyMetiers();
 	} else if (index.indexOf("references")>=0) {
-		updateAll('references');
+		if (index.split('#').length>0) {
+			updateAll('references#'+index.split('#')[1]);
+		} else {
+			updateAll('references');
+		}
 		$("body").addClass('cas-clients');
 		$("#menu-bottom").addClass("menu-bleu");
 		$("#bouton-imatech").addClass("bouton-bleu");
 		readyCasClient();
+	} else if (index.indexOf("mentions")>=0) {
+		updateAll('mentions');
+		$("body").addClass('mentions-legales');
+		$("#menu-bottom").addClass("menu-bleu");
+		$("#bouton-imatech").addClass("bouton-bleu");
+		readyMetiers();
 	} else {
 		updateAll('accueil');
 		$("body").addClass('intro');
 		$("#menu-bottom").addClass("menu-violet");
 		readyIntro();
 	}
+	mapAllLinks();
 }
 
 function updateAll(espace) {
@@ -227,26 +252,39 @@ function updateAll(espace) {
 }
 
 function updateURL(espace) {
-	var obj = { page: index };
+	espace = espace.split('#')[0];
 	if (Modernizr.history) {
 		switch(espace) {
 			case "vision":
-				window.history.pushState(obj,'Page Vision', '/vision');
+				window.history.pushState(null,'Page Vision', '/vision');
+				document.title = 'Conseil IMATECH | Notre vision du conseil';
 				break;
 			case "metiers":
-				window.history.pushState(obj,'Page Métiers', '/metiers');
+				window.history.pushState(null,'Page Métiers', '/metiers');
+				document.title = 'Conseil IMATECH | Nos domaines d’expertise';
 				break;
 			case "references":
-				window.history.pushState(obj,'Page Cas Client', '/references');
+				if (espace.split('#').length>0) {
+					window.history.pushState(null,'Page Cas Client', '/references#'+index.split('#')[1]);
+				} else {
+					window.history.pushState(null,'Page Cas Client', '/references');
+				}
+				document.title = 'Conseil IMATECH | Notre références';
+				break;
+			case "mentions":
+				window.history.pushState(null,'Mentions légales', '/mentions-legales');
+				document.title = 'Conseil IMATECH | Mentions légales';
 				break;
 			default :
-				window.history.pushState(obj,'PageAccueil', '/');
+				window.history.pushState(null,'PageAccueil', '/');
+				document.title = 'Conseil IMATECH | Une relation client comme on l’aime';
 				break;
 		}
 	}
 }
 
 function updateMenuState(espace) {
+	espace = espace.split('#')[0];
 	$('#cn-wrapper').removeClass("opened-nav");
 	$(".cn-wrapper-menu-ferme").removeClass('accueil').removeClass('vision').removeClass('expertise').removeClass('references');
 	$(".cn-wrapper-menu-ferme li").removeClass('active');
@@ -267,6 +305,8 @@ function updateMenuState(espace) {
 			$(".cn-wrapper-menu-ferme li.references").addClass('active');
 			$("#cn-wrapper li.references").addClass('active');
 			break;
+		case "mentions":
+			break;
 		default :
 			$(".cn-wrapper-menu-ferme").addClass('accueil');
 			$(".cn-wrapper-menu-ferme li.accueil").addClass('active');
@@ -277,6 +317,7 @@ function updateMenuState(espace) {
 }
 
 function updateSuperfluous(espace) {
+	espace = espace.split('#')[0];
 	$("#superfluous").html();
 	switch(espace) {
 		case "vision":
@@ -284,6 +325,7 @@ function updateSuperfluous(espace) {
 			$("#superfluous").html('<div id="bg-office"></div>');
 			break;
 		case "references":
+		case "mentions":
 			$("#superfluous").html('<div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
 			break;
 		default :
@@ -292,6 +334,25 @@ function updateSuperfluous(espace) {
 	}
 }
 
+
+function mapAllLinks() {
+	// vision
+	$("#content-load a[href^=vision]").click(function() {
+		loadStart($(this).attr("href"));
+		everPushed = true;
+		return false;
+	});
+	$("#content-load a[href^=metiers]").click(function() {
+		loadStart($(this).attr("href"));
+		everPushed = true;
+		return false;
+	});
+	$("#content-load a[href^=references]").click(function() {
+		loadStart($(this).attr("href"));
+		everPushed = true;
+		return false;
+	});	
+}
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -332,6 +393,12 @@ function readyIntro(){
 	initBlocVideo();
 	initTexteIntro();
 	getTranslationYSlideIntro();
+	
+	$("#bloc-btn-notre-actu").click(function(){
+		if($("html").hasClass("touch")){
+			animateApparitionBlocActus();
+		}
+	});
 	
 	if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
 		// si on n'est pas sur mobile
@@ -388,6 +455,7 @@ function readyIntro(){
 			// au mouse leave
 			
 		});
+		
 	
 		// survol du bouton pour fermer les actus
 		$("a#btn-fermer-actus").hover(function(){
