@@ -3145,6 +3145,7 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
 @media (max-width: 979px) {
   #container {
     width: 100%;
+    overflow: hidden;
   }
   #bloc-contact {
     width: 400px;

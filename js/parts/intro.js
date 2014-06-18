@@ -178,14 +178,26 @@ function animateApparitionVideo(videoID){
 		
 		// le bloc actus s'anime vers la droite
 		tlBlocActusPart2 = new TimelineMax();
-		tlBlocActusPart2.to($('#bloc-actus'), actusAnimationTime, {x: "800px", onComplete: function(){
-			//customActuScroll();
-			//if($("#"+videoID).hasClass("has-actu")){
-				customActuOuverteScroll();
-			//}
-		}, onReverseComplete: function() {
-			customActuScroll();
-		}});
+		if($(window).width()>"767"){
+			tlBlocActusPart2.to($('#bloc-actus'), actusAnimationTime, {x: "430px", onComplete: function(){
+				//customActuScroll();
+				//if($("#"+videoID).hasClass("has-actu")){
+					customActuOuverteScroll();
+				//}
+			}, onReverseComplete: function() {
+				customActuScroll();
+			}});
+		}else {
+			tlBlocActusPart2.to($('#bloc-actus'), actusAnimationTime, {x: "800px", onComplete: function(){
+				//customActuScroll();
+				//if($("#"+videoID).hasClass("has-actu")){
+					customActuOuverteScroll();
+				//}
+			}, onReverseComplete: function() {
+				customActuScroll();
+			}});
+		}
+		
 		
 		/*if($("#content").hasClass("bloc-actus-ouvert")){
 			// apparition du bloc video
