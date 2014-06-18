@@ -3195,6 +3195,17 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     margin-left: -40%;
   }
   /* @end */
+  /* @group Intro */
+  #content #bloc-actus {
+    left: 40px;
+  }
+  #content #bloc-videos-actus {
+    left: 40px;
+  }
+  #content #bloc-btn-notre-actu {
+    left: 20px;
+  }
+  /* @end */
 }
 @media (max-width: 767px) {
   html,

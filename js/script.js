@@ -244,6 +244,12 @@ function readyIntro(){
 	initTexteIntro();
 	getTranslationYSlideIntro();
 	
+	$("#bloc-btn-notre-actu").click(function(){
+		if($("html").hasClass("touch")){
+			animateApparitionBlocActus();
+		}
+	});
+	
 	if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
 		// si on n'est pas sur mobile
 		initBlocNotreActu();
@@ -299,6 +305,7 @@ function readyIntro(){
 			// au mouse leave
 			
 		});
+		
 	
 		// survol du bouton pour fermer les actus
 		$("a#btn-fermer-actus").hover(function(){
