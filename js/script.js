@@ -165,7 +165,6 @@ function initLoad() {
 		});
 	});
 	
-<<<<<<< HEAD
 	/////////////////// GESTION D'URL ///////////////////
 	if (Modernizr.history) {
 		$(window).bind("popstate", function(e) {
@@ -182,16 +181,13 @@ function loadStart(toLoad) {
 	index = toLoad;
 	$("#content-load").fadeOut(400);
 	$("#content-load").load(toLoad+" #content-load", loadFinished);
-=======
 	$(window).bind("popstate", function(e) {
 		//window.location = location.pathname;
 	});
-	
-});
+}
 
 function loadInit() {
 	$(".content-load").hide(400);
->>>>>>> FETCH_HEAD
 }
 
 function loadFinished() {
