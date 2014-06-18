@@ -2250,6 +2250,7 @@ ul#pictos-fond{
 			border-color: @vertima;
 			top: 30px;
 			display: none;
+			z-index: 2;
 			span{
 				color: @vertima;
 			}
@@ -2646,7 +2647,7 @@ ul#puces-slides-cas-clients{
 							vertical-align: top;
 							width: 128px;
 							height: 128px;
-							margin: 0 7px;
+							margin: 0 7px 14px 7px;
 							.transition(all 300ms);
 							.box-shadow(~"0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.08)");
 							&:hover, &.active{
@@ -2999,6 +3000,73 @@ body.mentions-legales, body.page-template-default{
 	}
 	
 	/* @end */
+	
+	/* @group metiers */
+	
+	ul#puces-metiers{
+		position: absolute;
+		top: 180px;
+		left: 50%;
+		display: block;
+		width: 90%;
+		height: auto;
+		margin: 0 0 0 -45%;
+		li.puce-metier{
+			position: relative;
+			top: auto;
+			left: auto;
+			margin: 10px 0!important;
+			width: 100%;
+			height: auto;
+			.border-radius(5px);
+			overflow: hidden;
+			
+			.box-shadow(0 0 7px rgba(0,0,0,.29));
+			.bloc-bulle{
+				position: relative;
+				top: inherit!important;
+				bottom: inherit!important;
+				left: inherit!important;
+				right: inherit!important;
+				width: 100%;
+				text-align: center;
+				padding: 20px 0;
+				.box-shadow(none);
+				.border-radius(0);
+			}
+			.bloc-question{
+				position: relative;
+				top: inherit!important;
+				bottom: inherit!important;
+				left: inherit!important;
+				right: inherit!important;
+				width: 100%;
+				text-align: center;
+				padding: 20px;
+				.opacity(1);
+				.box-shadow(none);
+				.border-radius(0);
+				display: none;
+				h2{
+					display: none;
+				}
+			}
+			.contour-puce{
+				display: none;
+			}
+		}
+	}
+	
+	/* @end */
+	
+	/* @group cas clients */
+	#masque-slides-cas-clients {
+		display: block;
+		width: 85%;
+		//padding: 100px 0 100px 0;
+		overflow: auto;
+		height: 950px;
+	}
 }
 
 
@@ -3331,55 +3399,6 @@ body.mentions-legales, body.page-template-default{
 	ul#puces-metiers{
 		position: absolute;
 		top: 100px;
-		left: 50%;
-		display: block;
-		width: 90%;
-		height: auto;
-		margin: 0 0 0 -45%;
-		li.puce-metier{
-			position: relative;
-			top: auto;
-			left: auto;
-			margin: 10px 0!important;
-			width: 100%;
-			height: auto;
-			.border-radius(5px);
-			overflow: hidden;
-			
-			.box-shadow(0 0 7px rgba(0,0,0,.29));
-			.bloc-bulle{
-				position: relative;
-				top: inherit!important;
-				bottom: inherit!important;
-				left: inherit!important;
-				right: inherit!important;
-				width: 100%;
-				text-align: center;
-				padding: 20px 0;
-				.box-shadow(none);
-				.border-radius(0);
-			}
-			.bloc-question{
-				position: relative;
-				top: inherit!important;
-				bottom: inherit!important;
-				left: inherit!important;
-				right: inherit!important;
-				width: 100%;
-				text-align: center;
-				padding: 20px;
-				.opacity(1);
-				.box-shadow(none);
-				.border-radius(0);
-				display: none;
-				h2{
-					display: none;
-				}
-			}
-			.contour-puce{
-				display: none;
-			}
-		}
 	}
 	
 	/* @end */
