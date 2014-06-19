@@ -159,25 +159,25 @@ $(window).resize(function() {
 //////////////////////////////////////////////////////////////////////
 function initLoad() {
 	/////////////////// MAPPER LES LIENS ///////////////////
-	// menu
-	$("#cn-wrapper a").each(function() {
-		$(this).click(function() {
+	if (Modernizr.history) {	
+		// menu
+		$("#cn-wrapper a").each(function() {
+			$(this).click(function() {
+				loadStart($(this).attr("href"));
+				everPushed = true;
+				return false;
+			});
+		});
+		// footer 
+		/*$("#bloc-btn-bottom a[href^=mentions]").click(function() {
 			loadStart($(this).attr("href"));
 			everPushed = true;
 			return false;
-		});
-	});
-	// footer 
-	$("#bloc-btn-bottom a[href^=mentions]").click(function() {
-		loadStart($(this).attr("href"));
-		everPushed = true;
-		return false;
-	});
-	// contenu
-	mapAllLinks();
+		});*/
+		// contenu
+		mapAllLinks();
 	
-	/////////////////// GESTION D'URL ///////////////////
-	if (Modernizr.history) {
+		/////////////////// GESTION D'URL ///////////////////
 		$(window).bind("popstate", function() {
 			 if (everPushed) {
 			   // link = location.pathname.replace(/^.*[\\/]/, ""); // get filename only
@@ -192,7 +192,9 @@ function initLoad() {
 function loadStart(toLoad) {
 	for (var key in niceScrolls){
   	   // virer les scrollbars qui trainent
-	   niceScrolls[key].resize().hide().remove();
+  	   try {
+		   niceScrolls[key].resize().hide().remove();
+	   } catch (e) {}
 	}
 	niceScrolls = [];
 	index = toLoad;
@@ -1186,7 +1188,9 @@ function majPucesCasClient(indexPucesCasClient){
 function customCasClientScroll(){
 	for (var key in niceScrolls){
 		   // virer les scrollbars qui trainent
-	   niceScrolls[key].resize().hide().remove();
+	   try {
+		   niceScrolls[key].resize().hide().remove();
+ 	   } catch (e) {}
 	}
 	niceScrolls = [];
 	if($(window).width()>767){
