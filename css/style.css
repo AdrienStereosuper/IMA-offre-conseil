@@ -345,16 +345,6 @@ body {
   -o-transition: background 400ms;
   transition: background 400ms;
 }
-.touch body.intro,
-.touch body.home,
-.lt-ie9 body.intro,
-.lt-ie9 body.home {
-  background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
-}
-body.intro .nicescroll-rails,
-body.home .nicescroll-rails {
-  margin-left: -30px;
-}
 body #bg-office {
   background-image: url('../layoutImg/metiers/photo-office.jpg');
   background-repeat: no-repeat;
@@ -365,6 +355,28 @@ body #bg-office {
   height: 100%;
   background-position-y: 75%;
   background-size: 100% auto;
+}
+.touch body.intro,
+.touch body.home,
+.lt-ie9 body.intro,
+.lt-ie9 body.home {
+  background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
+}
+.touch body.intro ul#pictos-fond,
+.touch body.home ul#pictos-fond,
+.lt-ie9 body.intro ul#pictos-fond,
+.lt-ie9 body.home ul#pictos-fond {
+  background: none !important;
+}
+.touch body.intro #bg-office,
+.touch body.home #bg-office,
+.lt-ie9 body.intro #bg-office,
+.lt-ie9 body.home #bg-office {
+  display: none;
+}
+body.intro .nicescroll-rails,
+body.home .nicescroll-rails {
+  margin-left: -30px;
 }
 body.cas-clients .nicescroll-rails,
 body.page-template-templatesreferences-php .nicescroll-rails,
@@ -3522,6 +3534,14 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   body.intro,
   body.home {
     background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
+  }
+  body.intro ul#pictos-fond,
+  body.home ul#pictos-fond {
+    background: none;
+  }
+  body.intro #bg-office,
+  body.home #bg-office {
+    display: none;
   }
   body.intro #container,
   body.home #container {

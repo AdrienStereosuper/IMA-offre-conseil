@@ -420,14 +420,6 @@ body {
 body {
 	color: #fff;
 	.transition(background 400ms);
-	&.intro, &.home{
-		.touch &, .lt-ie9 &{
-			background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
-		}
-		.nicescroll-rails{
-			margin-left: -30px;
-		}
-	}
 	#bg-office{
 		background-image: url('../layoutImg/metiers/photo-office.jpg');
 		background-repeat: no-repeat;
@@ -438,6 +430,20 @@ body {
 		height: 100%;
 		background-position-y: 75%;
 		background-size: 100% auto;
+	}
+	&.intro, &.home{
+		.touch &, .lt-ie9 &{
+			background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
+			ul#pictos-fond {
+				background: none !important;
+			}
+			#bg-office{
+				display: none;
+			}
+		}
+		.nicescroll-rails{
+			margin-left: -30px;
+		}
 	}
 	&.cas-clients, &.page-template-templatesreferences-php, &.mentions-legales, &.page-template-default {
 		.nicescroll-rails{
@@ -3255,6 +3261,12 @@ body.mentions-legales, body.page-template-default{
 	// Intro responsive
 	body.intro, body.home{
 		background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
+		ul#pictos-fond {
+			background: none;
+		}
+		#bg-office{
+			display: none;
+		}
 		#container{
 			height: 1000px;
 		}
