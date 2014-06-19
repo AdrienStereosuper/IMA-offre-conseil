@@ -345,6 +345,10 @@ body.intro,
 body.home {
   background: #ab0464;
 }
+.touch body.intro,
+.touch body.home {
+  background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
+}
 body.intro .nicescroll-rails,
 body.home .nicescroll-rails {
   margin-left: -30px;
