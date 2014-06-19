@@ -2162,6 +2162,9 @@ ul#pictos-fond li.picto-fond.videochat {
   left: 50%;
   margin-left: -260px;
 }
+.lt-ie9 #content #bloc-slides {
+  top: 0;
+}
 #content #bloc-slides .slide {
   display: block;
   width: 100%;
