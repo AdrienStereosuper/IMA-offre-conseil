@@ -3150,20 +3150,23 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     background-position-x: 50%;
     background-size: 1300px auto;
   }
+  ul#puces-metiers {
+    margin-top: 85px;
+  }
   ul#puces-metiers li.puce-metier#parcours-client {
-    margin-left: -35%;
+    margin-left: -22%;
   }
   ul#puces-metiers li.puce-metier#organisation {
-    margin-left: 20%;
+    margin-left: 16%;
   }
   ul#puces-metiers li.puce-metier#audit-technique {
-    margin-left: -20%;
+    margin-left: -8%;
   }
   ul#puces-metiers li.puce-metier#management {
-    margin-left: -18%;
+    margin-left: -22%;
   }
   ul#puces-metiers li.puce-metier#formation {
-    margin-left: 35%;
+    margin-left: 31%;
   }
   ul#puces-metiers li.puce-metier#dimensionnement {
     margin-left: 0;

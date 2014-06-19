@@ -661,17 +661,17 @@ function readyMetiers(){
 	// survol d'une puce métier
 	
 		$("ul#puces-metiers li.puce-metier").hover(function(){
-			if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
-			// au mouse enter
-			idPuceMetier = $(this).attr("id");
-			$(this).css('z-index',2);
-			animAppartitionBlocQuesion(idPuceMetier);
+			if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+				// au mouse enter
+				idPuceMetier = $(this).attr("id");
+				$(this).css('z-index',2);
+				animAppartitionBlocQuesion(idPuceMetier);
 			}
 		}, function(){
 			// au mouse leave
-			if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
-			$(this).css('z-index','');
-			animDisparitionBlocQuesion();
+			if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+				$(this).css('z-index','');
+				animDisparitionBlocQuesion();
 			}
 		});
 	
