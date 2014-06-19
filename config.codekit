@@ -725,6 +725,17 @@
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},
+	"\/layoutImg\/bg-no-script.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8659,
+		"inputAbbreviatedPath": "\/layoutImg\/bg-no-script.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/bg-no-script.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/degrade-bottom.png": {
 		"fileType": 32768,
 		"ignore": 0,

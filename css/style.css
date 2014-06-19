@@ -3545,6 +3545,10 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   .csstransforms .cn-wrapper ul li .zone-texte h2 br {
     display: none;
   }
+  body.intro,
+  body.home {
+    background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
+  }
   body.intro #container,
   body.home #container {
     height: 1000px;
