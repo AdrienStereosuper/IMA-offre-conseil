@@ -346,7 +346,9 @@ body {
   transition: background 400ms;
 }
 .touch body.intro,
-.touch body.home {
+.touch body.home,
+.lt-ie9 body.intro,
+.lt-ie9 body.home {
   background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
 }
 body.intro .nicescroll-rails,
@@ -2156,6 +2158,9 @@ ul#pictos-fond li.picto-fond.videochat {
   left: 50%;
   margin-left: -260px;
 }
+.lt-ie9 #content #bloc-slides {
+  top: 0;
+}
 #content #bloc-slides .slide {
   display: block;
   width: 100%;
@@ -3122,20 +3127,23 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     background-position-x: 50%;
     background-size: 1300px auto;
   }
+  ul#puces-metiers {
+    margin-top: 85px;
+  }
   ul#puces-metiers li.puce-metier#parcours-client {
-    margin-left: -35%;
+    margin-left: -22%;
   }
   ul#puces-metiers li.puce-metier#organisation {
-    margin-left: 20%;
+    margin-left: 16%;
   }
   ul#puces-metiers li.puce-metier#audit-technique {
-    margin-left: -20%;
+    margin-left: -8%;
   }
   ul#puces-metiers li.puce-metier#management {
-    margin-left: -18%;
+    margin-left: -22%;
   }
   ul#puces-metiers li.puce-metier#formation {
-    margin-left: 35%;
+    margin-left: 31%;
   }
   ul#puces-metiers li.puce-metier#dimensionnement {
     margin-left: 0;

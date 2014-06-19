@@ -398,8 +398,13 @@ function readyIntro(){
 	animateButtonArrow($('#btn-notre-actu .icon-arrow-right'), "x", "2px", "1", "7", tlbouton3);
 	animateButtonArrow($('#btn-fermer-actus .icon-arrow-right'), "x", "4px", "0.95", "10", tlbouton4);
 	
+	
 	initBlocVideo();
-	initTexteIntro();
+	if($("html").hasClass("lt-ie9")){
+		initTexteIntroIE8();
+	}else{
+		initTexteIntro();
+	}	
 	getTranslationYSlideIntro();
 	
 	$("#bloc-btn-notre-actu").click(function(){
@@ -668,6 +673,7 @@ function readyMetiers(){
 	
 	// survol d'une puce métier
 	
+<<<<<<< HEAD
 	$("ul#puces-metiers li.puce-metier").hover(function(){
 		if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
 		// au mouse enter
@@ -682,6 +688,22 @@ function readyMetiers(){
 		animDisparitionBlocQuesion();
 		}
 	});
+=======
+		$("ul#puces-metiers li.puce-metier").hover(function(){
+			if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+				// au mouse enter
+				idPuceMetier = $(this).attr("id");
+				$(this).css('z-index',2);
+				animAppartitionBlocQuesion(idPuceMetier);
+			}
+		}, function(){
+			// au mouse leave
+			if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+				$(this).css('z-index','');
+				animDisparitionBlocQuesion();
+			}
+		});
+>>>>>>> FETCH_HEAD
 	
 	
 	$("ul#puces-metiers li.puce-metier .bloc-bulle").click(function(){

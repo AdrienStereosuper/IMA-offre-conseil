@@ -421,7 +421,12 @@ body {
 	color: #fff;
 	.transition(background 400ms);
 	&.intro, &.home{
+<<<<<<< HEAD
 		.touch &{
+=======
+		background: @violetintro;
+		.touch &, .lt-ie9 &{
+>>>>>>> FETCH_HEAD
 			background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
 		}
 		.nicescroll-rails{
@@ -2039,6 +2044,9 @@ ul#pictos-fond{
 		bottom: 100px;
 		left: 50%;
 		margin-left: -260px;
+		.lt-ie9 &{
+			top: 0;
+		}
 		.slide{
 			display: block;
 			width: 100%;
@@ -2877,21 +2885,22 @@ body.mentions-legales, body.page-template-default{
 		}
 	}
 	ul#puces-metiers{
+		margin-top: 85px;
 		li.puce-metier{
 			&#parcours-client{
-				margin-left: -35%;
+				margin-left: -22%;
 			}
 			&#organisation{
-				margin-left: 20%;
+				margin-left: 16%;
 			}
 			&#audit-technique{
-				margin-left: -20%;
+				margin-left: -8%;
 			}
 			&#management{
-				margin-left: -18%;
+				margin-left: -22%;
 			}
 			&#formation{
-				margin-left: 35%;
+				margin-left: 31%;
 			}
 			&#dimensionnement{
 				margin-left: 0;
