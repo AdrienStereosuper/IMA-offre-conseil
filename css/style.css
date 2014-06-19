@@ -345,6 +345,10 @@ body.intro,
 body.home {
   background: #ab0464;
 }
+.touch body.intro,
+.touch body.home {
+  background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
+}
 body.intro .nicescroll-rails,
 body.home .nicescroll-rails {
   margin-left: -30px;
@@ -3545,6 +3549,10 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   .csstransforms .cn-wrapper ul li .zone-texte h2 br {
     display: none;
   }
+  body.intro,
+  body.home {
+    background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
+  }
   body.intro #container,
   body.home #container {
     height: 1000px;
@@ -3574,11 +3582,11 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   }
   #content #bloc-slides .slide#slide2 {
     top: 0;
-    left: 400px;
+    left: 500px;
   }
   #content #bloc-slides .slide#slide3 {
     top: 0;
-    left: 400px;
+    left: 500px;
   }
   #content #bloc-slides .slide#slide3 a.btn-base {
     margin-top: 10px;

@@ -421,6 +421,9 @@ body {
 	color: #fff;
 	&.intro, &.home{
 		background: @violetintro;
+		.touch &{
+			background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
+		}
 		.nicescroll-rails{
 			margin-left: -30px;
 		}
@@ -3262,6 +3265,7 @@ body.mentions-legales, body.page-template-default{
 
 	// Intro responsive
 	body.intro, body.home{
+		background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
 		#container{
 			height: 1000px;
 		}
@@ -3290,11 +3294,11 @@ body.mentions-legales, body.page-template-default{
 				}
 				&#slide2 {
 					top: 0;
-					left: 400px;
+					left: 500px;
 				}
 				&#slide3 {
 					top: 0;
-					left: 400px;
+					left: 500px;
 					a.btn-base {
 						margin-top: 10px;
 					}
