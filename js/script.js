@@ -392,8 +392,13 @@ function readyIntro(){
 	animateButtonArrow($('#btn-notre-actu .icon-arrow-right'), "x", "2px", "1", "7", tlbouton3);
 	animateButtonArrow($('#btn-fermer-actus .icon-arrow-right'), "x", "4px", "0.95", "10", tlbouton4);
 	
+	
 	initBlocVideo();
-	initTexteIntro();
+	if($("html").hasClass("lt-ie9")){
+		initTexteIntroIE8();
+	}else{
+		initTexteIntro();
+	}	
 	getTranslationYSlideIntro();
 	
 	$("#bloc-btn-notre-actu").click(function(){

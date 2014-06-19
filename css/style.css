@@ -346,7 +346,9 @@ body.home {
   background: #ab0464;
 }
 .touch body.intro,
-.touch body.home {
+.touch body.home,
+.lt-ie9 body.intro,
+.lt-ie9 body.home {
   background: #ab0464 url('../layoutImg/bg-no-script.jpg') repeat left top;
 }
 body.intro .nicescroll-rails,
