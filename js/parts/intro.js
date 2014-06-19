@@ -427,8 +427,10 @@ function customActuScroll(){
 function removeCustomActuScroll(){
 	if($(window).width()>767){
 		for (var key in niceScrolls){
-			   // virer les scrollbars qui trainent
-		   niceScrolls[key].resize().hide().remove();
+		   // virer les scrollbars qui trainent
+		   try {
+			   niceScrolls[key].resize().hide().remove();
+		   } catch (e) {}
 		}
 		niceScrolls = [];
 	}
@@ -450,7 +452,11 @@ function customActuOuverteScroll(){
 
 function removeCustomActuOuverteScroll(){
 	if($(window).width()>767){
-		$("#bloc-videos-actus").getNiceScroll().resize().hide().remove();
+		try {
+			if ($("#bloc-videos-actus").getNiceScroll()) {
+				$("#bloc-videos-actus").getNiceScroll().resize().hide().remove();
+			}
+		} catch (e) {}
 	}
 }
 
