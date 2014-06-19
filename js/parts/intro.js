@@ -504,7 +504,10 @@ function mouseHandle(event, nomTimeline) {
 /////////// Fonction pour aligner l'actu de la vidéo cliquée en haut ///////////
 ////////////////////////////////////////////////////////////////////////////////
 function scrollToVideo(videoID){
-	topLigneActuVideo = $("li.actu#"+videoID).offset().top;
+	topLigneActuVideo = 0
+	try {
+		topLigneActuVideo = $("li.actu#"+videoID).offset().top;
+	 } catch (e) {}
 	topBlocActus = $("#bloc-actus").offset().top;
 	scrollBlocVideo = $("#masque-actus").scrollTop();
 	hauteurScrollAlignementVideo = topLigneActuVideo-topBlocActus+scrollBlocVideo;

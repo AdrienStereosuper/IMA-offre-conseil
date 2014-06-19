@@ -340,10 +340,10 @@ body {
 }
 body {
   color: #fff;
-}
-body.intro,
-body.home {
-  background: #ab0464;
+  -webkit-transition: background 400ms;
+  -moz-transition: background 400ms;
+  -o-transition: background 400ms;
+  transition: background 400ms;
 }
 .touch body.intro,
 .touch body.home {
@@ -353,13 +353,7 @@ body.intro .nicescroll-rails,
 body.home .nicescroll-rails {
   margin-left: -30px;
 }
-body.metiers #bg-office,
-body.page-template-templatesvision-php #bg-office,
-body.page-template-templatesmetiers-php #bg-office,
-body.page-template-templatesreferences-php #bg-office,
-body.cas-clients #bg-office,
-body.mentions-legales #bg-office,
-body.page-template-default #bg-office {
+body #bg-office {
   background-image: url('../layoutImg/metiers/photo-office.jpg');
   background-repeat: no-repeat;
   position: absolute;
@@ -1762,6 +1756,8 @@ ul#pictos-fond {
   left: 0;
   width: 100%;
   height: 100%;
+  background: #ab0464;
+  z-index: 2;
 }
 .touch ul#pictos-fond {
   display: none;
@@ -3070,20 +3066,12 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
    ========================================================================== */
 /* mes resolutions responsives "classiques" */
 @media (min-width: 1600px) {
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-size: cover;
   }
 }
 @media (max-width: 1600px) {
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-position-x: 100%;
     background-size: 1600px auto;
   }
@@ -3107,29 +3095,17 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   }
 }
 @media (max-width: 1500px) {
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-position-x: 85%;
   }
 }
 @media (max-width: 1400px) {
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-position-x: 75%;
   }
 }
 @media (max-width: 1300px) {
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-position-x: 75%;
     background-size: 1500px auto;
   }
@@ -3142,11 +3118,7 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   body.page-template-templatesreferences-php #container {
     width: 100%;
   }
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-position-x: 50%;
     background-size: 1300px auto;
   }
@@ -3197,11 +3169,7 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   #menu-bottom #content-menu-bottom {
     width: 90%;
   }
-  body.metiers #bg-office,
-  body.cas-clients #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-position-x: 50%;
   }
   ul#puces-metiers li.puce-metier#parcours-client {
@@ -3331,13 +3299,7 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     height: auto;
     min-height: 100%;
   }
-  body.metiers #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.cas-clients #bg-office,
-  body.mentions-legales #bg-office,
-  body.page-template-default #bg-office,
-  body.page-template-templatesreferences-php #bg-office {
+  body #bg-office {
     background-size: cover;
   }
   ul#pictos-fond {
@@ -3765,11 +3727,7 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   }
 }
 @media (max-height: 800px) {
-  body.metiers #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office,
-  body.cas-clients #bg-office {
+  body #bg-office {
     background-position-y: 65%;
   }
   ul#puces-metiers li.puce-metier#parcours-client {
@@ -3800,20 +3758,12 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   }
 }
 @media (max-height: 700px) {
-  body.metiers #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office,
-  body.cas-clients #bg-office {
+  body #bg-office {
     background-position-y: 60%;
   }
 }
 @media (max-height: 650px) {
-  body.metiers #bg-office,
-  body.page-template-templatesvision-php #bg-office,
-  body.page-template-templatesmetiers-php #bg-office,
-  body.page-template-templatesreferences-php #bg-office,
-  body.cas-clients #bg-office {
+  body #bg-office {
     background-position-y: 55%;
   }
   ul#puces-metiers li.puce-metier#parcours-client {

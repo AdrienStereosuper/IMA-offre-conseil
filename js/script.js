@@ -120,27 +120,34 @@ $(document).ready(function(){
 		return false;
 	});
 	
+	/////////////////// PRELOAD DE LA PHOTO DE FOND ///////////////////
+	$("#superfluous").html('<ul id="pictos-fond"></ul><div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
+	
 	/////////////////// PARTIE MENTIONS LEGALES ///////////////////
 	if($("body").hasClass("mentions-legales")){
 		readyMentionsLegales();
+		updateSuperfluous("mentions-legales",0);
 	};
 	
 	
 	/////////////////// PARTIE INTRO ///////////////////
 	if($("body").hasClass("intro") || $("body").hasClass("home")){
 		readyIntro();
+		updateSuperfluous("",0);
 	}	
 	
 	
 	/////////////////// PARTIE METIERS ///////////////////
 	if($("body").hasClass("metiers") || $("body").hasClass("page-template-templatesvision-php") || $("body").hasClass("page-template-templatesmetiers-php")){
 		readyMetiers();
+		updateSuperfluous("metiers",0);
 	}
 	
 	
 	/////////////////// PARTIE CAS CLIENTS ///////////////////
 	if($("body").hasClass("cas-clients") || $("body").hasClass("page-template-templatesreferences-php")){
 		readyCasClient();
+		updateSuperfluous("references",0);
 	}
 	
 	/////////////////// GÉRER LES LOADS ///////////////////
@@ -198,12 +205,9 @@ function loadStart(toLoad) {
 	}
 	niceScrolls = [];
 	index = toLoad;
-	$("#content-load").fadeOut(400);
-	$("#content-load").load(toLoad+" #content-load", loadFinished);
-}
-
-function loadInit() {
-	$(".content-load").hide(400);
+	$("#content-load").fadeOut(400, function() {
+		$("#content-load").load(toLoad+" #content-load", loadFinished);
+	});
 }
 
 function loadFinished() {
@@ -250,7 +254,7 @@ function updateAll(espace) {
 	// menu
 	updateMenuState(espace);
 	// déco
-	updateSuperfluous(espace);
+	updateSuperfluous(espace,500);
 }
 
 function updateURL(espace) {
@@ -318,20 +322,22 @@ function updateMenuState(espace) {
 	boutonIMA();
 }
 
-function updateSuperfluous(espace) {
+function updateSuperfluous(espace,timer) {
 	espace = espace.split('#')[0];
-	$("#superfluous").html();
 	switch(espace) {
 		case "vision":
 		case "metiers":
-			$("#superfluous").html('<div id="bg-office"></div>');
+			$("#superfluous .degrade").fadeOut(timer);
+			$("#superfluous #pictos-fond").fadeOut(timer*2);
 			break;
 		case "references":
 		case "mentions":
-			$("#superfluous").html('<div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
+			$("#superfluous .degrade").fadeIn(timer);
+			$("#superfluous #pictos-fond").fadeOut(timer*2);
 			break;
 		default :
-			$("#superfluous").html('<ul id="pictos-fond"></ul>');
+			$("#superfluous .degrade").fadeOut(timer);
+			$("#superfluous #pictos-fond").fadeIn(timer*2);
 			break;
 	}
 }
@@ -662,20 +668,20 @@ function readyMetiers(){
 	
 	// survol d'une puce métier
 	
-		$("ul#puces-metiers li.puce-metier").hover(function(){
-			if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
-			// au mouse enter
-			idPuceMetier = $(this).attr("id");
-			$(this).css('z-index',2);
-			animAppartitionBlocQuesion(idPuceMetier);
-			}
-		}, function(){
-			// au mouse leave
-			if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
-			$(this).css('z-index','');
-			animDisparitionBlocQuesion();
-			}
-		});
+	$("ul#puces-metiers li.puce-metier").hover(function(){
+		if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
+		// au mouse enter
+		idPuceMetier = $(this).attr("id");
+		$(this).css('z-index',2);
+		animAppartitionBlocQuesion(idPuceMetier);
+		}
+	}, function(){
+		// au mouse leave
+		if(($("html").hasClass("no-touch"))&&($(window).width()>767)){
+		$(this).css('z-index','');
+		animDisparitionBlocQuesion();
+		}
+	});
 	
 	
 	$("ul#puces-metiers li.puce-metier .bloc-bulle").click(function(){
@@ -787,13 +793,13 @@ function readyCasClient(){
 						TweenMax.fromTo($("li.slide-cas-client#"+idCasClient+" .bloc-cache"), 0.4, {display: "block", height: "0"}, {height: heightBlocCache+"px", ease:textAnimationEase, onComplete: function(){
 							$("li.slide-cas-client#"+idCasClient+" .bloc-cache").css("height", "auto");
 							$("li.slide-cas-client#"+idCasClient).addClass("ouvert");
-							$("#masque-slides-cas-clients").animate({ scrollTop: 400+casClient.index()*84-$("ul#puces-slides-cas-clients").offset().top}, {duration:300});
+							$("#masque-slides-cas-clients").animate({ scrollTop: 450+casClient.index()*84-$("ul#puces-slides-cas-clients").offset().top}, {duration:300});
 							customCasClientScroll();
 						}});
 					}});
 					}
 				}
-			}, 800);
+			}, 400);
 		}
 	}else {
 		// pas de hashtag
@@ -826,12 +832,12 @@ function readyCasClient(){
 					TweenMax.fromTo($("li.slide-cas-client#"+idCasClient+" .bloc-cache"), 0.4, {display: "block", height: "0"}, {height: heightBlocCache+"px", ease:textAnimationEase, onComplete: function(){
 						$("li.slide-cas-client#"+idCasClient+" .bloc-cache").css("height", "auto");
 						$("li.slide-cas-client#"+idCasClient).addClass("ouvert");
-						$("#masque-slides-cas-clients").animate({ scrollTop: 400+casClient.index()*84-$("ul#puces-slides-cas-clients").offset().top}, {duration:300});
+						$("#masque-slides-cas-clients").animate({ scrollTop: 450+casClient.index()*84-$("ul#puces-slides-cas-clients").offset().top}, {duration:300})
 						customCasClientScroll();
 					}});
 				}});
 			}
-		}, 800);
+		}, 400);
 	}
 	
 	
@@ -991,9 +997,9 @@ function readyCasClient(){
 				}});
 			}
 		}
-		
 		return false;
 	});
+	TweenMax.from($('#puces-slides-cas-clients'), textAnimationTime, {top: "100%", opacity: "0", delay: 0.3});
 }
 
 
@@ -1088,6 +1094,13 @@ function animDisparitionBlocQuesion(){
 ///////////////////////////////////////////////////////////////////////////////
 function initSlidesVision(){
 	TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", delay: 0.5});
+	TweenMax.from($('#puces-slides-vision'), textAnimationTime, {top: "100%", opacity: "0", delay: 0.8});
+	var offsetDelay=0.3;
+	$("ul#puces-metiers li.puce-metier").each(function() {
+		TweenMax.from($(this), textAnimationTime, {marginTop: "100px", opacity: "0", delay: offsetDelay});
+		offsetDelay+=0.05;
+	});
+		
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1205,7 +1218,3 @@ function customCasClientScroll(){
 		}));
 	}
 }
-
-$(window).bind( 'hashchange', function(e) { 
-	
-});
