@@ -120,6 +120,19 @@ $(document).ready(function(){
 		return false;
 	});
 	
+	if ($('html').hasClass('lt-ie10') || (Function('/*@cc_on return document.documentMode===10@*/')())){
+		$(".cn-wrapper ul li .zone-texte").hover(function(){
+			// au mouse enter
+			var parentZoneTexte = $(this).parent();
+			$("a", parentZoneTexte).addClass("survol");
+		}, function(){
+			// au mouse leave
+			var parentZoneTexte = $(this).parent();
+			$("a", parentZoneTexte).removeClass("survol");
+		});
+
+	}
+	
 	/////////////////// PRELOAD DE LA PHOTO DE FOND ///////////////////
 	$("#superfluous").html('<ul id="pictos-fond"></ul><div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
 	

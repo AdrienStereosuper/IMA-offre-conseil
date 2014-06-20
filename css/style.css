@@ -478,9 +478,6 @@ ul {
   -ms-transform: scale(1);
   transform: scale(1);
 }
-.csstransforms .cn-wrapper-menu-ferme.no-cssgradients li {
-  background-color: #ffffff;
-}
 .csstransforms .cn-wrapper-menu-ferme.accueil {
   background: url('../layoutImg/simon/menu-ferme-accueil-active.png') no-repeat center 172px;
 }
@@ -926,6 +923,7 @@ ul {
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
   pointer-events: none;
+  cursor: pointer;
 }
 .csstransforms .cn-wrapper li .zone-texte h2 {
   height: 90px;
@@ -959,7 +957,8 @@ ul {
   left: 50%;
   margin-left: -7px;
 }
-.csstransforms .cn-wrapper li.accueil:not(.active) a:hover {
+.csstransforms .cn-wrapper li.accueil:not(.active) a:hover,
+.csstransforms .cn-wrapper li.accueil:not(.active) a.survol {
   background-image: -webkit-radial-gradient(transparent 0, transparent 83px, #d13c92 83px, #d13c92 100%);
   background-image: -moz-radial-gradient(transparent 0, transparent 83px, #d13c92 83px, #d13c92 100%);
   background-image: -o-radial-gradient(transparent 0, transparent 83px, #d13c92 83px, #d13c92 100%);
@@ -968,6 +967,10 @@ ul {
   width: 386px;
   bottom: -183px;
   right: -193px;
+}
+.no-cssgradients.csstransforms .cn-wrapper li.accueil:not(.active) a:hover,
+.no-cssgradients.csstransforms .cn-wrapper li.accueil:not(.active) a.survol {
+  background-color: #d13c92;
 }
 .csstransforms .cn-wrapper li.accueil:not(.active) .zone-texte h2.survol {
   padding-top: 42px;
@@ -998,7 +1001,8 @@ ul {
   left: 50%;
   margin-left: -7px;
 }
-.csstransforms .cn-wrapper li.conseil:not(.active) a:hover {
+.csstransforms .cn-wrapper li.conseil:not(.active) a:hover,
+.csstransforms .cn-wrapper li.conseil:not(.active) a.survol {
   background-image: -webkit-radial-gradient(transparent 0, transparent 83px, #054b90 83px, #054b90 100%);
   background-image: -moz-radial-gradient(transparent 0, transparent 83px, #054b90 83px, #054b90 100%);
   background-image: -o-radial-gradient(transparent 0, transparent 83px, #054b90 83px, #054b90 100%);
@@ -1007,6 +1011,10 @@ ul {
   width: 386px;
   bottom: -183px;
   right: -193px;
+}
+.no-cssgradients.csstransforms .cn-wrapper li.conseil:not(.active) a:hover,
+.no-cssgradients.csstransforms .cn-wrapper li.conseil:not(.active) a.survol {
+  background-color: #054b90;
 }
 .csstransforms .cn-wrapper li.conseil:not(.active) .zone-texte h2.survol {
   padding-top: 26px;
@@ -1037,7 +1045,8 @@ ul {
   left: 50%;
   margin-left: -7px;
 }
-.csstransforms .cn-wrapper li.expertise:not(.active) a:hover {
+.csstransforms .cn-wrapper li.expertise:not(.active) a:hover,
+.csstransforms .cn-wrapper li.expertise:not(.active) a.survol {
   background-image: -webkit-radial-gradient(transparent 0, transparent 83px, #6d9c29 83px, #6d9c29 100%);
   background-image: -moz-radial-gradient(transparent 0, transparent 83px, #6d9c29 83px, #6d9c29 100%);
   background-image: -o-radial-gradient(transparent 0, transparent 83px, #6d9c29 83px, #6d9c29 100%);
@@ -1046,6 +1055,10 @@ ul {
   width: 386px;
   bottom: -183px;
   right: -193px;
+}
+.no-cssgradients.csstransforms .cn-wrapper li.expertise:not(.active) a:hover,
+.no-cssgradients.csstransforms .cn-wrapper li.expertise:not(.active) a.survol {
+  background-color: #6d9c29;
 }
 .csstransforms .cn-wrapper li.expertise:not(.active) .zone-texte h2.survol {
   padding-top: 26px;
@@ -1076,7 +1089,8 @@ ul {
   left: 50%;
   margin-left: -7px;
 }
-.csstransforms .cn-wrapper li.references:not(.active) a:hover {
+.csstransforms .cn-wrapper li.references:not(.active) a:hover,
+.csstransforms .cn-wrapper li.references:not(.active) a.survol {
   background-image: -webkit-radial-gradient(transparent 0, transparent 83px, #f99d49 83px, #f99d49 100%);
   background-image: -moz-radial-gradient(transparent 0, transparent 83px, #f99d49 83px, #f99d49 100%);
   background-image: -o-radial-gradient(transparent 0, transparent 83px, #f99d49 83px, #f99d49 100%);
@@ -1085,6 +1099,10 @@ ul {
   width: 386px;
   bottom: -183px;
   right: -193px;
+}
+.no-cssgradients.csstransforms .cn-wrapper li.references:not(.active) a:hover,
+.no-cssgradients.csstransforms .cn-wrapper li.references:not(.active) a.survol {
+  background-color: #f99d49;
 }
 .csstransforms .cn-wrapper li.references:not(.active) .zone-texte h2.survol {
   padding-top: 34px;

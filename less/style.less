@@ -513,11 +513,6 @@ ul{
 
 /* @group indications menu hors survol */
 .csstransforms .cn-wrapper-menu-ferme {
-	&.no-cssgradients{
-		li {
-			background-color: @blanc;
-		}
-	}
 	margin-top: 20px;
 	font-size: 1em;
 	width: 380px;
@@ -989,6 +984,8 @@ ul{
 	position: absolute;
 	.backface-visibility(hidden);
 	pointer-events: none;
+	
+	cursor: pointer;
 	h2{
 		height: 90px;
 		.conduit(1em);
@@ -1017,12 +1014,15 @@ ul{
 	}
 	&:not(.active){
 		a{
-			&:hover{
+			&:hover, &.survol{
 				.background-image(~"radial-gradient(transparent 0, transparent 83px, #d13c92 83px, #d13c92 100%)");
 				height: 386px;
 				width: 386px;
 				bottom: -183px;
 				right: -193px;
+				.no-cssgradients&{
+					background-color: #d13c92;
+				}
 			}
 		}
 		.zone-texte{
@@ -1059,12 +1059,15 @@ ul{
 	&:not(.active){
 		a{
 			
-			&:hover{
+			&:hover, &.survol{
 				.background-image(~"radial-gradient(transparent 0, transparent 83px, #054b90 83px, #054b90 100%)");
 				height: 386px;
 				width: 386px;
 				bottom: -183px;
 				right: -193px;
+				.no-cssgradients&{
+					background-color: #054b90;
+				}
 			}
 		}
 		.zone-texte{
@@ -1100,12 +1103,15 @@ ul{
 	}
 	&:not(.active){
 		a{
-			&:hover{
+			&:hover, &.survol{
 				.background-image(~"radial-gradient(transparent 0, transparent 83px, #6d9c29 83px, #6d9c29 100%)");
 				height: 386px;
 				width: 386px;
 				bottom: -183px;
 				right: -193px;
+				.no-cssgradients&{
+					background-color: #6d9c29;
+				}
 			}
 		}
 		.zone-texte{
@@ -1141,12 +1147,15 @@ ul{
 	}
 	&:not(.active){
 		a{
-			&:hover{
+			&:hover, &.survol{
 				.background-image(~"radial-gradient(transparent 0, transparent 83px, #f99d49 83px, #f99d49 100%)");
 				height: 386px;
 				width: 386px;
 				bottom: -183px;
 				right: -193px;
+				.no-cssgradients&{
+					background-color: #f99d49;
+				}
 			}
 		}
 		.zone-texte{
