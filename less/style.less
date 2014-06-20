@@ -2111,6 +2111,9 @@ ul#pictos-fond{
 	top: 150px;
 	bottom: 150px;
 	z-index: 2;
+	.lt-ie9 &{
+		top: -300px;
+	}
 	ul#puces-slides-vision{
 		margin: 0;
 		padding: 0;
@@ -2156,6 +2159,9 @@ ul#pictos-fond{
 			&#slide1-vision{
 				//margin-top: 50px;
 				top: 100%;
+				.lt-ie9 &{
+					top: 150%;
+				}
 			}
 			&#slide2-vision{
 				//margin-top: 300px;
@@ -2173,6 +2179,9 @@ ul#pictos-fond{
 					padding: 10px 20px 5px 20px;
 					.inline-ie7();
 				}
+				.lt-ie9 &{
+					top: 150%;
+				}
 			}
 			&#slide3-vision{
 				//margin-top: 300px;
@@ -2189,6 +2198,9 @@ ul#pictos-fond{
 					.bistroscript(1.5em);
 					padding: 10px 20px 5px 20px;
 					.inline-ie7();
+				}
+				.lt-ie9 &{
+					top: 150%;
 				}
 			}
 			h3{

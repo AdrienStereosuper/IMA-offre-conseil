@@ -701,6 +701,7 @@ function readyMetiers(){
 		if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
 			$(this).css('z-index','');
 			animDisparitionBlocQuesion();
+			
 		}
 	});
 

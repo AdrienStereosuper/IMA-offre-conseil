@@ -2233,6 +2233,9 @@ ul#pictos-fond li.picto-fond.videochat {
   bottom: 150px;
   z-index: 2;
 }
+.lt-ie9 #vision {
+  top: -300px;
+}
 #vision ul#puces-slides-vision {
   margin: 0;
   padding: 0;
@@ -2304,6 +2307,9 @@ ul#pictos-fond li.picto-fond.videochat {
 #vision ul#slides-vision li.slide-vision#slide1-vision {
   top: 100%;
 }
+.lt-ie9 #vision ul#slides-vision li.slide-vision#slide1-vision {
+  top: 150%;
+}
 #vision ul#slides-vision li.slide-vision#slide2-vision {
   top: 100%;
   text-align: center;
@@ -2324,6 +2330,9 @@ ul#pictos-fond li.picto-fond.videochat {
 .lt-ie8 #vision ul#slides-vision li.slide-vision#slide2-vision a.btn-base {
   display: inline;
 }
+.lt-ie9 #vision ul#slides-vision li.slide-vision#slide2-vision {
+  top: 150%;
+}
 #vision ul#slides-vision li.slide-vision#slide3-vision {
   top: 75%;
   text-align: center;
@@ -2343,6 +2352,9 @@ ul#pictos-fond li.picto-fond.videochat {
 }
 .lt-ie8 #vision ul#slides-vision li.slide-vision#slide3-vision a.btn-base {
   display: inline;
+}
+.lt-ie9 #vision ul#slides-vision li.slide-vision#slide3-vision {
+  top: 150%;
 }
 #vision ul#slides-vision li.slide-vision h3 {
   margin: 0 0 30px 0;
