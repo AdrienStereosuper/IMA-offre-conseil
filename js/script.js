@@ -130,7 +130,11 @@ $(document).ready(function(){
 			var parentZoneTexte = $(this).parent();
 			$("a", parentZoneTexte).removeClass("survol");
 		});
-
+		$(".cn-wrapper ul li .zone-texte").click(function(){
+			var parentAze = $(this).parent();
+			var link = $(this).parent().find('a').attr('href');
+			window.location.href=link;
+		});
 	}
 	
 	/////////////////// PRELOAD DE LA PHOTO DE FOND ///////////////////
