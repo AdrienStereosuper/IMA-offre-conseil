@@ -513,6 +513,11 @@ ul{
 
 /* @group indications menu hors survol */
 .csstransforms .cn-wrapper-menu-ferme {
+	&.no-cssgradients{
+		li {
+			background-color: @blanc;
+		}
+	}
 	margin-top: 20px;
 	font-size: 1em;
 	width: 380px;
@@ -946,7 +951,6 @@ ul{
 
 .csstransforms .cn-wrapper li a {
 	display: block;
-	
 	height: 366px;
 	width: 366px;
 	position: absolute;
@@ -961,14 +965,16 @@ ul{
 	text-transform: uppercase;
 	background-color: none;
 	.background-image(~"radial-gradient(transparent 0, transparent 83px, #ebebeb 83px, #fff 100%)");
-	.no-cssgradients &{
-		background-color: @blanc;
-	}
+	
 	.box-shadow(~"0 0 0 1px rgba(0,0,0,.1)");
 	border-top-width: 5px;
 	border-top-style: solid;
 	font-weight: normal;
 	font-style: normal;
+}
+
+.no-cssgradients.csstransforms .cn-wrapper li a {
+	background-color: @blanc;
 }
 
 .csstransforms .cn-wrapper li .zone-texte {

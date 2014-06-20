@@ -478,6 +478,9 @@ ul {
   -ms-transform: scale(1);
   transform: scale(1);
 }
+.csstransforms .cn-wrapper-menu-ferme.no-cssgradients li {
+  background-color: #ffffff;
+}
 .csstransforms .cn-wrapper-menu-ferme.accueil {
   background: url('../layoutImg/simon/menu-ferme-accueil-active.png') no-repeat center 172px;
 }
@@ -900,7 +903,7 @@ ul {
   font-weight: normal;
   font-style: normal;
 }
-.no-cssgradients .csstransforms .cn-wrapper li a {
+.no-cssgradients.csstransforms .cn-wrapper li a {
   background-color: #ffffff;
 }
 .csstransforms .cn-wrapper li .zone-texte {
