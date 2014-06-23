@@ -90,33 +90,18 @@
 }
 .icon-arrow:before {
   content: "\e600";
-  font-family: 'ima', sans-serif;
-  font-size: 1em;
-  font-weight: normal;
 }
 .icon-arrow-up:before {
   content: "\e604";
-  font-family: 'ima', sans-serif;
-  font-size: 1em;
-  font-weight: normal;
 }
 .icon-arrow-right:before {
   content: "\e603";
-  font-family: 'ima', sans-serif;
-  font-size: 1em;
-  font-weight: normal;
 }
 .icon-play:before {
   content: "\e601";
-  font-family: 'ima', sans-serif;
-  font-size: 1em;
-  font-weight: normal;
 }
 .icon-cross:before {
   content: "\e602";
-  font-family: 'ima', sans-serif;
-  font-size: 1em;
-  font-weight: normal;
 }
 [class^="ima-icon-"],
 [class*=" ima-icon-"] {
@@ -1603,11 +1588,23 @@ ul.social-pictos li a:active {
 #menu-bottom.menu-violet #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
   fill: #ab0464;
 }
+.lt-ie9 #menu-bottom.menu-violet #content-menu-bottom #masque-offre-conseil #offre-conseil {
+  background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+}
+.lt-ie9 #menu-bottom.menu-violet #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
+  display: none;
+}
 #menu-bottom.menu-violet #content-menu-bottom #signature {
   color: #ffffff;
 }
 #menu-bottom.menu-violet #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
   fill: #ffffff;
+}
+.lt-ie9 #menu-bottom.menu-violet #content-menu-bottom #signature .icon-logo-footer {
+  background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+}
+.lt-ie9 #menu-bottom.menu-violet #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
+  display: none;
 }
 #menu-bottom.menu-violet #content-menu-bottom #bloc-btn-bottom a.btn-base {
   background: #ffffff;
@@ -1696,6 +1693,7 @@ ul.social-pictos li a:active {
 #menu-bottom #content-menu-bottom #signature .icon-logo-footer {
   margin-left: 5px;
   display: inline-block;
+  vertical-align: top;
   width: 126px;
   height: 23px;
 }
@@ -2123,6 +2121,9 @@ ul#pictos-fond li.picto-fond.videochat {
   -moz-opacity: 1;
   opacity: 1;
 }
+.lt-ie9 #content #bloc-actus #masque-actus ul#actus li.actu.has-video .picto-video .icon-play {
+  display: block;
+}
 #content #bloc-actus #masque-actus ul#actus li.actu.has-video .picto-video .icon-cross {
   position: absolute;
   top: 6px;
@@ -2134,15 +2135,24 @@ ul#pictos-fond li.picto-fond.videochat {
   -moz-opacity: 0;
   opacity: 0;
 }
+.lt-ie9 #content #bloc-actus #masque-actus ul#actus li.actu.has-video .picto-video .icon-cross {
+  display: none;
+}
 #content #bloc-actus #masque-actus ul#actus li.actu.has-video.ouvert .picto-video .icon-play {
   -webkit-opacity: 0;
   -moz-opacity: 0;
   opacity: 0;
 }
+.lt-ie9 #content #bloc-actus #masque-actus ul#actus li.actu.has-video.ouvert .picto-video .icon-play {
+  display: none;
+}
 #content #bloc-actus #masque-actus ul#actus li.actu.has-video.ouvert .picto-video .icon-cross {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+}
+.lt-ie9 #content #bloc-actus #masque-actus ul#actus li.actu.has-video.ouvert .picto-video .icon-cross {
+  display: block;
 }
 #content #bloc-actus #masque-actus ul#actus li.actu .date-actu {
   font-family: 'ConduitITCStd-Regular', sans-serif;

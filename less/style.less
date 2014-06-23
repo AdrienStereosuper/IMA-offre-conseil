@@ -159,27 +159,22 @@
 	
 	.icon-arrow:before {
 		content: "\e600";
-		.ima(1em);
 	}
 	
 	.icon-arrow-up:before {
 		content: "\e604";
-		.ima(1em);
 	}
 	
 	.icon-arrow-right:before {
 		content: "\e603";
-		.ima(1em);
 	}
 	
 	.icon-play:before {
 		content: "\e601";
-		.ima(1em);
 	}
  	
  	.icon-cross:before {
  		content:  "\e602";
- 		.ima(1em);
  	}
  	
  	[class^="ima-icon-"], [class*=" ima-icon-"] {
@@ -1557,6 +1552,12 @@ ul.social-pictos{
 					#offre-conseil-svg{
 						fill: @violetintro;
 					}
+					.lt-ie9 &{
+						background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+						#offre-conseil-svg{
+							display: none;
+						}
+					}
 				}
 			}
 			#signature{
@@ -1564,6 +1565,12 @@ ul.social-pictos{
 				.icon-logo-footer{
 					#imatech-logo{
 						fill: @blanc;
+					}
+					.lt-ie9 &{
+						background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+						#imatech-logo{
+							display: none;
+						}
 					}
 				}
 			}
@@ -1649,6 +1656,7 @@ ul.social-pictos{
 			.icon-logo-footer{
 				margin-left: 5px;
 				display: inline-block;
+				vertical-align: top;
 				width: 126px;
 				height: 23px;
 				.inline-ie7();
@@ -2005,6 +2013,9 @@ ul#pictos-fond{
 								text-align: center;
 								font-size: 0.8em;
 								.opacity(1);
+								.lt-ie9 &{
+									display: block;
+								}
 							}
 							.icon-cross{
 								position: absolute;
@@ -2014,15 +2025,24 @@ ul#pictos-fond{
 								text-align: center;
 								font-size: 0.8em;
 								.opacity(0);
+								.lt-ie9 &{
+									display: none;
+								}
 							}
 						}
 						&.ouvert{
 							.picto-video{
 								.icon-play{
 									.opacity(0);
+									.lt-ie9 &{
+										display: none;
+									}
 								}
 								.icon-cross{
 									.opacity(1);
+									.lt-ie9 &{
+										display: block;
+									}
 								}
 							}
 						}
