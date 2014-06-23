@@ -474,9 +474,11 @@ function readyIntro(){
 		});
 	
 		// scroll sur le bloc slide
-		$("#bloc-slides").on('mousewheel', function(event) {
-			mouseHandle(event, tlSlides);
-		});
+		if(!$("html").hasClass("lt-ie9")){
+			$("#bloc-slides").on('mousewheel', function(event) {
+				mouseHandle(event, tlSlides);
+			});
+		}
 	
 		// survol du bouton Notre actu
 		$("#bloc-btn-notre-actu").hover(function(){

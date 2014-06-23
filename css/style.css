@@ -1266,6 +1266,25 @@ ul {
   display: inline-block;
   vertical-align: top;
 }
+.no-csstransforms  .cn-wrapper ul li.accueil a,
+.aze  .cn-wrapper ul li.accueil a {
+  border-top-color: #d13c92;
+}
+.no-csstransforms  .cn-wrapper ul li.conseil a,
+.aze  .cn-wrapper ul li.conseil a {
+  border-top-color: #054b90;
+  border-left: 1px solid #cbcbcb;
+}
+.no-csstransforms  .cn-wrapper ul li.expertise a,
+.aze  .cn-wrapper ul li.expertise a {
+  border-top-color: #6d9c29;
+  border-left: 1px solid #cbcbcb;
+}
+.no-csstransforms  .cn-wrapper ul li.references a,
+.aze  .cn-wrapper ul li.references a {
+  border-top-color: #f99d49;
+  border-left: 1px solid #cbcbcb;
+}
 .no-csstransforms  .cn-wrapper ul li a,
 .aze  .cn-wrapper ul li a {
   width: 100%;
@@ -1282,6 +1301,8 @@ ul {
   border-radius: 0;
   background-clip: padding-box;
   background: none;
+  border-top-width: 5px;
+  border-top-style: solid;
   z-index: 3;
   -webkit-transform: skew(0deg) rotate(0deg) scale(1) !important;
   -moz-transform: skew(0deg) rotate(0deg) scale(1) !important;
