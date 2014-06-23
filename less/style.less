@@ -1355,6 +1355,7 @@ ul{
 					height: 100%;
 					width: 100%;
 					background: @blanc;
+					cursor: pointer;
 					.opacity(1);
 					.transform(skew(0) rotate(0) scale(1))!important;
 					h2{
@@ -1571,6 +1572,7 @@ ul.social-pictos{
 					}
 					.lt-ie9 &{
 						background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+						border: none;
 						#offre-conseil-svg{
 							display: none;
 						}
@@ -1609,12 +1611,25 @@ ul.social-pictos{
 				#offre-conseil-svg{
 					fill: @bleuima;
 				}
+				.lt-ie9 &{
+					background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+					border: none;
+					#offre-conseil-svg{
+						display: none;
+					}
+				}
 			}
 			#signature{
 				color: @bleuima;
 				.icon-logo-footer{
 					#imatech-logo{
 						fill: @bleuima;
+					}
+					.lt-ie9 &{
+						background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+						#imatech-logo{
+							display: none;
+						}
 					}
 				}
 			}
@@ -1653,6 +1668,13 @@ ul.social-pictos{
 				#offre-conseil-svg{
 					fill: @blanc;
 				}
+				.lt-ie9 &{
+					background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+					border: none;
+					#offre-conseil-svg{
+						display: none;
+					}
+				}
 				strong{
 					display: block;
 					.bistroscript(1.233em);
@@ -1677,6 +1699,12 @@ ul.social-pictos{
 				width: 126px;
 				height: 23px;
 				.inline-ie7();
+				.lt-ie9 &{
+					background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+					#imatech-logo{
+						display: none;
+					}
+				}
 				#imatech-logo{
 					fill: @blanc;
 				}
@@ -2159,6 +2187,9 @@ ul#pictos-fond{
 		left: 0;
 		margin-top: -37px;
 		z-index: 2;
+		.lt-ie9 &{
+			top: 68%;
+		}
 		li.puce-slides-vision{
 			margin: 0 0 15px 0;
 			padding: 0;
@@ -2334,6 +2365,62 @@ ul#pictos-fond{
 /* @end */
 
 /* @group metiers */
+
+.lt-ie9 &{
+	ul#puces-metiers{
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		display: block;
+		width: 90%;
+		height: auto;
+		margin: 0 0 0 -45%;
+		li.puce-metier{
+			position: relative;
+			top: auto;
+			left: auto;
+			margin: 10px 0!important;
+			width: 100%;
+			height: auto;
+			.border-radius(5px);
+			overflow: hidden;
+			
+			.box-shadow(0 0 7px rgba(0,0,0,.29));
+			.bloc-bulle{
+				position: relative;
+				top: inherit!important;
+				bottom: inherit!important;
+				left: inherit!important;
+				right: inherit!important;
+				width: 100%;
+				text-align: center;
+				padding: 20px 0;
+				.box-shadow(none);
+				.border-radius(0);
+			}
+			.bloc-question{
+				position: relative;
+				top: inherit!important;
+				bottom: inherit!important;
+				left: inherit!important;
+				right: inherit!important;
+				width: 100%;
+				text-align: center;
+				padding: 20px;
+				.opacity(1);
+				.box-shadow(none);
+				.border-radius(0);
+				display: none;
+				h2{
+					display: none;
+				}
+			}
+			.contour-puce{
+				display: none;
+			}
+		}
+	}
+}
 
 ul#puces-metiers{
 	display: block;

@@ -1340,6 +1340,7 @@ ul {
   height: 100%;
   width: 100%;
   background: #ffffff;
+  cursor: pointer;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -1611,6 +1612,7 @@ ul.social-pictos li a:active {
 }
 .lt-ie9 #menu-bottom.menu-violet #content-menu-bottom #masque-offre-conseil #offre-conseil {
   background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+  border: none;
 }
 .lt-ie9 #menu-bottom.menu-violet #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
   display: none;
@@ -1640,11 +1642,24 @@ ul.social-pictos li a:active {
 #menu-bottom.menu-bleu #content-menu-bottom #offre-conseil #offre-conseil-svg {
   fill: #054b90;
 }
+.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #offre-conseil {
+  background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+  border: none;
+}
+.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #offre-conseil #offre-conseil-svg {
+  display: none;
+}
 #menu-bottom.menu-bleu #content-menu-bottom #signature {
   color: #054b90;
 }
 #menu-bottom.menu-bleu #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
   fill: #054b90;
+}
+.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #signature .icon-logo-footer {
+  background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+}
+.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
+  display: none;
 }
 #menu-bottom.menu-bleu #content-menu-bottom #bloc-btn-bottom a.btn-base {
   background: #054b90;
@@ -1689,6 +1704,13 @@ ul.social-pictos li a:active {
 #menu-bottom #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
   fill: #ffffff;
 }
+.lt-ie9 #menu-bottom #content-menu-bottom #masque-offre-conseil #offre-conseil {
+  background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+  border: none;
+}
+.lt-ie9 #menu-bottom #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
+  display: none;
+}
 #menu-bottom #content-menu-bottom #masque-offre-conseil #offre-conseil strong {
   display: block;
   font-family: 'BistroScript', sans-serif;
@@ -1720,6 +1742,12 @@ ul.social-pictos li a:active {
 }
 .lt-ie8 #menu-bottom #content-menu-bottom #signature .icon-logo-footer {
   display: inline;
+}
+.lt-ie9 #menu-bottom #content-menu-bottom #signature .icon-logo-footer {
+  background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+}
+.lt-ie9 #menu-bottom #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
+  display: none;
 }
 #menu-bottom #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
   fill: #ffffff;
@@ -2276,6 +2304,9 @@ ul#pictos-fond li.picto-fond.videochat {
   margin-top: -37px;
   z-index: 2;
 }
+.lt-ie9 #vision ul#puces-slides-vision {
+  top: 68%;
+}
 #vision ul#puces-slides-vision li.puce-slides-vision {
   margin: 0 0 15px 0;
   padding: 0;
@@ -2493,6 +2524,81 @@ ul#pictos-fond li.picto-fond.videochat {
 }
 /* @end */
 /* @group metiers */
+.lt-ie9  ul#puces-metiers {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 0 0 0 -45%;
+}
+.lt-ie9  ul#puces-metiers li.puce-metier {
+  position: relative;
+  top: auto;
+  left: auto;
+  margin: 10px 0!important;
+  width: 100%;
+  height: auto;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.29);
+}
+.lt-ie9  ul#puces-metiers li.puce-metier .bloc-bulle {
+  position: relative;
+  top: inherit!important;
+  bottom: inherit!important;
+  left: inherit!important;
+  right: inherit!important;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+}
+.lt-ie9  ul#puces-metiers li.puce-metier .bloc-question {
+  position: relative;
+  top: inherit!important;
+  bottom: inherit!important;
+  left: inherit!important;
+  right: inherit!important;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  display: none;
+}
+.lt-ie9  ul#puces-metiers li.puce-metier .bloc-question h2 {
+  display: none;
+}
+.lt-ie9  ul#puces-metiers li.puce-metier .contour-puce {
+  display: none;
+}
 ul#puces-metiers {
   display: block;
   position: absolute;

@@ -692,7 +692,7 @@ function readyMetiers(){
 	
 	// survol d'une puce métier
 	$("ul#puces-metiers li.puce-metier").hover(function(){
-		if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+		if(($("html").hasClass("no-touch"))&&($(window).width()>979)&&(!($("html").hasClass("lt-ie9")))){
 			// au mouse enter
 			idPuceMetier = $(this).attr("id");
 			$(this).css('z-index',2);
@@ -700,10 +700,9 @@ function readyMetiers(){
 		}
 	}, function(){
 		// au mouse leave
-		if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+		if(($("html").hasClass("no-touch"))&&($(window).width()>979)&&(!($("html").hasClass("lt-ie9")))){
 			$(this).css('z-index','');
 			animDisparitionBlocQuesion();
-			
 		}
 	});
 
