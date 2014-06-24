@@ -391,6 +391,9 @@ ul {
 #bouton-imatech.bouton-bleu .cn-button .rond-centre {
   background: #054b90 url('../layoutImg/logo-imatech-blanc.png') no-repeat center center;
 }
+.lt-ie9 #bouton-imatech.bouton-bleu .cn-button .rond-centre {
+  background: #ffffff url('../layoutImg/logo-imatech.png') no-repeat center center;
+}
 #bouton-imatech.bouton-bleu .cn-button.ima-icon-menu:before {
   color: #ffffff;
 }
@@ -1285,6 +1288,22 @@ ul {
   border-top-color: #f99d49;
   border-left: 1px solid #cbcbcb;
 }
+.no-csstransforms  .cn-wrapper ul li.active.accueil .zone-texte h2,
+.aze  .cn-wrapper ul li.active.accueil .zone-texte h2 {
+  color: #d13c92;
+}
+.no-csstransforms  .cn-wrapper ul li.active.conseil .zone-texte h2,
+.aze  .cn-wrapper ul li.active.conseil .zone-texte h2 {
+  color: #054b90;
+}
+.no-csstransforms  .cn-wrapper ul li.active.expertise .zone-texte h2,
+.aze  .cn-wrapper ul li.active.expertise .zone-texte h2 {
+  color: #6d9c29;
+}
+.no-csstransforms  .cn-wrapper ul li.active.references .zone-texte h2,
+.aze  .cn-wrapper ul li.active.references .zone-texte h2 {
+  color: #f99d49;
+}
 .no-csstransforms  .cn-wrapper ul li a,
 .aze  .cn-wrapper ul li a {
   width: 100%;
@@ -1636,17 +1655,17 @@ ul.social-pictos li a:active {
 #menu-bottom.menu-violet #content-menu-bottom .border {
   border-color: #ffffff;
 }
-#menu-bottom.menu-bleu #content-menu-bottom #offre-conseil {
+#menu-bottom.menu-bleu #content-menu-bottom #masque-offre-conseil #offre-conseil {
   border-color: #054b90;
 }
-#menu-bottom.menu-bleu #content-menu-bottom #offre-conseil #offre-conseil-svg {
+#menu-bottom.menu-bleu #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
   fill: #054b90;
 }
-.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #offre-conseil {
-  background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
+.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #masque-offre-conseil #offre-conseil {
+  background: url('../layoutImg/offre-conseil-bleu.png') no-repeat center bottom;
   border: none;
 }
-.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #offre-conseil #offre-conseil-svg {
+.lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #masque-offre-conseil #offre-conseil #offre-conseil-svg {
   display: none;
 }
 #menu-bottom.menu-bleu #content-menu-bottom #signature {
@@ -1656,7 +1675,7 @@ ul.social-pictos li a:active {
   fill: #054b90;
 }
 .lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #signature .icon-logo-footer {
-  background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+  background: url('../layoutImg/imatech-texte-bleu.png') no-repeat center top;
 }
 .lt-ie9 #menu-bottom.menu-bleu #content-menu-bottom #signature .icon-logo-footer #imatech-logo {
   display: none;
@@ -2837,6 +2856,9 @@ body.cas-client {
   background: url('../layoutImg/degrade-top.png') repeat-x center top;
   margin-left: 30px;
 }
+.lt-ie9 .degrade.haut {
+  display: none!important;
+}
 .degrade.bas {
   bottom: 0;
   background: url('../layoutImg/degrade-bottom.png') repeat-x center top;
@@ -2883,6 +2905,12 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.lt-ie9 #masque-slides-cas-clients {
+  padding: 50px 0 750px 0;
+}
+.lt-ie9 #masque-slides-cas-clients ul#slides-cas-clients {
+  padding: 0 0 500px 0;
 }
 #masque-slides-cas-clients ul#slides-cas-clients {
   display: block;

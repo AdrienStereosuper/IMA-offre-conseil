@@ -474,6 +474,9 @@ ul{
 			border-color: @bleuima;
 			.rond-centre{
 				background: @bleuima url('../layoutImg/logo-imatech-blanc.png') no-repeat center center;
+				.lt-ie9 &{
+					background: @blanc url('../layoutImg/logo-imatech.png') no-repeat center center;
+				}
 			}
 			&.ima-icon-menu{
 				&:before{
@@ -1317,6 +1320,20 @@ ul{
 					border-top-color: #f99d49;
 					border-left: 1px solid #cbcbcb;
 				}
+				&.active{
+					&.accueil .zone-texte h2 {
+						color: #d13c92;
+					}
+					&.conseil  .zone-texte h2{
+						color: #054b90;
+					}
+					&.expertise  .zone-texte h2{
+						color: #6d9c29;
+					}
+					&.references  .zone-texte h2{
+						color: #f99d49;
+					}
+				}
 				a{
 					width: 100%;
 					height: 100%;
@@ -1606,16 +1623,18 @@ ul.social-pictos{
 	}
 	&.menu-bleu{
 		#content-menu-bottom{
-			#offre-conseil{
-				border-color: @bleuima;
-				#offre-conseil-svg{
-					fill: @bleuima;
-				}
-				.lt-ie9 &{
-					background: url('../layoutImg/offre-conseil.png') no-repeat center bottom;
-					border: none;
+			#masque-offre-conseil{
+				#offre-conseil{
+					border-color: @bleuima;
 					#offre-conseil-svg{
-						display: none;
+						fill: @bleuima;
+					}
+					.lt-ie9 &{
+						background: url('../layoutImg/offre-conseil-bleu.png') no-repeat center bottom;
+						border: none;
+						#offre-conseil-svg{
+							display: none;
+						}
 					}
 				}
 			}
@@ -1626,7 +1645,7 @@ ul.social-pictos{
 						fill: @bleuima;
 					}
 					.lt-ie9 &{
-						background: url('../layoutImg/imatech-texte.png') no-repeat center top;
+						background: url('../layoutImg/imatech-texte-bleu.png') no-repeat center top;
 						#imatech-logo{
 							display: none;
 						}
@@ -2598,6 +2617,9 @@ body{
 		top: 0;
 		background: url('../layoutImg/degrade-top.png') repeat-x center top;
 		margin-left: 30px;
+		.lt-ie9 &{
+			display: none!important;
+		}
 	}
 	&.bas{
 		bottom: 0;
@@ -2638,6 +2660,12 @@ ul#puces-slides-cas-clients{
 	padding: 350px 0 750px 0;
 	overflow: auto;
 	.box-sizing(border-box);
+	.lt-ie9 &{
+		padding: 50px 0 750px 0;
+		ul#slides-cas-clients{
+			padding: 0 0 500px 0;
+		}
+	}
 	ul#slides-cas-clients{
 		display: block;
 		width: 100%;
