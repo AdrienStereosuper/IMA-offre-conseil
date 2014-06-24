@@ -1587,6 +1587,9 @@ ul.social-pictos li a:active {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.lt-ie9 #bloc-contact .notre-expert .photo-expert img {
+  top: 0;
+}
 #bloc-contact .notre-expert .desc-expert {
   display: inline-block;
   vertical-align: middle;
@@ -3070,6 +3073,9 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+.lt-ie9 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-notre-reponse .notre-expert .photo-expert img {
+  top: 0;
+}
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-notre-reponse .notre-expert .desc-expert {
   display: inline-block;
   vertical-align: middle;
@@ -3129,6 +3135,10 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
 }
 .lt-ie8 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-cas-client ul.logos-cas-client li.logo-cas-client {
   display: inline;
+}
+.lt-ie9 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-cas-client ul.logos-cas-client li.logo-cas-client {
+  border: 1px solid #cbcbcb;
+  height: auto;
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-cas-client ul.logos-cas-client li.logo-cas-client:hover,
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client .bloc-cache .part-cas-client ul.logos-cas-client li.logo-cas-client.active {

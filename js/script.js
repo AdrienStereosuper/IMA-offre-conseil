@@ -783,7 +783,7 @@ function readyMetiers(){
 ////////////////////////////////////////////////////////////////////////////////
 
 function readyCasClient(){
-	if(!$("html").hasClass("lt-ie9")){
+	//if(!$("html").hasClass("lt-ie9")){
 		if(window.location.hash) {
 		  // hashtag existant
 		  var hash = window.location.hash.substring(1);
@@ -864,7 +864,7 @@ function readyCasClient(){
 				}
 			}, 400);
 		}
-	}
+	//}
 	
 	
 	// clic sur une slide client

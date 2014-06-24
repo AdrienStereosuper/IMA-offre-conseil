@@ -1544,6 +1544,9 @@ ul.social-pictos{
 				top: 50%;
 				left: 0;
 				.translateY(-50%);
+				.lt-ie9 &{
+					top: 0;
+				}
 			}
 		}
 
@@ -2791,6 +2794,9 @@ ul#puces-slides-cas-clients{
 								top: 50%;
 								left: 0;
 								.translateY(-50%);
+								.lt-ie9 &{
+									top: 0;
+								}
 							}
 						}
 	
@@ -2838,6 +2844,10 @@ ul#puces-slides-cas-clients{
 							margin: 0 7px 14px 7px;
 							.transition(all 300ms);
 							.box-shadow(~"0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.08)");
+							.lt-ie9 &{
+								border: 1px solid #cbcbcb;
+								height: auto;
+							}
 							&:hover, &.active{
 								.box-shadow(none);
 								a{
