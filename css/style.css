@@ -2909,6 +2909,12 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.lt-ie10 #masque-slides-cas-clients {
+  padding: 350px 0 750px 0;
+}
+.lt-ie10 #masque-slides-cas-clients ul#slides-cas-clients {
+  padding: 0 0 500px 0;
+}
 .lt-ie9 #masque-slides-cas-clients {
   padding: 50px 0 750px 0;
 }

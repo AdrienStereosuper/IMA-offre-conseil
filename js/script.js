@@ -887,7 +887,7 @@ function readyCasClient(){
 				var casClient= $(this);
 				idCasClient = $(this).attr("id");
 				//window.location.hash = '#'+idCasClient;
-				if(!$("html").hasClass("lt-ie9")){
+				if(!$("html").hasClass("lt-ie10")){
 					window.history.pushState(null,null,'#'+idCasClient);
 				}
 				var tlSlideCasClient;
@@ -989,7 +989,7 @@ function readyCasClient(){
 				}
 				var casClient = $("ul#slides-cas-clients li.slide-cas-client").eq(indexPuceCasClientClic-1);
 				idCasClient = $("ul#slides-cas-clients li.slide-cas-client").eq(indexPuceCasClientClic-1).attr("id");
-				if(!$("html").hasClass("lt-ie9")){
+				if(!$("html").hasClass("lt-ie10")){
 					window.history.pushState(null,null,'#'+idCasClient);
 				}
 				var tlSlideCasClient;
