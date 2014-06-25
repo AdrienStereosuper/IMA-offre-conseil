@@ -3289,6 +3289,16 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     background-size: cover;
   }
 }
+@media (min-width: 1400px) {
+  body.cas-clients #container,
+  body.page-template-templatesreferences-php #container {
+    width: 1150px;
+  }
+  body.cas-clients #masque-slides-cas-clients,
+  body.page-template-templatesreferences-php #masque-slides-cas-clients {
+    width: 980px;
+  }
+}
 @media (max-width: 1600px) {
   body #bg-office {
     background-position-x: 100%;
