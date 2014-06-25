@@ -104,6 +104,9 @@ var everPushed  = false;
 $(document).ready(function(){
 	boutonIMA();
 	blocContact();
+	if(!$("html").hasClass("lt-ie9")){
+		menuOuvertDefault();
+	}
 	$("a#btn-contact").click(function(){
 		if(!$(this).hasClass("active")){
 			$(this).addClass("active");
@@ -119,6 +122,23 @@ $(document).ready(function(){
 		
 		return false;
 	});
+	
+	if ($('html').hasClass('lt-ie10') || (Function('/*@cc_on return document.documentMode===10@*/')())){
+		$(".cn-wrapper ul li .zone-texte").hover(function(){
+			// au mouse enter
+			var parentZoneTexte = $(this).parent();
+			$("a", parentZoneTexte).addClass("survol");
+		}, function(){
+			// au mouse leave
+			var parentZoneTexte = $(this).parent();
+			$("a", parentZoneTexte).removeClass("survol");
+		});
+		$(".cn-wrapper ul li .zone-texte").click(function(){
+			var parentAze = $(this).parent();
+			var link = $(this).parent().find('a').attr('href');
+			window.location.href=link;
+		});
+	}
 	
 	/////////////////// PRELOAD DE LA PHOTO DE FOND ///////////////////
 	$("#superfluous").html('<ul id="pictos-fond"></ul><div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
@@ -187,11 +207,12 @@ function initLoad() {
 		/////////////////// GESTION D'URL ///////////////////
 		$(window).bind("popstate", function() {
 			 if (everPushed) {
-			   // link = location.pathname.replace(/^.*[\\/]/, ""); // get filename only
-			   // loadStart(link);
-			   if (!everPushed) {
+			    link = location.pathname.replace(/^.*[\\/]/, ""); 
+			    alert(link);
+			    loadStart(link);
+			  /* if (!everPushed) {
 				   	window.location = location.pathname;
-			   }
+			   }*/
 			 }
 		});
 	}
@@ -224,11 +245,7 @@ function loadFinished() {
 		$("body").addClass('metiers');
 		readyMetiers();
 	} else if (index.indexOf("references")>=0) {
-		if (index.split('#').length>0) {
-			updateAll('references#'+index.split('#')[1]);
-		} else {
-			updateAll('references');
-		}
+		updateAll('references');
 		$("body").addClass('cas-clients');
 		$("#menu-bottom").addClass("menu-bleu");
 		$("#bouton-imatech").addClass("bouton-bleu");
@@ -262,23 +279,18 @@ function updateURL(espace) {
 	if (Modernizr.history) {
 		switch(espace) {
 			case "vision":
-				window.history.pushState(null,'Page Vision', '/vision');
+				window.history.pushState(null,'Page Vision', '/vision/');
 				document.title = 'Conseil IMATECH | Notre vision du conseil';
 				break;
 			case "metiers":
-				window.history.pushState(null,'Page Métiers', '/metiers');
+				window.history.pushState(null,'Page Métiers', '/metiers/');
 				document.title = 'Conseil IMATECH | Nos domaines d’expertise';
 				break;
 			case "references":
-				if (espace.split('#').length>0) {
-					window.history.pushState(null,'Page Cas Client', '/references#'+index.split('#')[1]);
-				} else {
-					window.history.pushState(null,'Page Cas Client', '/references');
-				}
 				document.title = 'Conseil IMATECH | Notre références';
 				break;
 			case "mentions":
-				window.history.pushState(null,'Mentions légales', '/mentions-legales');
+				window.history.pushState(null,'Mentions légales', '/mentions-legales/');
 				document.title = 'Conseil IMATECH | Mentions légales';
 				break;
 			default :
@@ -457,9 +469,11 @@ function readyIntro(){
 		});
 	
 		// scroll sur le bloc slide
-		$("#bloc-slides").on('mousewheel', function(event) {
-			mouseHandle(event, tlSlides);
-		});
+		if(!$("html").hasClass("lt-ie9")){
+			$("#bloc-slides").on('mousewheel', function(event) {
+				mouseHandle(event, tlSlides);
+			});
+		}
 	
 		// survol du bouton Notre actu
 		$("#bloc-btn-notre-actu").hover(function(){
@@ -673,7 +687,7 @@ function readyMetiers(){
 	
 	// survol d'une puce métier
 	$("ul#puces-metiers li.puce-metier").hover(function(){
-		if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+		if(($("html").hasClass("no-touch"))&&($(window).width()>979)&&(!($("html").hasClass("lt-ie9")))){
 			// au mouse enter
 			idPuceMetier = $(this).attr("id");
 			$(this).css('z-index',2);
@@ -681,7 +695,7 @@ function readyMetiers(){
 		}
 	}, function(){
 		// au mouse leave
-		if(($("html").hasClass("no-touch"))&&($(window).width()>979)){
+		if(($("html").hasClass("no-touch"))&&($(window).width()>979)&&(!($("html").hasClass("lt-ie9")))){
 			$(this).css('z-index','');
 			animDisparitionBlocQuesion();
 		}
@@ -764,13 +778,14 @@ function readyMetiers(){
 ////////////////////////////////////////////////////////////////////////////////
 
 function readyCasClient(){
+	$('html, body').animate({ scrollTop: 0 }, 0);
 	if(window.location.hash) {
 	  // hashtag existant
 	  var hash = window.location.hash.substring(1);
-	  if ($("li#"+hash).length){
+	  if ($("li#cc-"+hash).length){
 	  	// hashtag correspondant à une catégorie
 	  	setTimeout(function() {
-		  	if(!($("li#"+hash).hasClass("ouvert"))){
+		  	if(!($("li#cc-"+hash).hasClass("ouvert"))){
 				if(!TweenMax.isTweening($("ul#slides-cas-clients li.slide-cas-client .bloc-cache"))){
 					fermerCasClient();
 					if($("ul.logos-cas-client li.logo-cas-client").hasClass("active")){
@@ -782,11 +797,12 @@ function readyCasClient(){
 						}});
 					}
 				
-					indexPuceCasClientClic = $("li#"+hash).index()+1;
+					indexPuceCasClientClic = $("li#cc-"+hash).index()+1;
 					majPucesCasClient(indexPuceCasClientClic);
 					
-					var casClient= $("li#"+hash);
-					idCasClient = $("li#"+hash).attr("id");
+					var casClient= $("li#cc-"+hash);
+					idCasClient = $("li#cc-"+hash).attr("id");
+					
 					var tlSlideCasClient;
 					tlSlideCasClient = new TimelineMax();
 					var heightBlocCache = $("li.slide-cas-client#"+idCasClient+" .bloc-cache").height();
@@ -821,11 +837,13 @@ function readyCasClient(){
 					}});
 				}
 			
-				indexPuceCasClientClic = $("li#dimensionnement").index()+1;
+				indexPuceCasClientClic = $("li#cc-dimensionnement").index()+1;
 				majPucesCasClient(indexPuceCasClientClic);
-				
-				var casClient= $("li#dimensionnement");
-				idCasClient = $("li#dimensionnement").attr("id");
+				var casClient= $("li#cc-dimensionnement");
+				idCasClient = $("li#cc-dimensionnement").attr("id");
+				if (Modernizr.history) {
+					window.history.pushState(null,null,'/references/#'+(idCasClient.replace("cc-","")));
+				}
 				var tlSlideCasClient;
 				tlSlideCasClient = new TimelineMax();
 				var heightBlocCache = $("li.slide-cas-client#"+idCasClient+" .bloc-cache").height();
@@ -844,7 +862,6 @@ function readyCasClient(){
 			}
 		}, 400);
 	}
-	
 	
 	
 	// clic sur une slide client
@@ -867,7 +884,9 @@ function readyCasClient(){
 				var casClient= $(this);
 				idCasClient = $(this).attr("id");
 				//window.location.hash = '#'+idCasClient;
-				window.history.pushState(null,null,'#'+idCasClient);
+				if (Modernizr.history) {
+					window.history.pushState(null,null,'/references/#'+(idCasClient.replace("cc-","")));
+				}
 				var tlSlideCasClient;
 				tlSlideCasClient = new TimelineMax();
 				var heightBlocCache = $("li.slide-cas-client#"+idCasClient+" .bloc-cache").height();
@@ -967,7 +986,9 @@ function readyCasClient(){
 				}
 				var casClient = $("ul#slides-cas-clients li.slide-cas-client").eq(indexPuceCasClientClic-1);
 				idCasClient = $("ul#slides-cas-clients li.slide-cas-client").eq(indexPuceCasClientClic-1).attr("id");
-				window.history.pushState(null,null,'#'+idCasClient);
+				if (Modernizr.history) {
+					window.history.pushState(null,null,'/references/#'+(idCasClient.replace("cc-","")));
+				}
 				var tlSlideCasClient;
 				tlSlideCasClient = new TimelineMax();
 				var heightBlocCache = $("li.slide-cas-client#"+idCasClient+" .bloc-cache").height();
