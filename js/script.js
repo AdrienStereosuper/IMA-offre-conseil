@@ -289,7 +289,7 @@ function updateURL(espace) {
 				document.title = 'Conseil IMATECH | Nos domaines d’expertise';
 				break;
 			case "references":
-				document.title = 'Conseil IMATECH | Notre références';
+				document.title = 'Conseil IMATECH | Nos références';
 				break;
 			case "mentions":
 				window.history.pushState(null,'Mentions légales', '/mentions-legales/');
