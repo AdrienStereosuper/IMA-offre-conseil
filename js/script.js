@@ -191,7 +191,6 @@ function initLoad() {
 		$("#cn-wrapper a").each(function() {
 			$(this).click(function() {
 				loadStart($(this).attr("href"));
-				everPushed = true;
 				return false;
 			});
 		});
@@ -206,14 +205,17 @@ function initLoad() {
 	
 		/////////////////// GESTION D'URL ///////////////////
 		$(window).bind("popstate", function() {
-			 if (everPushed) {
-			    link = location.pathname.replace(/^.*[\\/]/, ""); 
-			    alert(link);
+			
+			/* if (everPushed) {
+			    link = location.pathname.substr(0, location.pathname.length-1).replace(/^.*[\\/]/, ""); 
 			    loadStart(link);
-			  /* if (!everPushed) {
-				   	window.location = location.pathname;
-			   }*/
-			 }
+			 } */
+			 if (everPushed) {
+				 window.location = location.pathname;
+			 } else {
+				 everPushed = true;
+			}
+			 
 		});
 	}
 }
@@ -359,17 +361,14 @@ function mapAllLinks() {
 	// vision
 	$("#content-load a[href^=vision]").click(function() {
 		loadStart($(this).attr("href"));
-		everPushed = true;
 		return false;
 	});
 	$("#content-load a[href^=metiers]").click(function() {
 		loadStart($(this).attr("href"));
-		everPushed = true;
 		return false;
 	});
 	$("#content-load a[href^=references]").click(function() {
 		loadStart($(this).attr("href"));
-		everPushed = true;
 		return false;
 	});	
 }
