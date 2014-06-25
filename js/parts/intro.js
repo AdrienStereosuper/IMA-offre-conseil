@@ -313,9 +313,9 @@ function initTexteIntroIE8(){
 	TweenMax.fromTo($('a#btn-next-slide'), textAnimationTime, {y: "80px", opacity: "0"}, {y: "50px", opacity: "1", delay: 2.5});
 	TweenMax.to($('a#btn-prev-slide'), textAnimationTime, {scale: "1"});
 
-	TweenMax.to($('#slide1'), textAnimationTime, {top: "5%", scale: "0.6", opacity: "0.5", ease:textAnimationEase});
-	TweenMax.to($('#slide2'), textAnimationTime, {top: "28%", scale: "0.8", opacity: "0.7", ease:textAnimationEase})
-	TweenMax.to($('#slide3'), textAnimationTime, {top: "63.5%", scale: "1", opacity: "1", ease:textAnimationEase})
+	TweenMax.to($('#slide1'), textAnimationTime, {top: "18%", scale: "0.6", opacity: "0.5", ease:textAnimationEase});
+	TweenMax.to($('#slide2'), textAnimationTime, {top: "35%", scale: "0.8", opacity: "0.7", ease:textAnimationEase})
+	TweenMax.to($('#slide3'), textAnimationTime, {top: "56%", scale: "1", opacity: "1", ease:textAnimationEase})
 	TweenMax.to($('#slide3 a.btn-base'), textAnimationTime, {display: "inline-block", ease:textAnimationEase})
 	TweenMax.to($('a#btn-next-slide'), textAnimationTime, {display: "none", ease:textAnimationEase});
 }
