@@ -104,6 +104,9 @@ var everPushed  = false;
 $(document).ready(function(){
 	boutonIMA();
 	blocContact();
+	if(!$("html").hasClass("lt-ie9")){
+		menuOuvertDefault();
+	}
 	$("a#btn-contact").click(function(){
 		if(!$(this).hasClass("active")){
 			$(this).addClass("active");

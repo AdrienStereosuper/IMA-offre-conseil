@@ -767,6 +767,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/imatech-texte-bleu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2889,
+		"inputAbbreviatedPath": "\/layoutImg\/imatech-texte-bleu.png",
+		"outputAbbreviatedPath": "\/layoutImg\/imatech-texte-bleu.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/imatech-texte.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -840,6 +851,17 @@
 		"initialSize": 1.06146e+06,
 		"inputAbbreviatedPath": "\/layoutImg\/metiers\/photo-office.jpg",
 		"outputAbbreviatedPath": "\/layoutImg\/metiers\/photo-office.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/offre-conseil-bleu.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7027,
+		"inputAbbreviatedPath": "\/layoutImg\/offre-conseil-bleu.png",
+		"outputAbbreviatedPath": "\/layoutImg\/offre-conseil-bleu.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
