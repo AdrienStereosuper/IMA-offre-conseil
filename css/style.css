@@ -449,7 +449,6 @@ ul {
   top: -190px;
   left: 50%;
   margin-left: -190px;
-  pointer-events: none;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -716,7 +715,6 @@ ul {
   -o-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
-  pointer-events: none;
 }
 .csstransforms .cn-wrapper-menu-ferme li .zone-texte h2 {
   height: 90px;
@@ -741,6 +739,7 @@ ul {
   -moz-background-clip: padding;
   border-radius: 10px;
   background-clip: padding-box;
+  pointer-events: auto;
 }
 /* @end */
 .cn-button {
@@ -2944,6 +2943,10 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   background-clip: padding-box;
   background: #ffffff;
   cursor: pointer;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client h4 {
   font-family: 'ConduitITCStd-Bold', sans-serif;
@@ -2967,7 +2970,10 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   font-weight: normal;
   color: #054b90;
   line-height: 1em;
-  word-break: break-all;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client ul {
   list-style: disc outside none;

@@ -520,7 +520,7 @@ ul{
 	top: -190px;
 	left: 50%;
 	margin-left: -190px;
-	pointer-events: none;
+	//pointer-events: none;
 	.transition(all .3s ease);
 	.border-radius(50%);
 	.transform(scale(1));
@@ -807,7 +807,7 @@ ul{
 			right: -183px;
 			position: absolute;
 			.backface-visibility(hidden);
-			pointer-events: none;
+			//pointer-events: none;
 			h2{
 				height: 90px;
 				.conduit-bold(1.1em);
@@ -823,6 +823,7 @@ ul{
 					left: 50%;
 					margin-left: -5px;
 					.border-radius(10px);
+					pointer-events: auto;
 				}
 			}
 		}
@@ -2690,6 +2691,7 @@ ul#puces-slides-cas-clients{
 			.border-radius(10px);
 			background: @blanc;
 			cursor: pointer;
+			.hyphens(auto);
 			h4{
 				.conduit-bold(1.375em);
 				color: @roseima;
@@ -2706,7 +2708,7 @@ ul#puces-slides-cas-clients{
 				.conduit(1em);
 				color: @bleuima;
 				line-height: 1em;
-				word-break: break-all;
+				.hyphens(auto);
 			}
 			ul{
 				list-style:disc outside none;

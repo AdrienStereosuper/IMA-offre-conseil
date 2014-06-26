@@ -14,6 +14,10 @@ function blocContact(){
 ////////////// Fontion pour l'affichage et le survol du bouton top ////////////////
 ///////////////////////////////////////////////////////////////////////////////////
 function boutonIMA(){
+	$(".cercle-indic").hover(function() {
+		$('#cn-wrapper').addClass("opened-nav");
+	});
+	
 	button = $('#cn-button');
 	wrapper = $('#cn-wrapper');
 	if($(window).width()>767){
