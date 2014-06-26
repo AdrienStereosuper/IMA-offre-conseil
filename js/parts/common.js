@@ -137,9 +137,11 @@ function stopAnimateScaleBtn(nomTimeline){
 //////////// Fonction pour ouvrir le menu à l'ouvreture de la page /////////////
 ////////////////////////////////////////////////////////////////////////////////
 function menuOuvertDefault(){
-	$(".cn-wrapper").addClass("opened-nav");
-	
-	setTimeout(function(){
-		$('.cn-wrapper').removeClass("opened-nav");
-	},2000);
+	if($(window).width()>767){
+		$(".cn-wrapper").addClass("opened-nav");
+		
+		setTimeout(function(){
+			$('.cn-wrapper').removeClass("opened-nav");
+		},2000);
+	}
 }
