@@ -141,5 +141,5 @@ function menuOuvertDefault(){
 	
 	setTimeout(function(){
 		$('.cn-wrapper').removeClass("opened-nav");
-	},5000);
+	},2000);
 }
