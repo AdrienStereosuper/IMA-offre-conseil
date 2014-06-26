@@ -190,6 +190,7 @@ function initLoad() {
 		// menu
 		$("#cn-wrapper a").each(function() {
 			$(this).click(function() {
+				everPushed = true;
 				loadStart($(this).attr("href"));
 				return false;
 			});
@@ -206,17 +207,20 @@ function initLoad() {
 		/////////////////// GESTION D'URL ///////////////////
 		$(window).bind("popstate", function() {
 			
-			/* if (everPushed) {
+			if (everPushed) {
 			    link = location.pathname.substr(0, location.pathname.length-1).replace(/^.*[\\/]/, ""); 
 			    loadStart(link);
-			 } */
-			 if (everPushed) {
-				 window.location = location.pathname;
-			 } else {
-				 everPushed = true;
-			}
-			 
+			 }
+			/*if (everPushed) {
+				window.location = location.pathname;
+			} else {
+				
+			}*/
+
 		});
+		
+		
+
 	}
 }
 function loadStart(toLoad) {
@@ -279,21 +283,30 @@ function updateAll(espace) {
 function updateURL(espace) {
 	espace = espace.split('#')[0];
 	if (Modernizr.history) {
+		link = location.pathname.substr(0, location.pathname.length-1).replace(/^.*[\\/]/, ""); 
 		switch(espace) {
 			case "vision":
-				window.history.pushState(null,'Page Vision', '/vision/');
-				document.title = 'Conseil IMATECH | Notre vision du conseil';
+				if (link.indexOf("vision")<0) {
+					window.history.pushState(null,'Page Vision', '/vision/');
+					document.title = 'Conseil IMATECH | Notre vision du conseil';
+				}
 				break;
 			case "metiers":
-				window.history.pushState(null,'Page Métiers', '/metiers/');
-				document.title = 'Conseil IMATECH | Nos domaines d’expertise';
+				if (link.indexOf("metiers")<0) {
+					window.history.pushState(null,'Page Métiers', '/metiers/');
+					document.title = 'Conseil IMATECH | Nos domaines d’expertise';
+				}
 				break;
 			case "references":
-				document.title = 'Conseil IMATECH | Nos références';
+				if (link.indexOf("references")<0) {
+					document.title = 'Conseil IMATECH | Nos références';
+				}
 				break;
 			case "mentions":
-				window.history.pushState(null,'Mentions légales', '/mentions-legales/');
-				document.title = 'Conseil IMATECH | Mentions légales';
+				if (link.indexOf("mentions")<0) {
+					window.history.pushState(null,'Mentions légales', '/mentions-legales/');
+					document.title = 'Conseil IMATECH | Mentions légales';
+				}
 				break;
 			default :
 				window.history.pushState(null,'PageAccueil', '/');
@@ -360,14 +373,17 @@ function updateSuperfluous(espace,timer) {
 function mapAllLinks() {
 	// vision
 	$("#content-load a[href^=vision]").click(function() {
+		everPushed = true;
 		loadStart($(this).attr("href"));
 		return false;
 	});
 	$("#content-load a[href^=metiers]").click(function() {
+		everPushed = true;
 		loadStart($(this).attr("href"));
 		return false;
 	});
 	$("#content-load a[href^=references]").click(function() {
+		everPushed = true;
 		loadStart($(this).attr("href"));
 		return false;
 	});	
