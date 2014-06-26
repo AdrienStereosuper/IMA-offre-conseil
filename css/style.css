@@ -2967,6 +2967,7 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   font-weight: normal;
   color: #054b90;
   line-height: 1em;
+  word-break: break-all;
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client ul {
   list-style: disc outside none;
