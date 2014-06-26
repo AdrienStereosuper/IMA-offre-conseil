@@ -211,11 +211,6 @@ function initLoad() {
 			    link = location.pathname.substr(0, location.pathname.length-1).replace(/^.*[\\/]/, ""); 
 			    loadStart(link);
 			 }
-			/*if (everPushed) {
-				window.location = location.pathname;
-			} else {
-				
-			}*/
 
 		});
 		
@@ -233,7 +228,7 @@ function loadStart(toLoad) {
 	niceScrolls = [];
 	index = toLoad;
 	$("#content-load").fadeOut(400, function() {
-		$("#content-load").load(toLoad+" #content-load", loadFinished);
+		$("#content-load").load(toLoad+" #content-load>*", loadFinished);
 	});
 }
 
