@@ -3284,8 +3284,8 @@ body.mentions-legales, body.page-template-default{
 @media (max-width: 767px) {
 	html, body{
 		font-size: 0.95em;
-		height: auto;
-		min-height: 100%;
+		height: 100%;
+		min-height: 850px;
 	}
 	
 	body{
@@ -3299,6 +3299,9 @@ body.mentions-legales, body.page-template-default{
 	}
 	body{	
 		overflow: visible;
+	}
+	#container{
+		overflow: hidden;
 	}
 	#menu-bottom  {
 		position: absolute;
@@ -3315,10 +3318,6 @@ body.mentions-legales, body.page-template-default{
 			}
 		}
 	}
-	#container{
-		overflow: hidden;
-		height: auto;
-	}
 	#content{
 		height: 800px;
 		#bloc-slides{
@@ -3327,6 +3326,11 @@ body.mentions-legales, body.page-template-default{
 			width: 95%;
 			left: 50%;
 			margin-left: -47.5%;
+		}
+		#bloc-actus{
+			#masque-actus{
+				height: 300px;
+			}
 		}
 	}
 	
@@ -3473,7 +3477,7 @@ body.mentions-legales, body.page-template-default{
 			background: @violetintro url('../layoutImg/bg-no-script.jpg') repeat left top;
 		}
 		#container{
-			height: 1000px;
+			//height: 1000px;
 		}
 	}
 	#content{
