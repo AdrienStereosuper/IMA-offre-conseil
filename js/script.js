@@ -146,7 +146,7 @@ $(document).ready(function(){
 	/////////////////// PARTIE MENTIONS LEGALES ///////////////////
 	if($("body").hasClass("mentions-legales")){
 		readyMentionsLegales();
-		updateSuperfluous("mentions-legales",0);
+		updateSuperfluous("mentions",0);
 	};
 	
 	
