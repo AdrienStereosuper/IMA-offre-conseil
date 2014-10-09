@@ -3644,6 +3644,9 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   #content #bloc-actus #masque-actus {
     height: 280px;
   }
+  #container-map-ima {
+    display: none;
+  }
   #bouton-imatech {
     position: relative;
     top: inherit;
