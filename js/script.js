@@ -123,8 +123,8 @@ $(document).ready(function(){
 		return false;
 	});
 	
-	if ($('html').hasClass('lt-ie10') || (Function('/*@cc_on return document.documentMode===10@*/')())){
-		$(".cn-wrapper ul li .zone-texte").hover(function(){
+	//if ($('html').hasClass('lt-ie10') || (Function('/*@cc_on return document.documentMode===10@*/')())){
+		/*$(".cn-wrapper ul li .zone-texte").hover(function(){
 			// au mouse enter
 			var parentZoneTexte = $(this).parent();
 			$("a", parentZoneTexte).addClass("survol");
@@ -137,8 +137,43 @@ $(document).ready(function(){
 			var parentAze = $(this).parent();
 			var link = $(this).parent().find('a').attr('href');
 			window.location.href=link;
+		});*/
+		
+		
+		$(".cn-wrapper ul li a").hover(function(){
+			// au mouse enter
+			var parentZoneTexte = $(this).parent();
+			$("a", parentZoneTexte).addClass("survol");
+		}, function(){
+			// au mouse leave
+			var parentZoneTexte = $(this).parent();
+			$("a", parentZoneTexte).removeClass("survol");
 		});
-	}
+		
+		$("#container-map-ima area").hover(function(){
+			// au mouse enter
+			var areaClassName = $(this).attr("class");
+			var lienCorrespondant = areaClassName.replace("area-","");
+			var liCorrespondant = $(".cn-wrapper ul li."+lienCorrespondant+":not(.active)");
+			var aCorrespondant = $(".cn-wrapper ul li."+lienCorrespondant+":not(.active) a");
+			aCorrespondant.addClass("survol");
+		}, function(){
+			// au mouse leave
+			var areaClassName = $(this).attr("class");
+			var lienCorrespondant = areaClassName.replace("area-","");
+			var liCorrespondant = $(".cn-wrapper ul li."+lienCorrespondant+":not(.active)");
+			var aCorrespondant = $(".cn-wrapper ul li."+lienCorrespondant+":not(.active) a");
+			aCorrespondant.removeClass("survol");
+			$("a", liCorrespondant).removeClass("survol");
+		});
+		
+		$(".cn-wrapper ul li a").click(function(){
+			var parentAze = $(this).parent();
+			var link = $(this).parent().find('a').attr('href');
+			window.location.href=link;
+		});
+		
+	//}
 	
 	/////////////////// PRELOAD DE LA PHOTO DE FOND ///////////////////
 	$("#superfluous").html('<ul id="pictos-fond"></ul><div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
@@ -189,6 +224,13 @@ function initLoad() {
 	if (Modernizr.history) {	
 		// menu
 		$("#cn-wrapper a").each(function() {
+			$(this).click(function() {
+				everPushed = true;
+				loadStart($(this).attr("href"));
+				return false;
+			});
+		});
+		$("#container-map-ima area").each(function() {
 			$(this).click(function() {
 				everPushed = true;
 				loadStart($(this).attr("href"));
@@ -314,6 +356,7 @@ function updateURL(espace) {
 function updateMenuState(espace) {
 	espace = espace.split('#')[0];
 	$('#cn-wrapper').removeClass("opened-nav");
+	$('#container-map-ima').removeClass("opened-nav");
 	$(".cn-wrapper-menu-ferme").removeClass('accueil').removeClass('vision').removeClass('expertise').removeClass('references');
 	$(".cn-wrapper-menu-ferme li").removeClass('active');
 	$("#cn-wrapper li").removeClass('active');
@@ -378,6 +421,22 @@ function mapAllLinks() {
 		return false;
 	});
 	$("#content-load a[href^=references]").click(function() {
+		everPushed = true;
+		loadStart($(this).attr("href"));
+		return false;
+	});	
+	
+	$("#container-map-ima area[href^=vision]").click(function() {
+		everPushed = true;
+		loadStart($(this).attr("href"));
+		return false;
+	});
+	$("#container-map-ima area[href^=metiers]").click(function() {
+		everPushed = true;
+		loadStart($(this).attr("href"));
+		return false;
+	});
+	$("#container-map-ima area[href^=references]").click(function() {
 		everPushed = true;
 		loadStart($(this).attr("href"));
 		return false;
