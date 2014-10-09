@@ -179,7 +179,7 @@ $(document).ready(function(){
 	$("#superfluous").html('<ul id="pictos-fond"></ul><div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
 	
 	/////////////////// PARTIE MENTIONS LEGALES ///////////////////
-	if($("body").hasClass("mentions-legales")){
+	if($("body").hasClass("mentions-legales") || $("body").hasClass("page-template-default")){
 		readyMentionsLegales();
 		updateSuperfluous("mentions",0);
 	};
