@@ -4052,6 +4052,9 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   #content #bloc-slides {
     top: 55%;
   }
+  #content #bloc-slides .slide {
+    padding: 30px;
+  }
   a.btn-arrow.up {
     top: 0;
   }
@@ -4108,6 +4111,11 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   }
   ul#puces-metiers li.puce-metier#dimensionnement {
     margin-top: -10%;
+  }
+}
+@media (max-height: 600px) {
+  #content #bloc-slides {
+    top: 60%;
   }
 }
 /* retina */
