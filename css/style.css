@@ -4050,7 +4050,10 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     background-position-y: 65%;
   }
   #content #bloc-slides {
-    height: 250px;
+    top: 55%;
+  }
+  a.btn-arrow.up {
+    top: 0;
   }
   ul#puces-metiers li.puce-metier#parcours-client {
     margin-top: 0;
@@ -4082,9 +4085,6 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
 @media (max-height: 700px) {
   body #bg-office {
     background-position-y: 60%;
-  }
-  #content #bloc-slides {
-    height: 200px;
   }
 }
 @media (max-height: 650px) {

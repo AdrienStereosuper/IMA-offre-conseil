@@ -3749,8 +3749,12 @@ body.mentions-legales, body.page-template-default{
 	}
 	#content{
 		#bloc-slides{
-			height: 250px;
+			//height: 250px;
+			top: 55%;
 		}
+	}
+	a.btn-arrow.up{
+		top: 0;
 	}
 	ul#puces-metiers{
 		li.puce-metier{
@@ -3780,6 +3784,7 @@ body.mentions-legales, body.page-template-default{
 	#content{
 		#bloc-slides{
 			font-size: 0.85em;
+			//top: 60%;
 			.slide {
 				&#slide3{
 					a.btn-base{
@@ -3792,14 +3797,14 @@ body.mentions-legales, body.page-template-default{
 }
 
 @media (max-height: 700px) {
+	#content{
+		#bloc-slides{
+			//top: 65%;
+		}
+	}
 	body {
 		#bg-office{
 			background-position-y: 60%;
-		}
-	}
-	#content{
-		#bloc-slides{
-			height: 200px;
 		}
 	}
 }
@@ -3810,6 +3815,7 @@ body.mentions-legales, body.page-template-default{
 			background-position-y: 55%;
 		}
 	}
+	
 	ul#puces-metiers{
 		li.puce-metier{
 			&#parcours-client{
@@ -3830,6 +3836,14 @@ body.mentions-legales, body.page-template-default{
 			&#dimensionnement{
 				margin-top: -10%;
 			}
+		}
+	}
+}
+
+@media (max-height: 600px) {
+	#content{
+		#bloc-slides{
+			//top: 70%;
 		}
 	}
 }
