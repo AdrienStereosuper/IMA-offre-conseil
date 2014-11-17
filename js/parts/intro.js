@@ -327,7 +327,7 @@ function initTexteIntroIE8(){
 function getEtape2Slide() {
 	if($(window).width()>767){
 		tlSlide1 = new TimelineMax();
-		tlSlide1.to($('#slide1'), textAnimationTime, {top: "25%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlSlide1.to($('#slide1'), textAnimationTime, {top: "25%", scale: "0.8", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
 					etape=2;
 				}})
 				.to($('#slide2'), textAnimationTime, {top: "50%", scale: "1", opacity: "1", ease:textAnimationEase},0)
@@ -335,7 +335,7 @@ function getEtape2Slide() {
 				.to($('a#btn-prev-slide'), textAnimationTime, {display: "block", scale: "1", ease:textAnimationEase},0);
 	}else{
 		tlSlide1 = new TimelineMax();
-		tlSlide1.to($('#slide1'), textAnimationTime, {left: "-700px", scale: "1", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlSlide1.to($('#slide1'), textAnimationTime, {left: "-700px", scale: "1", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
 					etape=2;
 				}})
 				.to($('#slide2'), textAnimationTime, {left: "0", scale: "1", opacity: "1", ease:textAnimationEase},0)
@@ -367,19 +367,19 @@ function getReverseEtape2Slide() {
 function getEtape3Slide() {
 	if($(window).width()>767){
 		tlSlide3 = new TimelineMax();
-		tlSlide3.to($('#slide1'), textAnimationTime, {top: "9%", scale: "0.6", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
+		tlSlide3.to($('#slide1'), textAnimationTime, {top: "9%", scale: "0.6", opacity: "0.3", ease:textAnimationEase, onComplete: function() {
 					etape=3;
 				}})
-				.to($('#slide2'), textAnimationTime, {top: "28%", scale: "0.8", opacity: "0.7", ease:textAnimationEase},0)
+				.to($('#slide2'), textAnimationTime, {top: "28%", scale: "0.8", opacity: "0.5", ease:textAnimationEase},0)
 				.to($('#slide3'), textAnimationTime, {top: "63%", scale: "1", opacity: "1", ease:textAnimationEase},0)
 				.to($('#slide3 a.btn-base'), textAnimationTime, {display: "inline-block", ease:textAnimationEase},0)
 				.to($('a#btn-next-slide'), textAnimationTime, {display: "none", ease:textAnimationEase},0);
 	}else{
 		tlSlide3 = new TimelineMax();
-		tlSlide3.to($('#slide1'), textAnimationTime, {left: "-700px", scale: "1", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
+		tlSlide3.to($('#slide1'), textAnimationTime, {left: "-700px", scale: "1", opacity: "0.3", ease:textAnimationEase, onComplete: function() {
 					etape=3;
 				}})
-				.to($('#slide2'), textAnimationTime, {left: "-700px", scale: "1", opacity: "0.7", ease:textAnimationEase},0)
+				.to($('#slide2'), textAnimationTime, {left: "-700px", scale: "1", opacity: "0.5", ease:textAnimationEase},0)
 				.to($('#slide3'), textAnimationTime, {left: "0", scale: "1", opacity: "1", ease:textAnimationEase},0)
 				.to($('#slide3 a.btn-base'), textAnimationTime, {display: "inline-block", ease:textAnimationEase},0)
 				.to($('a#btn-next-slide'), textAnimationTime, {display: "none", ease:textAnimationEase},0);
@@ -389,7 +389,7 @@ function getEtape3Slide() {
 function getReverseEtape3Slide() {
 	if($(window).width()>767){
 		tlReverseSlide3 = new TimelineMax();
-		tlReverseSlide3.to($('#slide1'), textAnimationTime, {top: "25%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlReverseSlide3.to($('#slide1'), textAnimationTime, {top: "25%", scale: "0.8", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
 							etape=2;
 							$('#slide3 a.btn-base').css("display","none");
 						}})
@@ -398,7 +398,7 @@ function getReverseEtape3Slide() {
 					   .to($('a#btn-next-slide'), textAnimationTime, {display: "block", ease:textAnimationEase},0);
 	}else{
 		tlReverseSlide3 = new TimelineMax();
-		tlReverseSlide3.to($('#slide1'), textAnimationTime, {left: "-700px", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlReverseSlide3.to($('#slide1'), textAnimationTime, {left: "-700px", scale: "0.8", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
 							etape=2;
 							$('#slide3 a.btn-base').css("display","none");
 						}})
