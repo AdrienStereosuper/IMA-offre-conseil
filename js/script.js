@@ -175,9 +175,6 @@ $(document).ready(function(){
 		
 	//}
 	
-	/////////////////// PRELOAD DE LA PHOTO DE FOND ///////////////////
-	$("#superfluous").html('<ul id="pictos-fond"></ul><div id="bg-office"></div><div class="degrade haut"></div><div class="degrade bas"></div>');
-	
 	/////////////////// PARTIE MENTIONS LEGALES ///////////////////
 	if($("body").hasClass("mentions-legales") || $("body").hasClass("page-template-default")){
 		readyMentionsLegales();
@@ -302,7 +299,6 @@ function loadFinished() {
 	} else {
 		updateAll('accueil');
 		$("body").addClass('intro');
-		$("#menu-bottom").addClass("menu-violet");
 		readyIntro();
 	}
 	mapAllLinks();
@@ -393,16 +389,13 @@ function updateSuperfluous(espace,timer) {
 		case "vision":
 		case "metiers":
 			$("#superfluous .degrade").fadeOut(timer);
-			$("#superfluous #pictos-fond").fadeOut(timer*2);
 			break;
 		case "references":
 		case "mentions":
 			$("#superfluous .degrade").fadeIn(timer);
-			$("#superfluous #pictos-fond").fadeOut(timer*2);
 			break;
 		default :
 			$("#superfluous .degrade").fadeOut(timer);
-			$("#superfluous #pictos-fond").fadeIn(timer*2);
 			break;
 	}
 }
@@ -1303,7 +1296,7 @@ function customCasClientScroll(){
 	niceScrolls = [];
 	if($(window).width()>767){
 		niceScrolls.push($("#masque-slides-cas-clients").niceScroll({
-			cursorcolor: "#fff",
+			cursorcolor: "#054b90",
 			cursorwidth: "3px",
 			cursorborderradius: "3px",
 			railalign: "right",

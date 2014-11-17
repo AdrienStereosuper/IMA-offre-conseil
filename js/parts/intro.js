@@ -31,7 +31,7 @@ function animateApparitionBlocActus(){
 		}});
 		
 		// le btn votre actu s'anime vers le haut
-		TweenMax.to($('a#btn-notre-actu'), blocActusAnimationTime, {top: "-10px"});
+		TweenMax.to($('a#btn-notre-actu'), blocActusAnimationTime, {top: "-15px"});
 		
 		// le bloc slides s'anime vers la droite
 		TweenMax.to($('#bloc-slides'), blocActusAnimationTime, {x: "300px", opacity: "0.5", onReverseComplete: function(){
@@ -327,7 +327,7 @@ function initTexteIntroIE8(){
 function getEtape2Slide() {
 	if($(window).width()>767){
 		tlSlide1 = new TimelineMax();
-		tlSlide1.to($('#slide1'), textAnimationTime, {top: "30%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlSlide1.to($('#slide1'), textAnimationTime, {top: "25%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
 					etape=2;
 				}})
 				.to($('#slide2'), textAnimationTime, {top: "50%", scale: "1", opacity: "1", ease:textAnimationEase},0)
@@ -367,11 +367,11 @@ function getReverseEtape2Slide() {
 function getEtape3Slide() {
 	if($(window).width()>767){
 		tlSlide3 = new TimelineMax();
-		tlSlide3.to($('#slide1'), textAnimationTime, {top: "5%", scale: "0.6", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
+		tlSlide3.to($('#slide1'), textAnimationTime, {top: "9%", scale: "0.6", opacity: "0.5", ease:textAnimationEase, onComplete: function() {
 					etape=3;
 				}})
 				.to($('#slide2'), textAnimationTime, {top: "28%", scale: "0.8", opacity: "0.7", ease:textAnimationEase},0)
-				.to($('#slide3'), textAnimationTime, {top: "63.5%", scale: "1", opacity: "1", ease:textAnimationEase},0)
+				.to($('#slide3'), textAnimationTime, {top: "63%", scale: "1", opacity: "1", ease:textAnimationEase},0)
 				.to($('#slide3 a.btn-base'), textAnimationTime, {display: "inline-block", ease:textAnimationEase},0)
 				.to($('a#btn-next-slide'), textAnimationTime, {display: "none", ease:textAnimationEase},0);
 	}else{
@@ -389,7 +389,7 @@ function getEtape3Slide() {
 function getReverseEtape3Slide() {
 	if($(window).width()>767){
 		tlReverseSlide3 = new TimelineMax();
-		tlReverseSlide3.to($('#slide1'), textAnimationTime, {top: "30%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
+		tlReverseSlide3.to($('#slide1'), textAnimationTime, {top: "25%", scale: "0.8", opacity: "0.7", ease:textAnimationEase, onComplete: function() {
 							etape=2;
 							$('#slide3 a.btn-base').css("display","none");
 						}})
