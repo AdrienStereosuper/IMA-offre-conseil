@@ -2079,7 +2079,7 @@ body {
   font-family: 'ConduitITCStd-Bold', sans-serif;
   font-size: 1em;
   font-weight: normal;
-  color: #ffffff;
+  color: #054b90;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
@@ -2354,6 +2354,55 @@ body {
 #content #bloc-slides a#btn-next-slide {
   display: block;
   top: 60%;
+}
+/* @end */
+/* @group quiz */
+#quiz {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 150px;
+  bottom: 150px;
+  z-index: 2;
+}
+.lt-ie9 #quiz {
+  top: -300px;
+}
+#quiz ul#puces-slides-quiz {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -37px;
+  z-index: 2;
+}
+.lt-ie9 #quiz ul#puces-slides-quiz {
+  top: 68%;
+}
+#quiz ul#puces-slides-quiz li.puce-slides-quiz {
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+#quiz ul#puces-slides-quiz li.puce-slides-quiz a.lien-puce-slides-quiz {
+  display: block;
+  width: 15px;
+  height: 15px;
+  -webkit-border-radius: 15px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 15px;
+  -moz-background-clip: padding;
+  border-radius: 15px;
+  background-clip: padding-box;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41);
+  -moz-box-shadow: 0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41);
+  box-shadow: 0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41);
+}
+#quiz ul#puces-slides-quiz li.puce-slides-quiz a.lien-puce-slides-quiz.active {
+  background: #e09118;
 }
 /* @end */
 /* @group vision */

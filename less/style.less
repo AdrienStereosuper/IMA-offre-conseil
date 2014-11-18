@@ -13,6 +13,7 @@
 @vertima: #6a9a25;
 @violetintro: #ab0464;
 @roseima: #d13c92;
+@orangeima: #e09118;
 
 /* @end */
 
@@ -1931,7 +1932,6 @@ body{
 			padding-top: 18px;
 			width: 100%;
 			li.video-actu{
-				
 				width: 100%;
 				height: auto;
 				display: none;
@@ -1972,7 +1972,7 @@ body{
 				}
 				a{
 					.conduit-bold(1em);
-					color: @blanc;
+					color: @bleuima;
 					.opacity(1);
 					&:hover{
 						.opacity(0.8);
@@ -2195,6 +2195,51 @@ body{
 			display: block;
 			//top: 55%;
 			top: 60%;
+		}
+	}
+}
+
+/* @end */
+
+/* @group quiz */
+
+#quiz{
+	display: block;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	left: 0;
+	top: 150px;
+	bottom: 150px;
+	z-index: 2;
+	.lt-ie9 &{
+		top: -300px;
+	}
+	ul#puces-slides-quiz{
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -37px;
+		z-index: 2;
+		.lt-ie9 &{
+			top: 68%;
+		}
+		li.puce-slides-quiz{
+			margin: 0 0 15px 0;
+			padding: 0;
+			a.lien-puce-slides-quiz{
+				display: block;
+				width: 15px;
+				height: 15px;
+				.border-radius(15px);
+				background: @blanc;
+				.box-shadow(~"0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41)");
+				&.active{
+					background: @orangeima;
+				}
+			}
 		}
 	}
 }
