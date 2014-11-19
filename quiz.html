@@ -47,9 +47,10 @@
 		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
-	<body class="metiers">
+	<body class="quiz">
 		<div id="superfluous">
 			<div id="bg-office"></div>
+			<div id="bg-question-1"></div>
 		</div>
 	  	<div id="container">
 	  		<div id="bouton-imatech">
@@ -84,9 +85,9 @@
 		  				<li class="puce-slides-quiz"><a class="lien-puce-slides-quiz" href="#"></a></li>
 		  				<li class="puce-slides-quiz"><a class="lien-puce-slides-quiz" href="#"></a></li>
 		  			</ul>
-		  			<ul id="slides-vision">
+		  			<ul id="slides-quiz">
 		  				<a href="#" class="btn-arrow up" id="btn-prev-slide-metier"><span class="icon-arrow-up"></span></a>
-		  				<li class="slide-vision" id="slide3-vision">
+		  				<li class="slide-quiz" id="slide3-quiz">
 		  					<h3>L’audit préliminaire, un état des lieux de votre Relation Client.</h3>
 		  					<p class="texte-slide-vision">Nous étudions chacun des éléments qui la composent pour identifier et prioriser les actions à mener pour faire une Relation Client comme vous l'aimez.</p>
 		  					<ul id="elements-audit-preliminaire">
@@ -97,18 +98,35 @@
 		  					<div class="fleche-vision"></div>
 		  					<a href="metiers.html" class="btn-base">Nos domaines d'expertise</a>
 		  				</li>
-		  				<li class="slide-vision" id="slide2-vision">
+		  				<li class="slide-quiz" id="slide2-quiz">
 		  					<p class="texte-slide-vision">Tous nos consultants sont opérationnels, nos observations, nos recommandations et notre accompagnement sont donc fondés sur des expertises éprouvées au quotidien.</p>
 		  					<a href="#" class="btn-base" id="btn-next-slide-metier2">Audit préliminaire</a>
 		  				</li>
-		  				<li class="slide-vision" id="slide1-vision">
-		  					<div class="question gauche">
+		  				<li class="slide-quiz" id="slide1-quiz">
+		  					<!--<div class="question gauche">
 		  						<p>Préférez-vous être formé au management  par quelqu’un qui n’a jamais managé ou par un manager expérimenté ?</p>
 		  					</div><div class="question droite">
 		  						<p>Préférez-vous un système informatique fait pour les gens qui vont s’en servir ou pour ceux qui l’ont développé ?</p>
 		  					</div>
 		  					<div class="accolade"></div>
-		  					<a href="#" class="btn-arrow down" id="btn-next-slide-metier"><span class="icon-arrow"></span></a>
+		  					<a href="#" class="btn-arrow down" id="btn-next-slide-metier"><span class="icon-arrow"></span></a>-->
+		  					<h3>Vous êtes à la boulangerie.</h3>
+		  					<p class="texte-slide-quiz">Devant vous se trouve une file d'attente d'une dizaine de minutes. Vous patientez et lorsqu'arrive votre tour, il n' y a plus de pain. La boulangère, très serviable, comprend ce que vous avez vécu et s'excuse. Que pensez-vous ?</p>
+		  					<form class="form-quiz" id="form-question-1">
+		  						<div class="ligne-form">
+			  						<input onclick="document.getElementById('btn-question-1').disabled = false;" class="radio" type="radio" name="radios" id="radios-0" value="agreable">
+			  					    <label class="label-radio" for="radios-0">Même dans une situation délicate, la posture de la boulangère a rendu ce moment agréable.</label>
+		  					    </div>
+		  					    <div class="ligne-form">
+			  					    <input onclick="document.getElementById('btn-question-1').disabled = false;" class="radio" type="radio" name="radios" id="radios-1" value="afficheur">
+			  					    <label class="label-radio" for="radios-1">Vous auriez aimer qu'un afficheur vous annonce le pain restant afin d'éviter d'attendre pour rien.</label>
+			  					</div>
+			  					<div class="ligne-form">
+			  					    <input onclick="document.getElementById('btn-question-1').disabled = false;" class="radio" type="radio" name="radios" id="radios-2" value="assez de pain">
+			  					    <label class="label-radio" for="radios-2">Vous auriez aimé que le boulanger ait fait assez de pain pour tous ses clients.</label>
+			  					</div>
+		  					    <button id="btn-question-1" type="submit" class="btn" disabled="disabled"><span class="cercle-btn"><span class="icon-arrow-right"></span></span>Valider et passer à la question 2</button>
+		  					</form>
 		  				</li>
 		  				
 		  			</ul>

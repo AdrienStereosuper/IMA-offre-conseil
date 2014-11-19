@@ -201,6 +201,11 @@ $(document).ready(function(){
 		readyCasClient();
 		updateSuperfluous("references",0);
 	}
+
+	/////////////////// PARTIE CAS CLIENTS ///////////////////
+	if($("body").hasClass("quiz")){
+		readyQuiz();
+	}
 	
 	/////////////////// GÉRER LES LOADS ///////////////////
 	initLoad();
@@ -637,6 +642,118 @@ function readyIntro(){
 	  actuID = $(this).attr("id");
 	  animateApparitionVideo(actuID);
 	  return false;
+	});
+}
+
+////////////////////////////////////////////////////////////////////////////////
+///////////////////////////// Fonction ready quiz //////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+function readyQuiz(){
+	initSlidesQuiz();
+	// Appel de la fonction pour animer les fleches dans les boutons animateButtonArrow(objet, direction, decalage, scale, delay, nomTimeline)
+	tlboutonMetier1 = new TimelineMax();
+	animateButtonArrow($('#btn-next-slide-metier .icon-arrow'), "y", "4px", "0.95", "5", tlboutonMetier1);
+	
+	tlboutonMetier2 = new TimelineMax();
+	animateButtonArrow($('#btn-prev-slide-metier .icon-arrow-up'), "y", "-4px", "0.95", "5", tlboutonMetier2);
+	
+	// scroll sur le bloc slide
+	$("#vision").on('mousewheel', function(event) {
+		mouseHandleVision(event, tlSlidesVision, indexPucesVision);
+	});
+	
+	$("a#btn-prev-slide-metier").click(function(){
+		if(!TweenMax.isTweening($('#slide2-vision'))){
+			stopAnimateScaleBtn(tlBtnPrevSlideMetier);
+			tlBtnPrevSlideMetier = new TimelineMax();
+			indexPuceVision = $("a.lien-puce-slides-vision.active").parent().index()+1;
+			if(indexPuceVision==2){
+				majPucesVision(indexPucesVision-1);
+				TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase, onComplete: function(){
+					indexPucesVision--;
+					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "none"});
+				}});
+				TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+				TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+			}else if(indexPuceVision==3) {
+				majPucesVision(indexPucesVision-1);
+				TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase, onComplete: function(){
+					indexPucesVision--;
+				}});
+				TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+				TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+			}
+		}
+		return false;
+	});
+	
+	$("ul#puces-metiers li.puce-metier .bloc-bulle").click(function(){
+		idPuceMetier = $(this).parent().attr("id");
+		//animAppartitionBlocQuesion(idPuceMetier);
+		$(".bloc-question").css("display", "none");
+		$("#bloc-question-"+idPuceMetier).slideToggle( 200, function() {
+		});  
+		return false;
+	});
+	
+	
+	// clic sur une puce vision
+	$("ul#puces-slides-vision li.puce-slides-vision a.lien-puce-slides-vision").click(function(){
+		if(!($(this).hasClass("active"))){
+			oldIndexPucesVision = $("a.lien-puce-slides-vision.active").parent().index()+1;
+			indexPuceVisionClic = $(this).parent().index()+1;
+			majPucesVision(indexPuceVisionClic);
+			var nbMouvements = indexPuceVisionClic - oldIndexPucesVision;
+			if(nbMouvements>0){
+				// on va vers une slide suivante
+				if((oldIndexPucesVision=="1")&&(indexPuceVisionClic=="2")){
+					// on va de la 1 vers la 2
+					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "block"});
+					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase, onComplete: function(){
+						indexPucesVision=2;
+					}});
+					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+				}else if ((oldIndexPucesVision=="2")&&(indexPuceVisionClic=="3")){
+					// on va de la 2 vers la 3
+					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0", ease:textAnimationEase});
+					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase});
+					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+					indexPucesVision=3;
+				}else if ((oldIndexPucesVision=="1")&&(indexPuceVisionClic=="3")){
+					// on va de la 1 vers la 3
+					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "block"});
+					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0", ease:textAnimationEase});
+					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase});
+					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+					indexPucesVision=3;
+				}
+			}else{
+				// on va vers une slide precedente
+				if((oldIndexPucesVision=="2")&&(indexPuceVisionClic=="1")){
+					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "none"});
+					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase, onComplete: function(){
+						indexPucesVision=1;
+					}});
+					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+				}else if((oldIndexPucesVision=="3")&&(indexPuceVisionClic=="2")){
+					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase, onComplete: function(){
+						indexPucesVision=2;
+					}});
+					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+				}else if((oldIndexPucesVision=="3")&&(indexPuceVisionClic=="1")){
+					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "none"});
+					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase, onComplete: function(){
+						indexPucesVision=1;
+					}});
+					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
+				}
+			}
+		}
+		return false;
 	});
 }
 
@@ -1185,6 +1302,20 @@ function initSlidesVision(){
 	TweenMax.from($('#puces-slides-vision'), textAnimationTime, {top: "100%", opacity: "0", delay: 0.8});
 	var offsetDelay=0.3;
 	$("ul#puces-metiers li.puce-metier").each(function() {
+		TweenMax.from($(this), textAnimationTime, {marginTop: "100px", opacity: "0", delay: offsetDelay});
+		offsetDelay+=0.05;
+	});
+		
+}
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////// Fonction pour initialiser les slides quiz ///////////////////
+///////////////////////////////////////////////////////////////////////////////
+function initSlidesQuiz(){
+	TweenMax.to($('#slide1-quiz'), textAnimationTime, {top: "50%", opacity: "1", delay: 0.5});
+	TweenMax.from($('#puces-slides-quiz'), textAnimationTime, {top: "100%", opacity: "0", delay: 0.8});
+	var offsetDelay=0.3;
+	$("ul#puces-quiz li.puce-quiz").each(function() {
 		TweenMax.from($(this), textAnimationTime, {marginTop: "100px", opacity: "0", delay: offsetDelay});
 		offsetDelay+=0.05;
 	});
