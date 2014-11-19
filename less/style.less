@@ -442,6 +442,66 @@ body {
 		background-size: 100% auto;
 		background-size: cover;
 	}
+	#bg-question-2{
+		background-image: url('../layoutImg/quiz/bg-question-2.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+	#bg-question-3{
+		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+	#bg-question-4{
+		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+	#bg-question-5{
+		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-size: cover;
+	}
+	#bg-resultat{
+		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: 100% auto;
+		background-size: cover;
+	}
 	&.intro, &.home{
 		.nicescroll-rails{
 			margin-left: -30px;
@@ -2273,48 +2333,37 @@ body{
 			.transform(translate(0, -50%));
 			.opacity(0);
 			&#slide1-quiz{
-				//margin-top: 50px;
 				top: 100%;
 				.lt-ie9 &{
 					top: 150%;
 				}
 			}
 			&#slide2-quiz{
-				//margin-top: 300px;
 				top: 100%;
-				text-align: center;
-				a.btn-base{
-					display: inline-block;
-					left: auto;
-					top: auto;
-					position: relative;
-					margin: 20px auto;
-					background: @vertima;
-					color: @blanc;
-					.bistroscript(1.5em);
-					padding: 10px 20px 5px 20px;
-					.inline-ie7();
-				}
 				.lt-ie9 &{
 					top: 150%;
 				}
 			}
 			&#slide3-quiz{
-				//margin-top: 300px;
-				top: 75%;
-				text-align: center;
-				a.btn-base{
-					display: inline-block;
-					left: auto;
-					top: auto;
-					position: relative;
-					margin: 20px auto;
-					background: @vertima;
-					color: @blanc;
-					.bistroscript(1.5em);
-					padding: 10px 20px 5px 20px;
-					.inline-ie7();
+				top: 100%;
+				.lt-ie9 &{
+					top: 150%;
 				}
+			}
+			&#slide4-quiz{
+				top: 100%;
+				.lt-ie9 &{
+					top: 150%;
+				}
+			}
+			&#slide5-quiz{
+				top: 100%;
+				.lt-ie9 &{
+					top: 150%;
+				}
+			}
+			&#slide6-quiz{
+				top: 100%;
 				.lt-ie9 &{
 					top: 150%;
 				}
@@ -2339,6 +2388,7 @@ body{
 				margin: 35px 0 0 0;
 				padding: 0;
 				color: #2b3239;
+				text-align: left;
 				.conduit(1em);
 				.ligne-form{
 					display: block;
@@ -2356,14 +2406,14 @@ body{
 				}
 				/* @end */
 
-				button.btn{
+				.btn-submit{
 					background-color: @orangeima;
 					color: @blanc;
 					.conduit(1em);
 					text-transform: uppercase;
 					border: none;
 					.border-radius(10px);
-					padding: 8px 5px 6px 28px;
+					padding: 10px 10px 6px 28px;
 					margin: 20px 0 0 18px;
 					position: relative;
 					.box-shadow(0.5px 0.9px 43px rgba(23, 23, 22, 0.05), 0 0 7px rgba(0, 0, 0, 0.09));
@@ -2394,6 +2444,9 @@ body{
 							line-height: 13px;
 							.transition(transform 0.1s ease-in-out);
 						}
+					}
+					&:focus{
+						outline: none;
 					}
 					&:hover{
 						&:enabled{
