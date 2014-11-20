@@ -2418,6 +2418,7 @@ body{
 					margin: 20px 0 0 18px;
 					position: relative;
 					.box-shadow(0.5px 0.9px 43px rgba(23, 23, 22, 0.05), 0 0 7px rgba(0, 0, 0, 0.09));
+					.backface-visibility(hidden);
 					.cercle-btn{
 						display: block;
 						width: 38px;
@@ -2486,6 +2487,82 @@ body{
 			z-index: 2;
 			span{
 				color: @vertima;
+			}
+		}
+	}
+	a.lien-quitter-quiz{
+		display: block;
+		.size(114px);
+		.border-radius(50%);
+		background-color: @blanc;
+		position: absolute;
+		bottom: -116px;
+		left: 50%;
+		margin-left: -57px;
+		.box-shadow(0.5px 0.9px 43px rgba(23, 23, 22, 0.05), 0 0 7px rgba(0, 0, 0, 0.21));
+		.box-sizing(border-box);
+		padding: 4px;
+		text-decoration: none;
+		.transition(transform 0.2s ease-in-out);
+		.content-lien-quitter-quiz{
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			.border-radius(50%);
+			background-color: @blanc;
+			text-align: center;
+			.transform-style(preserve-3d);
+			.fond-lien-quitter-quiz{
+				display: block;
+				width: 100%;
+				height: 62px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: @orangeima;
+			}
+			.top-lien-quitter-quiz{
+				.bistroscript(2.75em);
+				color: @bleuima;
+				display: block;
+			}
+			.bottom-lien-quitter-quiz{
+				.conduit-bold(1.188em);
+				color: @blanc;
+				display: block;
+				text-transform: uppercase;
+				.icon-cross{
+					font-size: 13px;
+					margin-right: 5px;
+					color: #f3ebe4;
+					position: relative;
+					display: inline-block;
+					vertical-align: top;
+					width: 13px;
+					height: 13px;
+					&:before{
+						position: absolute;
+						top: 3px;
+						left: 0;
+						margin: 0;
+						padding: 0;
+						.transition(transform 0.1s ease-in-out);
+					}
+				}
+			}
+		}
+		&:hover{
+			.transform(scale(1.05));
+			.content-lien-quitter-quiz{
+				.bottom-lien-quitter-quiz{
+					.icon-cross{
+						&:before{
+							.transform(rotate(90deg));
+						}
+					}
+				}
 			}
 		}
 	}
@@ -3892,6 +3969,15 @@ body.mentions-legales, body.page-template-default{
 					.ligne-form{
 						margin: 10px 0;
 					}
+				}
+			}
+		}
+		a.lien-quitter-quiz{
+			.size(100px);
+			margin-left: -50px;
+			.content-lien-quitter-quiz{
+				.fond-lien-quitter-quiz{
+					height: 55px;
 				}
 			}
 		}
