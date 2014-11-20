@@ -654,33 +654,43 @@ function readyIntro(){
 function transitionSlideQuiz(idBtnSubmit){
 	switch(idBtnSubmit) {
 	    case "btn-question-1":
-	        TweenMax.to($('#slide1-quiz'), slideQuizTime, {top: "-100%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide1-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide2-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-1'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	        majPucesQuiz(2);
 	        break;
 	    case "btn-question-2":
-	        TweenMax.to($('#slide2-quiz'), slideQuizTime, {top: "-100%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide2-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide3-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-2'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	        majPucesQuiz(3);
 	        break;
 	    case "btn-question-3":
-	        TweenMax.to($('#slide3-quiz'), slideQuizTime, {top: "-100%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide3-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide4-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-3'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	        majPucesQuiz(4);
 	        break;
 	    case "btn-question-4":
-	        TweenMax.to($('#slide4-quiz'), slideQuizTime, {top: "-100%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide4-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-4'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	        majPucesQuiz(5);
 	        break;
 	    case "btn-question-5":
-	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-100%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide6-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-5'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	        majPucesQuiz(6);
 	        break;
 	    default:
 	        ;
 	}
+}
+
+function majPucesQuiz(indexPucesQuiz){
+	$("ul#puces-slides-quiz li.puce-slides-quiz .content-puce-slides-quiz").removeClass("active");
+	$("ul#puces-slides-quiz li.puce-slides-quiz .content-puce-slides-quiz").eq(indexPucesQuiz-1).addClass("active");
 }
 
 function readyQuiz(){
@@ -691,112 +701,12 @@ function readyQuiz(){
 	
 	tlboutonMetier2 = new TimelineMax();
 	animateButtonArrow($('#btn-prev-slide-metier .icon-arrow-up'), "y", "-4px", "0.95", "5", tlboutonMetier2);
-	
-
 
 	$(".form-quiz .btn-submit").click(function(event){
-		
+		// APPEL NICOLAS
 		var idBtnSubmit = $(this).attr("id");
 		transitionSlideQuiz(idBtnSubmit);
 		event.preventDefault();
-	});
-
-
-
-
-
-	$("a#btn-prev-slide-metier").click(function(){
-		if(!TweenMax.isTweening($('#slide2-vision'))){
-			stopAnimateScaleBtn(tlBtnPrevSlideMetier);
-			tlBtnPrevSlideMetier = new TimelineMax();
-			indexPuceVision = $("a.lien-puce-slides-vision.active").parent().index()+1;
-			if(indexPuceVision==2){
-				majPucesVision(indexPucesVision-1);
-				TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase, onComplete: function(){
-					indexPucesVision--;
-					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "none"});
-				}});
-				TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-				TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-			}else if(indexPuceVision==3) {
-				majPucesVision(indexPucesVision-1);
-				TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase, onComplete: function(){
-					indexPucesVision--;
-				}});
-				TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
-				TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-			}
-		}
-		return false;
-	});
-	
-	$("ul#puces-metiers li.puce-metier .bloc-bulle").click(function(){
-		idPuceMetier = $(this).parent().attr("id");
-		//animAppartitionBlocQuesion(idPuceMetier);
-		$(".bloc-question").css("display", "none");
-		$("#bloc-question-"+idPuceMetier).slideToggle( 200, function() {
-		});  
-		return false;
-	});
-	
-	
-	// clic sur une puce vision
-	$("ul#puces-slides-vision li.puce-slides-vision a.lien-puce-slides-vision").click(function(){
-		if(!($(this).hasClass("active"))){
-			oldIndexPucesVision = $("a.lien-puce-slides-vision.active").parent().index()+1;
-			indexPuceVisionClic = $(this).parent().index()+1;
-			majPucesVision(indexPuceVisionClic);
-			var nbMouvements = indexPuceVisionClic - oldIndexPucesVision;
-			if(nbMouvements>0){
-				// on va vers une slide suivante
-				if((oldIndexPucesVision=="1")&&(indexPuceVisionClic=="2")){
-					// on va de la 1 vers la 2
-					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "block"});
-					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase, onComplete: function(){
-						indexPucesVision=2;
-					}});
-					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
-					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-				}else if ((oldIndexPucesVision=="2")&&(indexPuceVisionClic=="3")){
-					// on va de la 2 vers la 3
-					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0", ease:textAnimationEase});
-					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase});
-					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
-					indexPucesVision=3;
-				}else if ((oldIndexPucesVision=="1")&&(indexPuceVisionClic=="3")){
-					// on va de la 1 vers la 3
-					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "block"});
-					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0", ease:textAnimationEase});
-					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase});
-					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
-					indexPucesVision=3;
-				}
-			}else{
-				// on va vers une slide precedente
-				if((oldIndexPucesVision=="2")&&(indexPuceVisionClic=="1")){
-					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "none"});
-					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase, onComplete: function(){
-						indexPucesVision=1;
-					}});
-					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-				}else if((oldIndexPucesVision=="3")&&(indexPuceVisionClic=="2")){
-					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "-350px", opacity: "0.5", ease:textAnimationEase, onComplete: function(){
-						indexPucesVision=2;
-					}});
-					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase});
-					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-				}else if((oldIndexPucesVision=="3")&&(indexPuceVisionClic=="1")){
-					TweenMax.to($('a#btn-prev-slide-metier'), 0, {display: "none"});
-					TweenMax.to($('#slide1-vision'), textAnimationTime, {top: "50%", opacity: "1", ease:textAnimationEase, onComplete: function(){
-						indexPucesVision=1;
-					}});
-					TweenMax.to($('#slide2-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-					TweenMax.to($('#slide3-vision'), textAnimationTime, {top: "100%", opacity: "0", ease:textAnimationEase});
-				}
-			}
-		}
-		return false;
 	});
 }
 

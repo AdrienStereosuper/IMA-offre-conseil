@@ -367,7 +367,7 @@ body #bg-question-2 {
   background-size: cover;
 }
 body #bg-question-3 {
-  background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+  background-image: url('../layoutImg/quiz/bg-question-3.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
@@ -379,7 +379,7 @@ body #bg-question-3 {
   background-size: cover;
 }
 body #bg-question-4 {
-  background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+  background-image: url('../layoutImg/quiz/bg-question-4.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
@@ -391,7 +391,7 @@ body #bg-question-4 {
   background-size: cover;
 }
 body #bg-question-5 {
-  background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+  background-image: url('../layoutImg/quiz/bg-question-5.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
@@ -403,7 +403,7 @@ body #bg-question-5 {
   background-size: cover;
 }
 body #bg-resultat {
-  background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+  background-image: url('../layoutImg/quiz/bg-resultat.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: absolute;
@@ -2448,7 +2448,7 @@ body {
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -37px;
+  margin-top: -75px;
   z-index: 2;
 }
 .lt-ie9 #quiz ul#puces-slides-quiz {
@@ -2458,7 +2458,7 @@ body {
   margin: 0 0 15px 0;
   padding: 0;
 }
-#quiz ul#puces-slides-quiz li.puce-slides-quiz a.lien-puce-slides-quiz {
+#quiz ul#puces-slides-quiz li.puce-slides-quiz .content-puce-slides-quiz {
   display: block;
   width: 15px;
   height: 15px;
@@ -2468,12 +2468,12 @@ body {
   -moz-background-clip: padding;
   border-radius: 15px;
   background-clip: padding-box;
-  background: #ffffff;
+  background: #e1e1e1;
   -webkit-box-shadow: 0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41);
   -moz-box-shadow: 0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41);
   box-shadow: 0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41);
 }
-#quiz ul#puces-slides-quiz li.puce-slides-quiz a.lien-puce-slides-quiz.active {
+#quiz ul#puces-slides-quiz li.puce-slides-quiz .content-puce-slides-quiz.active {
   background: #e09118;
 }
 #quiz ul#slides-quiz {
@@ -2556,6 +2556,7 @@ body {
   font-family: 'BistroScript', sans-serif;
   font-size: 2.625em;
   font-weight: normal;
+  line-height: 1.1em;
 }
 #quiz ul#slides-quiz li.slide-quiz p.texte-slide-quiz {
   margin: 0;
@@ -3817,6 +3818,12 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   ul#puces-metiers li.puce-metier#dimensionnement {
     margin-top: -18%;
   }
+  /* @group Quiz */
+  #quiz ul#slides-quiz li.slide-quiz {
+    width: 80%;
+    margin-left: -40%;
+  }
+  /* @end */
   /* @group Vision */
   #vision ul#slides-vision li.slide-vision {
     width: 80%;
@@ -4240,6 +4247,25 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   #content #bloc-actus a#btn-fermer-actus {
     display: none;
   }
+  /* @group Quiz */
+  #quiz {
+    height: 400px;
+  }
+  #quiz ul#puces-slides-quiz {
+    left: 6px;
+  }
+  #quiz ul#slides-quiz li.slide-quiz {
+    width: 84%;
+    margin-left: -42%;
+    padding: 25px 20px 20px 20px;
+  }
+  #quiz ul#slides-quiz li.slide-quiz h3 {
+    font-size: 2em;
+  }
+  #quiz ul#slides-quiz li.slide-quiz form.form-quiz .ligne-form {
+    margin: 10px 0;
+  }
+  /* @end */
   /* @group Vision */
   #vision {
     height: 500px;

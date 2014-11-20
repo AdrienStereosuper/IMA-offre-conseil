@@ -455,7 +455,7 @@ body {
 		background-size: cover;
 	}
 	#bg-question-3{
-		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-image: url('../layoutImg/quiz/bg-question-3.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		position: absolute;
@@ -467,7 +467,7 @@ body {
 		background-size: cover;
 	}
 	#bg-question-4{
-		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-image: url('../layoutImg/quiz/bg-question-4.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		position: absolute;
@@ -479,7 +479,7 @@ body {
 		background-size: cover;
 	}
 	#bg-question-5{
-		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-image: url('../layoutImg/quiz/bg-question-5.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		position: absolute;
@@ -491,7 +491,7 @@ body {
 		background-size: cover;
 	}
 	#bg-resultat{
-		background-image: url('../layoutImg/quiz/bg-question-1.jpg');
+		background-image: url('../layoutImg/quiz/bg-resultat.jpg');
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
 		position: absolute;
@@ -2293,7 +2293,7 @@ body{
 		position: absolute;
 		top: 50%;
 		left: 0;
-		margin-top: -37px;
+		margin-top: -75px;
 		z-index: 2;
 		.lt-ie9 &{
 			top: 68%;
@@ -2301,12 +2301,12 @@ body{
 		li.puce-slides-quiz{
 			margin: 0 0 15px 0;
 			padding: 0;
-			a.lien-puce-slides-quiz{
+			.content-puce-slides-quiz{
 				display: block;
 				width: 15px;
 				height: 15px;
 				.border-radius(15px);
-				background: @blanc;
+				background: #e1e1e1;
 				.box-shadow(~"0 1px 43px rgba(23,23,22,.05), 0 0 7px rgba(0,0,0,.41)");
 				&.active{
 					background: @orangeima;
@@ -2373,6 +2373,7 @@ body{
 				padding: 0;
 				color: @orangeima;
 				.bistroscript(2.625em);
+				line-height: 1.1em;
 			}
 			p.texte-slide-quiz{
 				margin: 0;
@@ -3484,6 +3485,19 @@ body.mentions-legales, body.page-template-default{
 			}
 		}
 	}
+
+	/* @group Quiz */
+	
+	#quiz{
+		ul#slides-quiz{
+			li.slide-quiz{
+				width: 80%;
+				margin-left: -40%;
+			}
+		}
+	}
+	
+	/* @end */
 	
 	/* @group Vision */
 	
@@ -3858,6 +3872,32 @@ body.mentions-legales, body.page-template-default{
 			}
 		}
 	}
+
+	/* @group Quiz */
+	
+	#quiz{
+		height: 400px;
+		ul#puces-slides-quiz {
+			left: 6px;
+		}
+		ul#slides-quiz{
+			li.slide-quiz{
+				width: 84%;
+				margin-left: -42%;
+				padding: 25px 20px 20px 20px;
+				h3{
+					font-size: 2em;
+				}
+				form.form-quiz{
+					.ligne-form{
+						margin: 10px 0;
+					}
+				}
+			}
+		}
+	}
+
+	/* @end */
 	
 	/* @group Vision */
 	
