@@ -695,12 +695,6 @@ function majPucesQuiz(indexPucesQuiz){
 
 function readyQuiz(){
 	initSlidesQuiz();
-	// Appel de la fonction pour animer les fleches dans les boutons animateButtonArrow(objet, direction, decalage, scale, delay, nomTimeline)
-	tlboutonMetier1 = new TimelineMax();
-	animateButtonArrow($('#btn-next-slide-metier .icon-arrow'), "y", "4px", "0.95", "5", tlboutonMetier1);
-	
-	tlboutonMetier2 = new TimelineMax();
-	animateButtonArrow($('#btn-prev-slide-metier .icon-arrow-up'), "y", "-4px", "0.95", "5", tlboutonMetier2);
 
 	$(".form-quiz .btn-submit").click(function(event){
 		// APPEL NICOLAS
