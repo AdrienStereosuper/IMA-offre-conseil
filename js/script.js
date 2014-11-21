@@ -99,6 +99,7 @@ var tlbouton4;
 
 /* quiz */
 var slideQuizTime = 0.8;
+var emailQuiz = true;
 
 /* pushstate */
 var index = '';
@@ -678,11 +679,23 @@ function transitionSlideQuiz(idBtnSubmit){
 	        majPucesQuiz(5);
 	        break;
 	    case "btn-question-5":
-	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
-	        TweenMax.to($('#slide6-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
-	        TweenMax.to($('#bg-question-5'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
-	        majPucesQuiz(6);
+	    	if (emailQuiz){
+	    		TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
+	    		TweenMax.to($('#slide-email-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+	    		TweenMax.to($('#bg-question-5'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	    		majPucesQuiz(6);
+	    	}else{
+	    		TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
+	    		TweenMax.to($('#slide6-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+	    		TweenMax.to($('#bg-question-5'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
+	    		majPucesQuiz(6);
+	    	}
 	        break;
+	    case "btn-email-quiz":
+	    	TweenMax.to($('#slide-email-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
+	    	TweenMax.to($('#slide6-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
+	    	majPucesQuiz(7);
+	    	break;
 	    default:
 	        ;
 	}
@@ -702,6 +715,19 @@ function readyQuiz(){
 		transitionSlideQuiz(idBtnSubmit);
 		event.preventDefault();
 	});
+
+
+	// Activer ou désactiver le btn "Voir le résultat" quand le champ email est rempli ou vide
+	$('#mail-1').keyup(function(){
+        var validated = true;
+        if($('#mail-1').val().length === 0) validated = false;
+        if(validated){
+        	$("#btn-email-quiz").attr("disabled", false);
+        }else{
+        	$("#btn-email-quiz").attr("disabled", true);
+        }
+	});
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -1259,6 +1285,9 @@ function initSlidesVision(){
 ///////////////// Fonction pour initialiser les slides quiz ///////////////////
 ///////////////////////////////////////////////////////////////////////////////
 function initSlidesQuiz(){
+	if (emailQuiz){
+		$("ul#puces-slides-quiz").append("<li class='puce-slides-quiz'><div class='content-puce-slides-quiz'></div></li>");
+	}
 	TweenMax.to($('#slide1-quiz'), textAnimationTime, {top: "50%", opacity: "1", delay: 0.5});
 	TweenMax.from($('#puces-slides-quiz'), textAnimationTime, {top: "100%", opacity: "0", delay: 0.8});
 	var offsetDelay=0.3;

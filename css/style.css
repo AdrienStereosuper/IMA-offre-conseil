@@ -2820,6 +2820,12 @@ a#bloc-btn-quiz .participer-btn-quiz .cercle-btn .icon-arrow-right {
 .lt-ie9 #quiz ul#slides-quiz li.slide-quiz#slide5-quiz {
   top: 150%;
 }
+#quiz ul#slides-quiz li.slide-quiz#slide-email-quiz {
+  top: 100%;
+}
+.lt-ie9 #quiz ul#slides-quiz li.slide-quiz#slide-email-quiz {
+  top: 150%;
+}
 #quiz ul#slides-quiz li.slide-quiz#slide6-quiz {
   top: 100%;
 }
@@ -3028,6 +3034,8 @@ a#bloc-btn-quiz .participer-btn-quiz .cercle-btn .icon-arrow-right {
   font-weight: normal;
   /* @group Radios */
   /* @end */
+  /* @group Email */
+  /* @end */
 }
 #quiz ul#slides-quiz li.slide-quiz form.form-quiz .ligne-form {
   display: block;
@@ -3053,6 +3061,41 @@ a#bloc-btn-quiz .participer-btn-quiz .cercle-btn .icon-arrow-right {
   z-index: 1;
   display: block;
   position: relative;
+}
+#quiz ul#slides-quiz li.slide-quiz form.form-quiz .input-quiz {
+  display: inline-block;
+  vertical-align: top;
+  padding: 6px 8px 4px 8px;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  border: 1px solid #dfdfdf;
+  font-family: 'ConduitITCStd-Regular', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+}
+#quiz ul#slides-quiz li.slide-quiz form.form-quiz .input-quiz:active,
+#quiz ul#slides-quiz li.slide-quiz form.form-quiz .input-quiz:focus {
+  border-color: #e09118;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#quiz ul#slides-quiz li.slide-quiz form.form-quiz .label-texte {
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 0 0 0;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin: 0 10px 0 0;
 }
 #quiz ul#slides-quiz li.slide-quiz form.form-quiz .btn-submit {
   background-color: #e09118;
@@ -3166,7 +3209,7 @@ a#bloc-btn-quiz .participer-btn-quiz .cercle-btn .icon-arrow-right {
   background-clip: padding-box;
   background-color: #ffffff;
   position: absolute;
-  bottom: -116px;
+  bottom: -66px;
   left: 50%;
   margin-left: -57px;
   -webkit-box-shadow: 0.5px 0.9px 43px rgba(23, 23, 22, 0.05), 0 0 7px rgba(0, 0, 0, 0.21);
@@ -4390,6 +4433,9 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     margin-top: -18%;
   }
   /* @group Quiz */
+  #quiz a.lien-quitter-quiz {
+    bottom: -94px;
+  }
   #quiz ul#puces-slides-quiz {
     left: 6px;
   }
