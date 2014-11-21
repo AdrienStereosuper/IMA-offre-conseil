@@ -2867,10 +2867,23 @@ a#bloc-btn-quiz .participer-btn-quiz .cercle-btn .icon-arrow-right {
   padding: 0 380px 0 0;
   margin: 0;
 }
-#quiz ul#slides-quiz li.slide-quiz img.img-droite-quiz {
+#quiz ul#slides-quiz li.slide-quiz .bloc-droite-slide-quiz {
   position: absolute;
-  top: 50px;
-  right: 30px;
+  top: 0;
+  right: 0;
+  width: 374px;
+  height: 273px;
+}
+#quiz ul#slides-quiz li.slide-quiz .bloc-droite-slide-quiz img.img-droite-quiz {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 50px 30px 0 10px;
 }
 #quiz ul#slides-quiz li.slide-quiz ul.social-quiz {
   display: block;
@@ -2883,7 +2896,7 @@ a#bloc-btn-quiz .participer-btn-quiz .cercle-btn .icon-arrow-right {
   width: 50px;
   height: 50px;
   position: relative;
-  margin: 0 15px 0 0;
+  margin: 0 15px 10px 0;
   padding: 0;
 }
 #quiz ul#slides-quiz li.slide-quiz ul.social-quiz li a {
@@ -4377,9 +4390,46 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
     margin-top: -18%;
   }
   /* @group Quiz */
+  #quiz ul#puces-slides-quiz {
+    left: 6px;
+  }
   #quiz ul#slides-quiz li.slide-quiz {
     width: 80%;
     margin-left: -40%;
+  }
+  #quiz ul#slides-quiz li.slide-quiz .bloc-gauche-slide-quiz {
+    padding: 0;
+  }
+  #quiz ul#slides-quiz li.slide-quiz .bloc-droite-slide-quiz {
+    position: relative;
+    top: inherit;
+    right: inherit;
+    width: auto;
+    height: auto;
+    margin: 10px 0;
+  }
+  #quiz ul#slides-quiz li.slide-quiz .bloc-droite-slide-quiz img.img-droite-quiz {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    width: auto;
+    height: auto;
+    padding: 0;
+    max-width: 100%;
+  }
+  #quiz ul#slides-quiz li.slide-quiz ul.social-quiz li {
+    margin: 0 5px 10px 0;
+    width: 40px;
+    height: 40px;
+  }
+  #quiz ul#slides-quiz li.slide-quiz ul.social-quiz li a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 23px;
+  }
+  #quiz ul#slides-quiz li.slide-quiz ul.social-quiz li a.ima-icon-twitter {
+    font-size: 20px;
   }
   /* @end */
   /* @group Vision */
@@ -4808,9 +4858,6 @@ body.page-template-default #masque-slides-cas-clients ul#slides-cas-clients li.s
   /* @group Quiz */
   #quiz {
     height: 400px;
-  }
-  #quiz ul#puces-slides-quiz {
-    left: 6px;
   }
   #quiz ul#slides-quiz li.slide-quiz {
     width: 84%;

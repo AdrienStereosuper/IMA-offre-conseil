@@ -654,31 +654,31 @@ function readyIntro(){
 function transitionSlideQuiz(idBtnSubmit){
 	switch(idBtnSubmit) {
 	    case "btn-question-1":
-	        TweenMax.to($('#slide1-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide1-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide2-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-1'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
 	        majPucesQuiz(2);
 	        break;
 	    case "btn-question-2":
-	        TweenMax.to($('#slide2-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide2-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide3-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-2'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
 	        majPucesQuiz(3);
 	        break;
 	    case "btn-question-3":
-	        TweenMax.to($('#slide3-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide3-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide4-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-3'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
 	        majPucesQuiz(4);
 	        break;
 	    case "btn-question-4":
-	        TweenMax.to($('#slide4-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide4-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-4'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
 	        majPucesQuiz(5);
 	        break;
 	    case "btn-question-5":
-	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-120%", opacity: "0.5", ease:textAnimationEase});
+	        TweenMax.to($('#slide5-quiz'), slideQuizTime, {top: "-150%", opacity: "0.5", ease:textAnimationEase});
 	        TweenMax.to($('#slide6-quiz'), slideQuizTime, {top: "50%", opacity: "1", ease:textAnimationEase});
 	        TweenMax.to($('#bg-question-5'), slideQuizTime, {opacity: "0", ease:textAnimationEase});
 	        majPucesQuiz(6);
