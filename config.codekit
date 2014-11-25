@@ -943,60 +943,16 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/layoutImg\/quiz\/bg-question-1.jpg": {
-		"fileType": 16384,
+	"\/layoutImg\/quiz\/resultats\/test-resultat.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 540935,
-		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-1.jpg",
-		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-1.jpg",
+		"initialSize": 20419,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/test-resultat.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/test-resultat.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
-	"\/layoutImg\/quiz\/bg-question-2.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 217386,
-		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-2.jpg",
-		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-2.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
-	"\/layoutImg\/quiz\/bg-question-3.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 418497,
-		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-3.jpg",
-		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-3.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
-	"\/layoutImg\/quiz\/bg-question-4.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 214265,
-		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-4.jpg",
-		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-4.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
-		},
-	"\/layoutImg\/quiz\/bg-question-5.jpg": {
-		"fileType": 16384,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 224577,
-		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-5.jpg",
-		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-5.jpg",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 1
+		"processed": 0
 		},
 	"\/layoutImg\/simon\/menu-ferme-accueil-active.png": {
 		"fileType": 32768,

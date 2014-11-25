@@ -350,75 +350,63 @@ body #bg-office {
 }
 body #bg-question-1 {
   background-image: url('../layoutImg/quiz/bg-question-1.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% auto;
-  background-size: cover;
 }
 body #bg-question-2 {
   background-image: url('../layoutImg/quiz/bg-question-2.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% auto;
-  background-size: cover;
 }
 body #bg-question-3 {
   background-image: url('../layoutImg/quiz/bg-question-3.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% auto;
-  background-size: cover;
 }
 body #bg-question-4 {
   background-image: url('../layoutImg/quiz/bg-question-4.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% auto;
-  background-size: cover;
 }
 body #bg-question-5 {
   background-image: url('../layoutImg/quiz/bg-question-5.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% auto;
-  background-size: cover;
 }
 body #bg-resultat {
   background-image: url('../layoutImg/quiz/bg-resultat.jpg');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: 50% 50%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: 100% auto;
-  background-size: cover;
 }
 body.intro .nicescroll-rails,
 body.home .nicescroll-rails {
