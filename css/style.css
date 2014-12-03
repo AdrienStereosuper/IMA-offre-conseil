@@ -3956,6 +3956,11 @@ ul#puces-slides-cas-clients li.puce-slides-cas-clients a.lien-puce-slides-cas-cl
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 #masque-slides-cas-clients ul#slides-cas-clients li.slide-cas-client h3 {
   font-family: 'BistroScript', sans-serif;
