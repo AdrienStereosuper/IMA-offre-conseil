@@ -2533,6 +2533,7 @@ a#bloc-btn-quiz{
 			}
 			&#slide6-quiz{
 				top: 100%;
+				width: 802px;
 				.lt-ie9 &{
 					top: 150%;
 				}
@@ -2543,6 +2544,26 @@ a#bloc-btn-quiz{
 				color: @orangeima;
 				.bistroscript(2.625em);
 				line-height: 1.1em;
+				
+			}
+			&#slide6-quiz{
+				h3{
+					margin: 0 0 25px 0;
+					padding: 0 0 0 120px;
+					color: @bleuima;
+					.conduit(1.438em);
+					line-height: 1.1em;
+					.box-sizing(border-box);
+					.perso-resultat-quiz{
+						color: @orangeima;
+						.bistroscript(1.957em);
+					}
+				}
+				h4{
+					.bistroscript(1.375em);
+					border-bottom: 1px solid @roseima;
+					margin: 20px 0 10px 0;
+				}
 			}
 			h4{
 				margin: 30px 0 10px 0;
@@ -2562,17 +2583,32 @@ a#bloc-btn-quiz{
 					.conduit(1.125em);
 				}
 			}
-			.bloc-gauche-slide-quiz{
-				display: block;
-				.box-sizing(border-box);
-				padding: 0 380px 0 0;
+			p.texte-orange-slide-quiz{
 				margin: 0;
+				padding: 0;
+				color: @orangeima;
+				.conduit(1em);
+				line-height: 1.1em;
+				strong{
+					color: @orangeima;
+					.conduit(1.125em);
+				}
 			}
-			.bloc-droite-slide-quiz{
+			.img-resultat-quiz{
+				display: block;
+				width: 162px;
+				height: 162px;
+				.border-radius(50%);
+				background: black;
+				position: absolute;
+				top: -26px;
+				left: -29px;
+			}
+			.bloc-gauche-slide-quiz{
 				position: absolute;
 				top: 0;
-				right: 0;
-				width: 374px;
+				left: 0;
+				width: 275px;
 				height: 273px;
 				#container-chart{
 					display: block;
@@ -2581,6 +2617,12 @@ a#bloc-btn-quiz{
 					.box-sizing(border-box);
 					padding: 50px 30px 0 10px;
 				}
+			}
+			.bloc-droite-slide-quiz{
+				display: block;
+				.box-sizing(border-box);
+				padding: 0 0 0 310px;
+				margin: 0;
 				img.img-droite-quiz{
 					position: absolute;
 					top: 0;
@@ -2591,37 +2633,120 @@ a#bloc-btn-quiz{
 					padding: 50px 30px 0 10px;
 				}
 			}
+		  	.interlocuteur-inline{
+		  		display: inline-block;
+		  		vertical-align: top;
+		  		width: 30%;
+		  		padding: 18px 0 0 0;
+		  		.titre-expert{
+		  			display: block;
+		  			color: @roseima;
+		  			text-transform: uppercase;
+		  			.conduit(0.813em);
+		  		}
+		  		.nom-expert{
+		  			display: block;
+		  			color: @bleuima;
+		  			.bistroscript(1.875em);
+		  			padding: 12px 0 0 0;
+		  		}
+		  	}
+		  	ul#menu-contact-inline{
+		  		display: inline-block;
+		  		vertical-align: top;
+		  		width: 70%;
+		  		margin: 0;
+		  		padding: 0;
+		  		li{
+		  			display: inline-block;
+		  			vertical-align: top;
+		  			a{
+		  				text-decoration: none;
+		  				display: block;
+		  				width: 100%;
+		  				height: 34px;
+		  				.border-radius(5px);
+		  				margin: 4px 0;
+		  				color: @vertima;
+		  				line-height: 34px;
+		  				padding: 0 0 0 62px;
+		  				.box-sizing(border-box);
+		  				.conduit(1em);
+		  				.transition(all 0.2s);
+		  				&.tel-menu-contact-inline, &.portable-menu-contact-inline{
+		  					width: 126px;
+		  					padding: 0 0 0 28px;
+		  					span{
+		  						left: 2px;
+		  					}
+		  				}
+		  				&.mail-menu-contact-inline{
+		  					padding: 0 18px 0 62px;
+		  				}
+		  				.no-touch &{
+		  					cursor: default;
+		  				}
+		  				&:hover{
+		  					.opacity(0.8);
+		  				}
+		  				&:active{
+		  					.opacity(0.6);
+		  				}
+		  				span{
+		  					position: absolute;
+		  					top: 50%;
+		  					margin-top: -12px;
+		  					left: 20px;
+		  					display: block;
+		  					height: 24px;
+		  					width: 24px;
+		  					text-align: center;
+		  					line-height: 24px;
+		  					font-size: 1.1em;
+		  				}
+		  				&#lien-mail{
+		  					color: @blanc;
+		  					background: @bleuima;
+		  					.no-touch &{
+		  						cursor: pointer;
+		  					}
+		  				}
+		  			}
+		  		}
+		  	}
 			ul.social-quiz{
 				display: block;
 				margin: 0;
 				padding: 0;
+				position: absolute;
+				top: 30px;
+				right: 32px;
 				li{
 					display: inline-block;
 					vertical-align: top;
-					width: 50px;
-					height: 50px;
+					width: 24px;
+					height: 24px;
 					position: relative;
-					margin: 0 15px 10px 0;
+					margin: 0 2px 0 0;
 					padding: 0;
 					a{
 						display: block;
-						width: 50px;
-						height: 50px;
+						width: 24px;
+						height: 24px;
 						.border-radius(50%);
 						color: @blanc;
-						line-height: 50px;
+						line-height: 24px;
 						margin: 0;
 						padding: 0;
 						text-align: center;
 						text-decoration: none;
 						.transition(transform 0.1s ease-in-out);
-						font-size: 25px;
+						font-size: 12px;
 						&:hover{
 							.transform(scale(1.05));
 						}
 						&.ima-icon-twitter{
 							background-color: #3ca7db;
-							font-size: 22px;
 						}
 						&.ima-icon-facebook{
 							background-color: #365390;
@@ -3915,10 +4040,13 @@ body.mentions-legales, body.page-template-default{
 			li.slide-quiz{
 				width: 80%;
 				margin-left: -40%;
-				.bloc-gauche-slide-quiz{
+				&#slide6-quiz{
+					width: 80%;
+				}
+				.bloc-droite-slide-quiz{
 					padding: 0;
 				}
-				.bloc-droite-slide-quiz {
+				.bloc-gauche-slide-quiz {
 					position: relative;
 					top: inherit;
 					right: inherit;
@@ -3936,7 +4064,11 @@ body.mentions-legales, body.page-template-default{
 					}
 				}
 				ul.social-quiz{
-					li{
+					position: relative;
+					top: inherit;
+					right: inherit;
+					padding: 0 0 0 120px;
+					/*li{
 						margin: 0 5px 10px 0;
 						width: 40px;
 						height: 40px;
@@ -3949,7 +4081,7 @@ body.mentions-legales, body.page-template-default{
 								font-size: 20px;
 							}
 						}
-					}
+					}*/
 				}
 			}
 		}
@@ -4346,6 +4478,41 @@ body.mentions-legales, body.page-template-default{
 				form.form-quiz{
 					.ligne-form{
 						margin: 10px 0;
+					}
+				}
+				.img-resultat-quiz{
+					width: 120px;
+					height: 120px;
+				}
+				&#slide6-quiz{
+					h3{
+						padding: 0 0 0 80px;
+						margin: 0 0 10px 0;
+						.perso-resultat-quiz{
+							font-size: 1.4em;
+						}
+					}
+				}
+				.interlocuteur-inline{
+					width: 100%;
+					display: block;
+					.nom-expert{
+						padding: 0;
+					}
+				}
+				ul.social-quiz{
+					padding: 0 0 0 80px;
+				}
+				ul#menu-contact-inline{
+					li{
+						a{
+							&#lien-mail{
+								padding: 0 5px 0 28px;
+								span {
+									left: 2px;
+								}
+							}
+						}
 					}
 				}
 			}
