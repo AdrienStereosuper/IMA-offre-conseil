@@ -943,6 +943,116 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/layoutImg\/quiz\/bg-question-1.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 225359,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-1.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-1.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/bg-question-2.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 88264,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-2.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-2.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/bg-question-3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 154609,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-3.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/bg-question-4.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 123871,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-4.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-4.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/bg-question-5.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 59078,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-5.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-question-5.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/bg-resultat.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 75516,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/bg-resultat.jpg",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/bg-resultat.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/ackbar.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33782,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/ackbar.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/ackbar.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/luke-skywalker.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37230,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/luke-skywalker.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/luke-skywalker.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/obiwan-kenobi.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 32819,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/obiwan-kenobi.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/obiwan-kenobi.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/r2d2.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 37656,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/r2d2.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/r2d2.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/layoutImg\/quiz\/resultats\/test-resultat.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -950,6 +1060,39 @@
 		"initialSize": 20419,
 		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/test-resultat.png",
 		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/test-resultat.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/xwing.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 25179,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/xwing.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/xwing.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/yoda.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 45346,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/yoda.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/yoda.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/layoutImg\/quiz\/resultats\/z6po.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33909,
+		"inputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/z6po.png",
+		"outputAbbreviatedPath": "\/layoutImg\/quiz\/resultats\/z6po.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

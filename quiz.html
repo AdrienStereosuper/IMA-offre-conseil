@@ -96,13 +96,19 @@
 		  			<ul id="slides-quiz">
 		  				<a href="#" class="btn-arrow up" id="btn-prev-slide-metier"><span class="icon-arrow-up"></span></a>
 		  				<li class="slide-quiz" id="slide6-quiz">
-		  					<div class="img-resultat-quiz"></div>
+		  					<div class="img-resultat-quiz"><img src=""></div>
 		  					<h3>Vous êtes le <span class="perso-resultat-quiz">Luke Skywalker</span> de la Relation Client !</h3>
 		  					<ul class="social-quiz">
-		  						<li><a title="Twitter" href="http://www.twitter.com/" class="ima-icon-twitter" target="_blank"></a></li>
-		  						<li><a title="Facebook" href="http://www.facebook.com/" class="ima-icon-facebook" target="_blank"></a></li>
+		  						<li><a title="Twitter" class="ima-icon-twitter" href="#"></a></li>
+								<li><a class="ima-icon-facebook" title="Facebook" href="https://www.facebook.com/dialog/feed?
+								  app_id=767837313285919
+								  &display=popup&caption=Vous êtes le Luke Skywalker de la Relation Client !
+								  &link=http://www.conseil-imatech.fr/quiz/
+								  &redirect_uri=http://www.conseil-imatech.fr/quiz/
+								  &picture=http://www.conseil-imatech.fr/wp-content/themes/conseil-IMA/layoutImg/quiz/resultats/yoda.png
+								  &description=Pour vous, un service client se doit d'apporter une réponse personnalisée et courtoise.Comme Luke, vous êtes en quête permanente de voies de progression. Vous favorisez la formation de vos équipes pour offrir un service de qualité à vos clients.
+								  " target="blank" ></a></li>
 								<li><a title="LinkedIn" href="http://www.linkedin.com/" class="ima-icon-linkedin" target="_blank"></a></li>
-								<li><a title="Viadeo" href="http://www.viadeo.com/" class="ima-icon-viadeo" target="_blank"></a></li>
 		  					</ul>
 		  					<div class="bloc-gauche-slide-quiz">
 								<div id="container-chart"></div>
@@ -303,5 +309,8 @@
 		   	<script src="js/libs/dd_belatedpng.js"></script>
 		   	<script>DD_belatedPNG.fix("img, .png_bg");</script>
 		 <![endif]-->
+		 <script>
+		 window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+		 </script>
 	</body>
 </html>
