@@ -3937,6 +3937,14 @@ body.mentions-legales, body.page-template-default{
 }
 
 @media (max-width: 1150px) {
+	a#bloc-btn-quiz{
+		top: 70px;
+		.transform(translateX(0px), translateY(0px));
+		z-index: 10;
+		&:hover{
+			.transform(translateX(0px), translateY(0px));
+		}
+	}
 	body {
 		&.metiers, &.cas-clients, &.page-template-templatesvision-php, &.page-template-templatesmetiers-php, &.page-template-templatesreferences-php {
 			#container{
@@ -4200,6 +4208,29 @@ body.mentions-legales, body.page-template-default{
 
 
 @media (max-width: 767px) {
+	a#bloc-btn-quiz{
+		top: 330px;
+		right: 50%;
+		margin-right: -140px;
+		z-index: 10;
+		.transform(translateX(0px), translateY(0px));
+		.bloc-question-btn-quiz{
+			padding: 20px 35px 20px 15px;
+			.bottom-bloc-question-btn-quiz{
+				br{
+					display: none;
+				}
+			}
+		}
+		.pastille-quiz{
+			top: 50%;
+			left: -65px;
+			margin-top: -37px;
+		}
+		&:hover{
+			.transform(translateX(0px), translateY(0px));
+		}
+	}
 	html, body{
 		font-size: 0.95em;
 		height: 100%;
@@ -4827,6 +4858,13 @@ body.mentions-legales, body.page-template-default{
 	#content{
 		#bloc-slides{
 			top: 60%;
+		}
+	}
+	@media (max-width: 767px) {
+		#content{
+			#bloc-slides{
+				top: 20px;
+			}
 		}
 	}
 }
