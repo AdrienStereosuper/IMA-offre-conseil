@@ -980,10 +980,12 @@ ul{
 }
 
 .cn-button:hover,
-.cn-button:active,
-.cn-button:focus {
+.cn-button:active{
 	color: #aa1010;
 	outline-style: none;
+}
+.cn-button:focus{
+	outline: none;
 }
 .csstransforms .cn-wrapper ul{
 	display: block;
@@ -1317,21 +1319,6 @@ ul{
 		cursor: default;
 		pointer-events: none;
 	}
-}
-
-
-
-/* active style */
-.csstransforms .cn-wrapper li.active a {
-	
-}
-
-
-/* hover style */
-.csstransforms .cn-wrapper li:not(.active) a:hover,
-.csstransforms .cn-wrapper li:not(.active) a:active,
-.csstransforms .cn-wrapper li:not(.active) a:focus {
-	
 }
 
 /* @group bouton sans css transform */

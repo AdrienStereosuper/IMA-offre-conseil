@@ -104,6 +104,7 @@ var emailQuiz = true;
 /* pushstate */
 var index = '';
 var everPushed  = false;
+var ga;
 
 $(document).ready(function(){
 	boutonIMA();
@@ -175,6 +176,7 @@ $(document).ready(function(){
 			var parentAze = $(this).parent();
 			var link = $(this).parent().find('a').attr('href');
 			window.location.href=link;
+			$(".cn-wrapper li a.survol").removeClass("survol");
 		});
 		
 	//}
@@ -232,6 +234,7 @@ function initLoad() {
 		$("#cn-wrapper a").each(function() {
 			$(this).click(function() {
 				everPushed = true;
+				$(".cn-wrapper li a.survol").removeClass("survol");
 				loadStart($(this).attr("href"));
 				return false;
 			});
@@ -239,6 +242,7 @@ function initLoad() {
 		$("#container-map-ima area").each(function() {
 			$(this).click(function() {
 				everPushed = true;
+				$(".cn-wrapper li a.survol").removeClass("survol");
 				loadStart($(this).attr("href"));
 				return false;
 			});
@@ -330,12 +334,14 @@ function updateURL(espace) {
 			case "vision":
 				if (link.indexOf("vision")<0) {
 					window.history.pushState(null,'Page Vision', '/vision/');
+					ga('send', 'pageview', '/vision/');
 					document.title = 'Conseil IMATECH | Notre vision du conseil';
 				}
 				break;
 			case "metiers":
 				if (link.indexOf("metiers")<0) {
 					window.history.pushState(null,'Page Métiers', '/metiers/');
+					ga('send', 'pageview', '/metiers/');
 					document.title = 'Conseil IMATECH | Nos domaines d’expertise';
 				}
 				break;
@@ -347,11 +353,13 @@ function updateURL(espace) {
 			case "mentions":
 				if (link.indexOf("mentions")<0) {
 					window.history.pushState(null,'Mentions légales', '/mentions-legales/');
+					ga('send', 'pageview', '/mentions-legales/');
 					document.title = 'Conseil IMATECH | Mentions légales';
 				}
 				break;
 			default :
 				window.history.pushState(null,'PageAccueil', '/');
+				ga('send', 'pageview', '/');
 				document.title = 'Conseil IMATECH | Une relation client comme on l’aime';
 				break;
 		}

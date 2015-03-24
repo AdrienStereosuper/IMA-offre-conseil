@@ -911,10 +911,12 @@ ul {
   color: #195c7f;
 }
 .cn-button:hover,
-.cn-button:active,
-.cn-button:focus {
+.cn-button:active {
   color: #aa1010;
   outline-style: none;
+}
+.cn-button:focus {
+  outline: none;
 }
 .csstransforms .cn-wrapper ul {
   display: block;
@@ -1281,8 +1283,6 @@ ul {
   cursor: default;
   pointer-events: none;
 }
-/* active style */
-/* hover style */
 /* @group bouton sans css transform */
 .no-csstransforms  #bouton-imatech,
 .aze  #bouton-imatech {
